@@ -1,0 +1,38 @@
+<view class='banner'>
+  <image src="https://m.zujiekeji.cn/xcximg/zl-banner.png?a=1"></image>
+</view>
+
+<view class='content-bac' id='{{item.id}}'  bindtap='detail' wx:for='{{list}}' wx:key='{{index}}'>
+
+<view class='content flex-aic'>
+  <view class='content-img'>
+    <image wx:if='{{item.give_type==="card"}}' src='https://m.zujiekeji.cn/xcximg/xcxzhuli/1.png' 
+    mode='aspectFit' class='content-img2'></image>
+    <image wx:if='{{item.give_type==="coupon"}}' src='https://m.zujiekeji.cn/xcximg/xcxzhuli/2.png' 
+    mode='aspectFit' class='content-img2'></image>
+  </view>
+  <view class='content-main flex-grow1'>
+    <view class='main'>{{item.title}}</view>
+    <view class='flex-aic'>
+        <view class='jindu'>
+            <view class='green' style='width: {{item.my_finish/item.my_total*100}}%'></view>
+        </view>
+        <view class='flex-jcs record-content'><view class='or'>{{item.my_finish}}</view>/{{item.my_total}}</view>
+    </view>
+  </view> 
+  <image wx:if='{{item.tag==="已参加"}}' src='https://m.zujiekeji.cn/xcximg/ycj.png' class='abimg'></image>
+  <image wx:if='{{item.tag==="已完成"}}' src='https://m.zujiekeji.cn/xcximg/ywc.png' class='abimg'></image>
+</view>
+
+</view>
+
+<view wx:if='{{list.length==0}}'>
+  <image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/nolist.png' class='nolist'></image>
+  <view class='nohuodong'>暂时没有助力活动，敬请期待~</view>
+</view>
+
+<view class='forfooter'></view>
+<view class='footer flex-jac' wx:if='{{user_id!=""}}' bindtap='myzhuli'>
+<image src='https://m.zujiekeji.cn/xcximg/xcxpintuan/pt_grey.png' class='futou'></image>
+<view class='themebfff fbtn f32'>查看我的助力</view>
+</view>

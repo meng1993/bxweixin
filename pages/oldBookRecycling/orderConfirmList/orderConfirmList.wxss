@@ -1,0 +1,5 @@
+@import '/temp/oldBook/oldBook.wxss';
+.orderConfirmList{
+    width: 100%;
+    overflow: hidden;
+}

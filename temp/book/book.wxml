@@ -1,0 +1,75 @@
+<wxs module="t1">
+  var age = function(e){
+    if(!e){
+      return false
+    }
+    e = e.split('-');
+    if(e[1] && parseInt(e[1])>18){
+      return false
+    }else{
+      return true
+    }
+  }
+  module.exports.age = age;
+</wxs>
+<template name='book'>
+
+  <view class='book1'>
+    <image class='book-image' id='{{item.book_id}}' bindtap='getdetail'
+    src='{{item.img_medium}}' mode='aspectFit'></image>
+    <image class='right-tag-img'  wx:if='{{item.is_purchased}}' src='/img/purchased-max.png'></image>
+    <view class='book-padding'>
+      <view class='book-text'>{{item.title}}</view>
+      <view class='flex-only flex-aic'>
+        <view class='book-age book-type' wx:if='{{t1.age(item.age_range)}}'>{{item.age_range}}</view>
+        <view class='book-type'>{{item.category}}</view>
+        <view class='flex-grow1'></view>
+        <view class='book-imgw flex-aic' id='{{item.is_shelf}}' data-index='{{index}}' 
+        data-book_id='{{item.book_id}}' data-parent='{{parent||""}}' catchtap='inshelf'>
+        <image class='book-inbookshelf' wx:if='{{item.is_shelf==0&&!shuwu}}'
+        src='/img/shouye/shujia.png'></image>
+        <image class='book-inbookshelf'  wx:if='{{item.is_shelf==1&&!shuwu}}'
+        src='/img/shouye/shujia1.png'></image>
+        <image class='book-inbookshelf' wx:if='{{item.addshuwu==1&&shuwu}}'
+        src='/img/home/shuwu.png'></image>
+        <image class='book-inbookshelf'  wx:if='{{item.addshuwu==0&&shuwu}}'
+        src='/img/home/shuwu2.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class='smallicon'>
+      <image wx:if='{{item.has_stock==0?true:false}}' 
+      class='yijiewan' src='/img/shouye/yijiewan.png'></image> 
+      <image wx:if='{{item.is_borrow==1?true:false}}' 
+      class='yijieguo' src='/img/shouye/yijieguo.png'></image>
+    </view>
+  </view>
+</template>
+
+<template name='seriesbook'>
+  <view class='seriesbook-w' id='{{item.series}}' bindtap='series'>
+    <image class='seriesbook-img' src='{{item.img_medium}}' mode='aspectFit'></image>
+    <view class='seriesbook-title'>{{item.title}}</view>
+  </view>
+</template>
+
+<template name='book2'>
+  <view class='book1'>
+    <image class='book-image' id='{{item.book_id}}' bindtap='getdetail'
+    src='{{item.img_medium}}' mode='aspectFit'></image>
+    <view class='book-padding book-padding2 flex-aic'>
+      <view class='book-text'>{{item.title}}</view>
+      <!-- <view class='flex-aic book-h60' id='{{item.book_id}}'>
+        <image class='book-dz' 
+        src='{{"https://m.zujiekeji.cn/xcximg/xcxshequ/dz.png"}}'></image>
+        <view class='book-dzindex'>20</view>
+      </view> -->
+    </view>
+    <view class='smallicon'>
+      <image wx:if='{{item.has_stock==0?true:false}}' 
+      class='yijiewan' src='/img/shouye/yijiewan.png'></image> 
+      <image wx:if='{{item.is_borrow==1?true:false}}' 
+      class='yijieguo' src='/img/shouye/yijieguo.png'></image>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,118 @@
+@import '/temp/oldBook/oldBook.wxss';
+.book_box{
+
+}
+.cActive{
+    color: #ff8e00;
+}
+.book_box .header{
+    position: fixed;
+    width: 100%;
+    height: 88rpx;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 999;
+}
+.book_box .header .icon_cicle{
+    float: left;
+    width: 16rpx;
+    height: 16rpx;
+    border-radius: 50%;
+    background-color: #6fd14e;
+    margin: 35rpx 30rpx;
+}
+.book_box .header .remind{
+    float: left;
+    width: 300rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+
+    font-size: 28rpx;
+    color: #333333;
+}
+.book_box .header .edit{
+    /*width: 54px;*/
+    float: right;
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 28rpx;
+    color: #3b7adb;
+    margin-right: 30rpx;
+}
+.line-20{
+    position: fixed;
+    top: 88rpx;
+    z-index: 999;
+}
+.book_box .content{
+    margin-top: 108rpx;
+    /*margin-bottom: 98rpx;*/
+    padding-bottom: 98rpx;
+}
+.book_box .bottom{
+    position: fixed;
+    width: 100%;
+    height: 98rpx;
+    background: #fff;
+    border-top: 1px solid lightgray;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+.book_box .bottom .select_all{
+    float: left;
+    width: 280rpx;
+    height: 98rpx;
+}
+.book_box .bottom .select_all .icon_img{
+    float: left;
+    width: 37rpx;
+    height: 37rpx;
+    margin: 30rpx 20rpx 30rpx 30rpx;
+}
+.book_box .bottom .select_all .quanxuan{
+    float: left;
+    height: 98rpx;
+    line-height: 98rpx;
+    font-size: 32rpx;
+    color: #262626;
+}
+.book_box .bottom .num_cal{
+    float: left;
+    width: 240rpx;
+    height: 98rpx;
+    display: flex;
+    flex-direction: column;
+}
+.book_box .bottom .num_cal .select_num{
+    flex: 1;
+    line-height: 49rpx;
+    font-size: 30rpx;
+    color: #262626;
+}
+.book_box .bottom .num_cal .select_num >text{
+    color: #ff8e00;
+}
+.book_box .bottom .num_cal .egg_num{
+    flex: 1;
+    line-height: 49rpx;
+    font-size: 26rpx;
+    color: #999999;
+}
+.book_box .bottom .num_cal .egg_num >text{
+    color: #ff304f;
+}
+.book_box .bottom .btn_xiadan{
+    float: left;
+    width: 230rpx;
+    height: 98rpx;
+    text-align: center;
+    line-height: 98rpx;
+    background: #6fd14e;
+    font-size: 32rpx;
+    color: #ffffff;
+}
+.book_box .bottom .delete_active{
+    background: red;
+}

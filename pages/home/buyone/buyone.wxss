@@ -1,0 +1,24 @@
+@import '/temp/book/book.wxss';
+page{background-color: #EFEFF4}
+.listbox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 2rpx;
+}
+.padding1{padding: 0 20rpx;}
+.goumai{width: 120rpx;height: 40rpx;border-radius: 5px;line-height: 40rpx;
+text-align: center;color: #3b7ada;border: 2rpx solid #3b7ada;font-size: 20rpx;}
+.color1{color: #fb0025;border: none}
+.pd20{padding-bottom:20rpx;}
+
+.footer{position: fixed;bottom: 0;width: 750rpx;height: 100rpx;z-index: 10000;background-color: #fff;}
+.footerlimg{display: block; width: 40rpx;height: 38rpx;margin: 0 auto}
+.footerr{background: #6ed14e;color: #fffefe;font-size: 32rpx;line-height: 100rpx;text-align: center;
+width: 250rpx;}
+.forfooter{height: 100rpx;}
+.gouxuan{position: absolute;display: block;width: 40rpx;height: 40rpx;right: 30rpx;top: 30rpx;
+background-color: rgba(255,255,255,0.7);border-radius: 4px;z-index: 999}
+.qx{position: absolute;left: 50rpx;top: 25rpx;display: flex}
+.quanxuan{display: block;width: 40rpx;height: 40rpx;padding-right: 10rpx}
+.f30{font-size: 30rpx;}

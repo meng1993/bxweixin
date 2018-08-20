@@ -1,0 +1,34 @@
+<import src='/temp/oldBook/oldBook.wxml' />
+<view class="orderDetail bgColor">
+    <!--<view class="header">共{{orderMessage.num}}本</view>-->
+    <view class="header">订单包含{{orderMessage.num}}本旧书</view>
+
+    <template is="orderDetail" data="{{list,num}}"></template>
+
+    <!--统计一行-->
+    <view class="statistical">
+        <view class="line70 line_edit">
+            <view class="line70_left">总计</view>
+            <view class="line70_right">可兑换<text class="active">{{orderMessage.score}}</text>个鸟蛋</view>
+        </view>
+        <view class="line70 line_edit">
+            <view class="line70_left">运费</view>
+            <view class="line70_right">￥0.00</view>
+        </view>
+    </view>
+    <!--实际鸟蛋一行-->
+    <view class="line88">
+        <view class="line88_right line88_text">实际鸟蛋：<text class="active">{{orderMessage.fact_score}}</text>个</view>
+    </view>
+    <!--取消订单一行-->
+    <!--<view class="line88">-->
+        <!--<view class="line88_right btn-166-56" data-id="{{orderMessage.id}}" catchtap="cancelOrder">取消订单</view>-->
+    <!--</view>-->
+    <view class="bg20"></view>
+    <!--留言-->
+    <view class='liuyan'>
+        <view class='liuyan_text'>备注：</view>
+        <textarea class='liuyan_textarea' value='{{orderMessage.remark}}' disabled="disabled"></textarea>
+    </view>
+
+</view>

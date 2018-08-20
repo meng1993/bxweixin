@@ -1,0 +1,26 @@
+<view class='a themebgreen'>
+  <view class='a1 themebfff flex-aic' wx:if='{{count.status==="0"}}'>
+    <text>一共</text><text class='co1'>{{count.have_count}}</text><text>位好友助力，还差</text>
+    <text class='co1'>{{count.short_count}}</text><text>人，加油哦~</text>
+  </view>
+  <view class='a1 themebfff flex-aic' wx:if='{{count.status==="1"}}'>
+    <text>恭喜您！共有<text class='co1'>{{count.have_count}}</text>位好友助力，任务完成。</text>
+  </view>
+</view>
+
+<view class='b themebfff' wx:if='{{list.length>0}}'>
+  <view class='b1 flex-aic {{index==0?"":"bt"}}' wx:for='{{list}}' wx:key='{{index}}'>
+    <view class='b2'>{{index+1}}</view>
+    <view class='b7'>
+      <image class='b3' src='{{item.head_img!=""?item.head_img:""/img/shouye/logo.png}}'></image>
+    </view>
+    <view class='b4'>
+      <view class='b5'>{{item.nickname}}</view>
+      <view class='b6'>{{item.subscribe_time}}</view>
+    </view>
+  </view>
+</view>
+
+<view wx:if='{{list.length==0}}'>
+  <image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/nolist.png' class='nolist'></image>
+</view>

@@ -1,0 +1,42 @@
+<!--pages/oldBookRecycling/orderConfirm/orderConfirm.wxml-->
+<view class="order_confirm">
+    <!--11111111111111111111111头部-->
+    <view class="header">
+        <view class="icon_cicle"></view>
+        <view class="remind">
+            暂不支持黑龙江,吉林,内蒙古,新疆,云南,青海,海南,西藏等地区
+        </view>
+    </view>
+    <view class="bg20 line-20"></view>
+    <!--书本图片展示列表-->
+    <view class="img_book" bindtap="toOrderConfirmList">
+        <image class="image" wx:for="{{imgSrc}}" wx:if="{{index<4}}" src="{{item}}" mode="aspectFit"></image>
+        <view class="book_num">
+            共{{bookTotal}}本
+            <image class="youjiantou czy_right" src="/img/shelf/yousanjiao.png"></image>
+        </view>
+    </view>
+    <view class="bg20"></view>
+    <!--总计-->
+    <view class="line88">
+        <view class="line88_left text_left_cf">总计</view>
+        <view class="line88_right text_right_cf">可兑换<text>{{eggNum}}</text>个鸟蛋</view>
+    </view>
+    <!--运费-->
+    <view class="line88">
+        <view class="line88_left text_left_cf">运费</view>
+        <view class="line88_right text_right_cf"><text style="font-size: 32rpx">￥0.00</text></view>
+    </view>
+    <view class="bg20"></view>
+    <!--留言-->
+    <view class='liuyan'>
+        <view class='liuyan_text'>留言：</view>
+        <textarea class='liuyan_textarea' placeholder='期待您的宝贵建议~' value='{{liuyan}}' bindinput='changeLiuyan'></textarea>
+    </view>
+    <!--bottom-->
+    <view class="bottom">
+        <view class="bottom_left">鸟蛋：<text>{{eggNum}}个</text></view>
+        <view class="bottom_center">以实际结算为准</view>
+        <view class="bottom_right" bindtap="commitOrder">提交订单</view>
+    </view>
+</view>

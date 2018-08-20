@@ -1,0 +1,59 @@
+<view class='flex-aic h100'>
+  <view class='greenl themebgreen'></view>
+  <view class='yigoumai'>已购买计划</view>
+</view>
+<view class='mb20 themebfff'>
+  <view class='c' wx:for='{{lists1}}' id='{{index}}' bindtap='chosecard'>
+    <view class='c1 flex-jcs'>
+      <view class='c1a'>{{item.name}}</view>
+      <view class='c1a'>往返包邮</view>
+    </view>
+    <view class='c2 flex-only'>
+      <view class='c2a'>
+        <view class='c2b'>{{item.one_rent_num}}本</view>
+        <view class='c2c'>每次可借</view>
+      </view>
+      <view class='c2a w170'>
+        <view class='c2b'>{{item.total_use_times==0?"无限次":item.total_use_times+"/"+item.total_remain+"次"}}</view>
+        <view class='c2c'>借阅/剩余次数</view>
+      </view>
+      <view class='c2a'>
+        <view class='c2b'>{{item.daoqi}}</view>
+        <view class='c2c'>到期时间</view>
+      </view>
+    </view>
+    <image class='cimg' src='{{item.use_status==0?"/img/home/bukeyong.png":""}}'></image>
+    <image class='cimg' src='{{item.status==2?"/img/home/yiguoqi.png":""}}'></image>
+    <image class='cimg' src='{{item.status==11?"/img/home/daishengxiao.png":""}}'></image>
+    <view class='cardno'>NO.{{item.card_no}}</view>
+  </view>
+
+  <!-- <view class='h100 flex-jasc p30'  wx:if='{{_from=="orderinfo"}}' id='no' bindtap='chosecard'>
+    <view class='text'>不使用会员计划</view>
+  </view> -->
+  <view class='h100 flex-jasc p30'  wx:if='{{wujihua==true}}' bindtap='buycard'>
+    <view class='text'>暂无已购计划，去购买</view>
+    <image class='sanjiao' src='/img/shelf/yousanjiao.png'></image>
+  </view>
+  <view class='h100 flex-jasc p30'  wx:if='{{wujihua==false}}' bindtap='buycard'>
+    <view class='text'>购买更多计划</view>
+    <image class='sanjiao' src='/img/shelf/yousanjiao.png'></image>
+  </view>
+</view>
+<view class='flex-aic h100 bb'>
+  <view class='greenl themebgreen'></view>
+  <view class='yigoumai'>已失效计划</view>
+</view>
+<view class='mb20'>
+  <view class='h100 flex-jasc p30' wx:for='{{lists2}}'>
+    <view class='text text2'>{{item.name}}(已失效)</view>
+    <image class='sanjiao' src='/img/shelf/yousanjiao.png'></image>
+  </view>
+</view>
+
+<view class='footer themebfff' wx:if='{{_from=="orderinfo"}}'>
+  <view class='h100 p30 blue' id='no' bindtap='chosecard'>
+    不使用会员计划
+  </view>
+</view>
+<view class='forfooter' wx:if='{{_from=="orderinfo"}}'></view>

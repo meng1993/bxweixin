@@ -1,0 +1,45 @@
+@import '/temp/bottomload/index.wxss';
+@import '/temp/book/book.wxss';
+@import '/temp/search/index.wxss';
+.header{position: fixed;top: 0;background-color: #fff;width: 750rpx;z-index: 1000;}
+.header2{width: 710rpx;padding: 20rpx 20rpx;height: 110rpx;}
+page{background-color: #EFEFF4}
+view{font-family: PingFangSC}
+.bluespot{display: block;width: 16rpx;height: 16rpx;}
+.shaixuan{color: #535353;font-size: 32rpx;margin-left: 20rpx;}
+.chongxin{color: #3b7ada;font-size: 28rpx;}
+.biaoqian{border: 2rpx solid #4a8fe2;border-radius: 20px;color: #3b7ada;
+font-size: 24rpx;padding: 4rpx 8rpx;margin-right: 6rpx;}
+.biaoqianb{margin-top: 20rpx;}
+.fortop{height: 240rpx;}
+.book{width: 250rpx;position: relative;background-color: #fff;border-bottom:2rpx solid #EFEFF4; }
+.image{display: block;width: 224rpx;height: 230rpx;margin: 20rpx auto}
+.text{ color: #535353;font-size: 24rpx;height: 66rpx;line-height: 32rpx;padding-left: 20rpx;overflow: hidden;}
+.gouxuan{position: absolute;display: block;width: 40rpx;height: 40rpx;right: 30rpx;top: 30rpx;
+background-color: rgba(255,255,255,0.7);border-radius: 4px;z-index: 999}
+
+.footer{position: fixed;bottom: 0;width: 750rpx;height: 100rpx;z-index: 10000;background-color: #fff;}
+.footerlimg{display: block; width: 40rpx;height: 38rpx;margin: 0 auto}
+.footerr{background: #6ed14e;color: #fffefe;font-size: 32rpx;line-height: 100rpx;text-align: center;
+width: 250rpx;}
+.forfooter{height: 100rpx;}
+.shujia{color: #878787;font-size: 22rpx;text-align: center;margin-top: 10rpx;}
+.imgb{width: 200rpx;padding-top: 10rpx;position: relative;}
+.bookwrap{margin-top: 20rpx;}
+.nobookbox{padding-top: 350rpx;height: 800rpx;background-color: #fff;}
+.nobook{width: 200rpx;  height: 200rpx;  display: block;  margin: 0 auto;}
+.nobooktext{font-size: 32rpx;   margin-top: 40rpx;    color: #666;   text-align: center;}
+.listbox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 2rpx;
+}
+.bookw{position: relative}
+.num{position: absolute;top: -5rpx;right: 45rpx;min-width: 40rpx;height: 40rpx;border-radius: 100px;
+background-color: rgb(244, 53, 48);color: #fff;font-size: 24rpx;text-align: center;line-height: 40rpx;}
+.qx{position: absolute;left: 50rpx;top: 25rpx;display: flex}
+.quanxuan{display: block;width: 40rpx;height: 40rpx;padding-right: 10rpx}
+.f30{font-size: 30rpx;}
+
+

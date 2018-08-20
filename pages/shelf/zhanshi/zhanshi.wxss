@@ -1,0 +1,7 @@
+@import '/temp/book/book.wxss';
+.listbox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 2rpx;
+}

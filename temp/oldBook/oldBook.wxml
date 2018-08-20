@@ -1,0 +1,116 @@
+<wxs module="filters" src="../../pages/diandu/pay/pay.wxs"></wxs>
+<template name="oldBook">
+    <view class="item" wx:for="{{list}}" data-id="{{item.book_id}}" bindtap="toDetail">
+        <image class="icon_check" data-id="{{item.book_reclaim_id}}" src="{{item.checkType ? '/img/oldBook/icon_selected.png':'/img/oldBook/icon_default.png'}}" catchtap="selectBook"></image>
+        <!--书的图片-->
+        <image class="img_book" src="{{item.img_medium}}" mode="aspectFit"></image>
+        <view class="book_msg">
+            <view class="msg_line">{{item.title}}</view>
+            <view class="msg_line">
+                <text class="price" style="text-decoration:line-through;color: #333333;">市场价:￥{{item.discount_price}}</text>
+                <text class="price" style="margin-left: 40rpx;">{{item.score}}鸟蛋（{{filters.toFixOne(item.score/(item.discount_price*10))}}折）</text>
+            </view>
+            <view class="msg_line">
+                <image class="icon_add_reduce" src="/img/oldBook/add.png"></image>
+                <view class="btn_add" data-id="{{item.book_reclaim_id}}" catchtap="reduceNum"></view>
+                <view class="num">{{item.czyNum}}</view>
+                <view class="btn_reduce" data-id="{{item.book_reclaim_id}}" catchtap="addNum"></view>
+            </view>
+        </view>
+    </view>
+</template>
+
+<!--111111111111111-----------oldBookBox-->
+<template name="oldBookBox">
+    <view class="item" wx:for="{{list}}" data-id="{{item.book_id}}" bindtap="toDetail">
+        <image class="icon_check" data-id="{{item.book_reclaim_id}}" src="{{item.checkType ? '/img/oldBook/icon_selected.png':'/img/oldBook/icon_default.png'}}" catchtap="selectBook"></image>
+        <!--书的图片-->
+        <image class="img_book" src="{{item.img_medium}}" mode="aspectFit"></image>
+        <view class="book_msg">
+            <view class="msg_line">{{item.title}}</view>
+            <view class="msg_line">
+                <!--<text class="price">{{item.score}}个鸟蛋</text>-->
+                <text class="price" style="text-decoration:line-through;color: #333333;">市场价:￥{{item.discount_price}}</text>
+                <!--<text class="price" style="margin-left: 40rpx;">{{item.score}}鸟蛋（{{item.discount/10}}折）</text>-->
+                <text class="price" style="margin-left: 40rpx;">{{item.score}}鸟蛋（{{filters.toFixOne(item.score/(item.discount_price*10))}}折）</text>
+            </view>
+            <view class="msg_line">
+                <image class="icon_add_reduce" src="/img/oldBook/add.png"></image>
+                <view class="btn_add" data-id="{{item.book_reclaim_id}}" catchtap="reduceNum"></view>
+                <view class="num">{{item.czyNum}}</view>
+                <view class="btn_reduce" data-id="{{item.book_reclaim_id}}" catchtap="addNum"></view>
+            </view>
+        </view>
+    </view>
+</template>
+
+<!--1111111111111----------------orderDetail-->
+<template name="orderDetail">
+    <view class="item orderDetail_item" wx:for="{{list}}" data-id="{{item.book_id}}" bindtap="toDetail">
+        <!--没什么用，占位的，为了跟其他模板统一-->
+        <view class="icon_check"></view>
+        <!--书的图片-->
+        <image class="img_book" src="{{item.img_medium}}"></image>
+        <view class="book_msg">
+            <view class="msg_line">{{item.title}}</view>
+            <view class="msg_line">
+                <text class="price">{{item.score}}个鸟蛋</text>
+                <text class="orderDetail_num">x{{item.num}}</text>
+            </view>
+            <view class="msg_line orderDetail_msg">
+                旧书检查合格{{item.valid_num}}本，实际鸟蛋{{item.valid_num * item.score}}个
+            </view>
+        </view>
+    </view>
+</template>
+
+<!--11111111111111111-------------orderList-->
+<template name="orderList">
+    <view class="orderList_item">
+        <view class="item_content" wx:for="{{list}}" data-id="{{item.id}}" bindtap="toOrderDetail">
+            <!--top上边内容-->
+            <view class="content_top">
+                <image class="icon_select" wx:if="{{!orderListType}}" data-message="{{item}}"  src="{{item.checkType?'/img/oldBook/order_selected.png':'/img/oldBook/order_default.png'}}" catchtap="check"></image>
+                <view class="message_right">
+                    <!--右边第一行-->
+                    <view class="one">
+                        <view class="order_num">{{item.order_sn}}</view>
+                        <view class="order_status" wx:if="{{item.status == 'wait'}}">待发货</view>
+                        <view class="order_status" wx:elif="{{item.status == 'delivery'}}">已发货</view>
+                        <view class="order_status" wx:elif="{{item.status == 'finish'}}">完成</view>
+                        <view class="order_status" wx:elif="{{item.status == 'cancel'}}">取消</view>
+                    </view>
+                    <!--右边第二行（日期/本数）-->
+                    <view class="two">{{item.start_time}}/{{item.num}}本书</view>
+                    <!--右边第三行（图书图片列表）-->
+                    <image wx:for="{{item.book_list}}" wx:if="{{index<4}}" class="book_img" src="{{item.img_medium}}"></image>
+                </view>
+            </view>
+            <!--下边按钮-->
+            <view class="content_btns" wx:if="{{item.status == 'wait'}}">
+                <view class="btn-166-56-c btn_group" catchtap="send"  data-message="{{item}}">我要寄出</view>
+                <view class="btn-166-56 btn_group" data-id="{{item.id}}" catchtap="cancelOrder" wx:if="{{orderListType}}">取消订单</view>
+            </view>
+
+            <view class="bg20" wx:if="{{index != list.length - 1}}"></view>
+        </view>
+        <!--<view class="bg20"></view>-->
+    </view>
+
+</template>
+
+<!--1111111111111111111orderConfirmList-->
+<template name="orderConfirmList">
+    <view class="confirmList_item" wx:for="{{list}}" data-id="{{item.book_id}}" bindtap="toDetail">
+        <image class="book_img" src="{{item.img_medium}}" mode="aspectFit"></image>
+        <view class="book_title" >{{item.title}}</view>
+        <view class="egg_num market_price" style="margin:0 37rpx;">
+            <view style="float:left;text-decoration:line-through;color: #333333;">市场价:￥{{item.discount_price}}</view>
+            <view style="float: left;">（{{filters.toFixOne(item.score/(item.discount_price*10))}}折）</view>
+        </view>
+        <view class="egg_num">
+            {{item.score}}个鸟蛋
+            <text style="float: right;">{{item.czyNum}}本</text>
+        </view>
+    </view>
+</template>

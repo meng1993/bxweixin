@@ -1,0 +1,37 @@
+<wxs module='wxs1'>
+  module.exports = {
+      a:function(date,m){
+        date=date.split("-");
+        if(m==="m"){
+          return date[1];
+        }
+        else if(m==="d"){
+          return date[2];
+        }
+      }
+  }
+</wxs>
+<view class='sbook themebfff'>  
+  <view class='f flex-only' wx:for='{{jilulist}}' wx:key='{{item.id}}'>
+    <view>
+      <view class='f1'>
+        <view class='f2'>{{wxs1.a(item.date,"d")}}</view> 
+        <view class='f3'>{{wxs1.a(item.date,"m")}}月</view>
+      </view>
+      <view class='ff1'>
+        <image class='ff2' src='/img/home/cishu.png'></image>
+        <view class='ff3 flex-jac'>第{{book.daka_num-index}}次</view>
+      </view>
+    </view>
+    <view class='f5'>
+      <view class='f4' id='{{item.id}}' data-date='{{item.date}}' wx:if='{{item.remark!=""}}'>{{item.remark}}</view>
+      <view class='f6 flex-aic' id='{{item.id}}' data-date='{{item.date}}'>
+          <view class='f7' wx:for='{{item.sign_info}}' wx:for-index="mindex" wx:for-item="mitem"
+          wx:key='{{mindex}}'>
+            <image class='f8'  bindtap='getdetail' id='{{mitem.book_id}}'  src='{{mitem.img}}' mode='aspectFit'></image>
+            <view class='f9'>{{mitem.book.title}}</view>
+          </view>
+      </view>
+    </view>
+  </view>
+</view>

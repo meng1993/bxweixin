@@ -1,0 +1,67 @@
+<import src="/temp/bottomload/index.wxml" />
+<import src="/temp/emptyPage/emptyPage.wxml" />
+<view class='topposition'>
+  <swiper display-multiple-items='5' class='themebfff' current='{{swiperindex}}'>
+    <block wx:for='{{titles}}'>
+      <swiper-item>
+        <view bindtap='change' data-index='{{index}}' id='{{item.b}}'  class='themebfff'>
+        <view class='condition1 {{index==_index?"condition2":""}}'>{{item.a}}</view>
+        <view class='Highlight' hidden='{{index==_index?false:true}}'></view>
+      </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='zhanwei'></view> 
+
+<view class='themebfff w' wx:for="{{orderList}}" bindtap="toDetail" data-id="{{item}}">
+  <view class='b1 flex-jasc'>
+    <view class='b1a' >订单号:{{item.order_sn}}</view>
+    <view class='b1b2' wx:if='{{item.status == "wait"}}'>待付款</view>
+    <view class='b1b3' wx:elif='{{item.status == "pay"}}'>待发货</view>
+    <view class='b1b2' wx:elif='{{item.status == "delivery"}}'>已发货</view>
+    <view class='b1b3' wx:elif='{{item.status == "finish"}}'>订单完成</view>
+    <view class='b1b3' wx:elif='{{item.status == "cancel"}}'>已取消</view>
+    <view class='b1b3' wx:elif='{{item.status == "refund"}}'>退款中</view>
+  </view>
+  <view class='a flex-aic'>
+    <view class='a1'>
+      <image class='a2' src='{{item.img}}'></image>
+    </view>
+    <view>
+      <view class='a3 f28 c333'>{{item.product_title}}</view>
+      <view class='flex-aie'>
+        <view class='f28'>￥{{item.price}}元</view>
+        <view class="f28" style="margin-left: 30rpx;">{{item.sku1_title}}<text wx:if="{{item.sku1_title != ''}}">/</text>{{item.sku2_title}}</view>
+        <view class="f28" style="margin-left: 30rpx;">x{{item.num}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='c flex-aic flex-jce f24 c333 '>
+    <view class='c1'>共{{item.num}}件商品</view>
+    <view wx:if="{{item.status == 'wait'}}" class="lzh_jj">待付款：<text class="cred">￥{{item.pay_amount}}</text></view>
+    <view wx:else class="lzh_jj">已付款：<text class="cred">￥{{item.pay_amount}}</text></view>
+  </view>
+  <!--待付款-->
+  <view class='c flex-aic flex-jce bt' wx:if="{{item.status == 'wait'}}">
+    <view class='c2 c999 f28' catchtap="cancelOrder" data-id="{{item.id}}">取消订单</view>
+    <view class='c2 cred f28' catchtap="toPay" data-ordersn="{{item.order_sn}}">去支付</view>
+  </view>
+  <!--待发货-->
+  <view class='c flex-aic flex-jce bt' wx:elif='{{item.status == "pay"}}'>
+    <view class='c2 c999 f28' catchtap="refund" data-id="{{item.id}}">退款</view>
+  </view>
+  <!--已发货-->
+  <view class='c flex-aic flex-jce bt' wx:elif='{{item.status == "delivery"}}'>
+    <view class='c2 c999 f28' catchtap="wuliu" data-a="{{item.deliver.deliver_expressid}}" data-b="{{item.deliver.logistics_name}}" data-c="{{item.deliver.deliver_company}}" data-d="{{item.status}}">查看物流</view>
+  </view>
+</view>
+
+
+
+<template wx:if="{{orderList.length == 0}}" is="emptyPage" data="{{emptyContent}}"></template>
+
+
+
+<template is="zan-loadmore" data="{{bottomload}}"></template>
+<template is="zan-loadend" data="{{bottomend}}"></template>

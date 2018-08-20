@@ -1,0 +1,4 @@
+<view class='a'>
+  <image class='b' src='https://m.zujiekeji.cn/xcximg/xcxzhuli/kidsday.png' mode='widthFix'></image>
+  <view class='c' bindtap='go'></view>
+</view> 

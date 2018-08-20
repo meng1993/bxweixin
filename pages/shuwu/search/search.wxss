@@ -1,0 +1,76 @@
+.header{
+  padding: 14rpx 20rpx;
+  background-color: #EFEFF4;
+  width: 730rpx;
+  z-index: 10000;
+}
+.forheader{
+  height: 88rpx;
+}
+.picker{
+  width: 200rpx; 
+  text-align: center;
+  color: #535353;
+  font-size: 30rpx;
+  line-height: 60rpx;  
+}
+.searchinputbox{
+  width: 710rpx;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden; align-items: center;
+}
+.searchimg{
+  width: 34rpx;
+  height: 34rpx;
+  margin-left: 20rpx;
+}
+.searchinput{
+  width: 600rpx;
+  background-color: #fff;
+  height: 60rpx;
+  color: #9c9c9c;
+  font-family: PingFangSC;
+  font-size: 30rpx;
+  font-style: normal;
+}
+.historuposition{
+  position: absolute;
+  width: 750rpx;
+}
+.history{
+  height: 48rpx;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  line-height: 48rpx;
+  font-size: 30rpx;
+  padding: 4rpx 16rpx;
+  margin: 20rpx;
+}
+.historyt{
+  font-size: 30rpx;
+  line-height: 60rpx;
+  margin-top: 10rpx;
+  margin-left: 60rpx;
+}
+.clearhistory{
+  margin-top: 10rpx;
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 60rpx;
+}
+.nobookbox{
+  padding-top: 350rpx;
+}
+.nobook{
+  width: 200rpx;
+  height: 200rpx;
+  display: block;
+  margin: 0 auto;
+}
+.nobooktext{
+    font-size: 32rpx;
+    margin-top: 40rpx;
+    color: #666;
+    text-align: center;
+}

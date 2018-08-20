@@ -1,0 +1,35 @@
+<view class='a'>
+  <image class='dimg' wx:if='{{!src==""}}' mode='aspectFit' src='{{src}}' bindtap='clear'></image>
+  <view class='add2 themebfff' bindtap='add' wx:if='{{src==""}}'>+</view>
+</view>
+
+<view class='b themebfff flex-aic'>
+  <view class='b1'>书名</view>
+  <input type='text' class='b2' placeholder='请输入书名' bindinput='bookname'></input>
+</view>
+
+<view class='c'>更多信息(选填)</view>
+
+<view class='b themebfff flex-aic mb20'>
+  <view class='b1'>系列名</view>
+  <input type='text' class='b2' placeholder='请填写系列名（不是系列图书不用填写）' bindinput='xilie'></input>
+</view>
+<view class='b themebfff flex-aic mb20'>
+  <view class='b1'>作者</view>
+  <input type='text' class='b2' placeholder='请填写作者姓名' bindinput='zuozhe'></input>
+</view>
+<view class='b themebfff flex-aic mb20'>
+  <view class='b1'>出版社</view>
+  <input type='text' class='b2' placeholder='请填写出版社信息' bindinput='banshe'></input>
+</view>
+<view class='b themebfff flex-jasc mb20'>
+  <view class='flex-aic'>
+    <view class='b1'>出版日期</view>
+    <picker bindchange="bindDateChange" mode="date" value='2018-01-01'>
+      <view class='b2'>{{date}}</view>
+    </picker>
+  </view>
+  <image src='/img/home/right2.png' class='r'></image>
+</view>
+
+<view class='tijiao themebgreen' bindtap='upload'>完成</view>

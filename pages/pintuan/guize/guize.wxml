@@ -1,0 +1,12 @@
+<view class='g'>
+  <image src='https://m.zujiekeji.cn/xcximg/xcxpintuan/wanfa.png' class='g1' mode='widthFix'></image>  
+  <view class='g2'>    
+    <view class='f30 mt10'>拼团规则：</view>
+    <view class='f26 co3 mt10'>1、参加拼团，支付拼团价并邀请好友参团，达到成团人数即拼团成功</view>
+    <view class='f26 co3 mt10'>2、团长名额有限，若团长在规定时间内未支付成功，名额将释放出来</view>
+    <view class='f26 co3 mt10'>3、若人为因素刷单等恶意参与，博鸟绘本有权解除拼团人员参与资格</view>
+    <view class='f26 co3 mt10'>4、若拼团未达到成团人数，系统会自动退回至原支付账户；退款时间为活动结束后1~3个工作日</view>
+    <view class='f26 co3 mt10'>5、本次拼团活动最终解释权归博鸟绘本所有,如有任何疑问请添加客服微信号：BN20171215或
+拨打电话0571-86113050</view>
+  </view>
+</view>

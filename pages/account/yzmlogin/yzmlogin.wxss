@@ -1,0 +1,6 @@
+@import '/pages/login/login';
+.codeimg{width: 38rpx;height: 28rpx;}
+.ybtn{width: 164rpx;height: 64rpx;background: #6ed14e;color: #fffefe;font-size: 26rpx;
+text-align: center;line-height: 64rpx;border-radius: 10px;}
+.inputw{margin-top: 20rpx;padding-bottom: 20rpx;border-bottom: 4rpx solid #e4e4e4;}
+.input{color: #c5c5ca;font-size: 32rpx;}

@@ -1,0 +1,37 @@
+<!-- <view class='a flex-jasc themebfff mb' bindtap='change'>
+  <view class='a1 '>更换手机号</view>
+  <view class='a2 flex-aic'>
+    <text>{{phone}}</text>
+    <image src='/img/home/right2.png' class='a3'></image>
+  </view>
+</view> -->
+<view class='a flex-jasc themebfff' bindtap='mima'>
+  <view class='a1 '>修改密码</view>
+</view>
+
+<view class='out themebgreen' bindtap='out'>退出登录</view>
+
+<view class='kw' wx:if='{{change}}'>
+  <view class='k'>
+    <view class='tishi-1 flex-aic'>
+      <view class='tishi-6'></view><view>安全验证 </view>   
+      <image src='/img/home/qx.png' class='quxiao' bindtap='quxiao'></image>
+    </view>
+   
+    <view class='k2'>
+      <view class='k3 flex-aic mb60'>
+        <view class='k4 w150'>原手机号：</view>
+        <view class='k4 w400 bb'>{{phone}}</view>
+      </view>
+      <view class='k3 flex-aic'>
+        <view class='k4 w150 k7'>验证码：</view>
+        <view class='k4 bb flex-aic w400'>
+           <input type='text' class='k8' bindinput='code'></input>
+           <view class='k5 {{codestatus!="获取验证码"?"a52":""}}' bindtap='getcode'>{{codestatus}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class='save f28' bindtap='save'>确定</view>
+  </view>
+</view>

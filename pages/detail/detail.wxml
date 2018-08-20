@@ -1,0 +1,57 @@
+<import src="/temp/bookDetail/bookDetail.wxml" />
+<!--<import src='/temp/oldBook/oldBook.wxml' />-->
+<image class='bigimg' mode='aspectFit' src='{{detail.img_main[0]}}'></image>
+<view class='yijie'>
+  <image wx:if='{{detail.has_stock==0?true:false}}' 
+  class='yijiewan' src='/img/shouye/yijiewan.png'></image> 
+  <image wx:if='{{detail.is_borrow==1?true:false}}' 
+  class='yijieguo' src='/img/shouye/yijieguo.png'></image>
+</view>
+<view class='detailbox themebfff'>
+  <view class='title'>{{detail.title}}</view>
+  <view class='text1'>作者：<text class='blue' bindtap='search' wx:for="{{detail.author}}" id='{{index}}'>{{item}}</text></view>
+  <view class='text1'>出版社：{{detail.publisher}}</view>
+  <!-- <view class='text1'>出版时间：{{detail.pub_date}}</view> -->
+  <view class='text1 ' id='{{detail.series}}' bindtap='xilie'
+  hidden='{{detail.series==""}}'>系列：<text class='blue'>{{detail.series}}</text> </view>
+  <view class='flex-only labelbox'>
+    <view class='app-label label-mr' hidden='{{detail.book_class===1}}'>{{detail.age_range}}</view>
+    <view class='app-label label-mr' wx:for='{{detail.cat_arr}}' wx:key='{{index}}'>{{item}}</view>
+  </view>
+</view>
+
+<view class='detailbox themebfff nopaddingb'>
+  <view class='title'>简介：</view>
+  <view class='introduce'>{{detail.summary}}</view>
+</view>
+
+<view class='themebfff detailimgbox'>
+  <image class='detailimg' mode='widthFix' wx:for='{{detail.imgs}}' src='{{item}}' wx:key='{{index}}'></image>
+</view>
+<image src='https://m.zujiekeji.cn/xcximg/show.png' class='processimg'></image>
+<view class='goshouye' bindtap='goshouye' wx:if='{{_from==="2"}}'>
+  <image src='/img/group/home.png' class='gohome'></image>
+</view>
+
+<!--用户评价开始-->
+<view class='themebgray userwrap'>
+  <template is="leaveMessage" data="{{messageType,leaveMessageList,bookid}}"></template>
+</view>
+<!--用户评价结束-->
+
+<!--底部栏-->
+<view class='footer flex-only'>
+  <!--<image class='footerlimg' src='/img/shouye/detailfooter1.png' bindtap='kefu'></image>-->
+  <view class="footerlimg">
+    <image class='footerlimg_icon_img' src='/img/shouye/customer_service.png' bindtap='kefu'></image>
+    <view class="footerlimg_kefu">客服</view>
+    <button open-type='contact' class='contact' session-from="sobot|{{userdata.nickname}}|{{userdata.face}}">联系我们</button>
+  </view>
+
+  <view class='shujiaw'>
+    <image class='footerlimg' src='/img/shouye/detailfooter2.png' bindtap='jieshujia'></image>
+    <view class='num' hidden='{{currshelfnum==0}}'>{{currshelfnum}}</view>
+  </view>
+  <view class='flex-grow1 footerr' bindtap='add'>加入借书架</view>
+</view>
+<view class='forfooter'></view>

@@ -1,0 +1,158 @@
+<view class='a'>
+  <image src='/img/home/ddxq-bg.png' class='abg'></image>
+  <view class='a1 flex-aic'>
+    <image src='/img/home/dfk.png' class='a1a'></image>
+    <view class='a1b' wx:if='{{data.status==1}}'>待付款</view>
+    <view class='a1b' wx:if='{{data.status==2}}'>待发货</view>
+    <view class='a1b' wx:if='{{data.status==3}}'>待收货</view>
+    <view class='a1b' wx:if='{{data.status==4}}'>待归还</view>
+    <view class='a1b' wx:if='{{data.status==5}}'>待结算</view>
+    <view class='a1b' wx:if='{{data.status==7}}'>待评价</view>
+    <view class='a1b' wx:if='{{data.status==8}}'>已完成</view>
+    <view class='a1b' wx:if='{{data.status==9}}'>已取消</view>
+    <view class='a1b' wx:if='{{data.status==11}}'>退款中</view>
+    <view class='a1b' wx:if='{{data.status==12}}'>退款完成</view>
+  </view>
+  <view class='a2 flex-aic'>
+    <!-- <view class='a2a' wx:if='{{status==1}}'>剩余：22小时自动关闭</view> -->
+  </view>
+</view>
+<view class='themebfff'>
+    <view class='flex-jasc adresswrap pr40' bindtap='checkaddress'id='{{addressid}}'>
+      <view>
+        <view class='flex-aic'>
+          <view class='name'>{{data.address_name}}</view>
+          <view class='phone'>{{data.mobile}}</view>
+          <!-- <view class='moren' wx:if='{{data.is_set_default==1}}'>默认</view> -->
+        </view>
+        <view class='flex-aic mt'>
+          <view><image class='adressimg' src='/img/shelf/adress.png'></image></view>    
+          <view class='adress'>{{data.province}}{{data.city}}{{data.district}}
+          {{data.address}}</view>
+        </view> 
+      </view>
+    </view> 
+</view>
+
+<image class='fgx' src='/img/shelf/fgx.png'></image>
+
+<view class='themebfff mb20'>
+  <view class='flex-jasc imgwrap' bindtap='gozhanshi'>
+    <view class='flex-only'>
+      <view class='mineimgw' wx:for="{{data.books}}" wx:if="{{index<4}}" id='{{item.book_id}}'>
+        <image class='mineimg' src='{{item.img_medium}}'></image>
+        <image class='right-tag-img' src='/img/purchased-min.png' wx:if="{{item.is_purchased}}"></image>
+      </view>
+    </view>
+    <view class='flex-jasc'>
+      <view class='jiben'>共{{data.books.length}}本</view>
+      <image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>
+    </view>
+  </view>
+  <view class='jydate flex-jcs'>
+    <view class='datezhi'>借阅时间为：{{data.rent_start_time}}
+      <text  hidden='{{data.rank==4}}'>至{{data.rent_end_time}}</text></view>
+    <view class='sanshitian' hidden='{{data.rank==4}}'>共计三十天</view>
+  </view>
+  <view class='goumaiw' wx:if='{{data.status==4||data.status==5}}'>
+    <view class='goumai' id='{{order_id}}' bindtap='buyone'>赔偿</view>
+  </view>
+</view>
+
+<view class='flex-jasc feiyongb themebfff' wx:if="{{data.reclaim != ''}}" data-id="{{data.reclaim.book_reclaim_order_id}}" catchtap="toOrderDetail">
+    <view class='xuanzejihua'>共享图书订单:</view>
+    <view class='feiyongr' style="color: #333333;">
+        {{data.reclaim.order_sn}}
+    </view>
+    <image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>
+</view>
+<view class='flex-jasc feiyongb themebfff' wx:if="{{data.reclaim == ''}}">
+    <view class='xuanzejihua'>共享图书订单:</view>
+    <view class='feiyongr' style="color: #333333">无</view>
+</view>
+
+<view class="bg20"></view>
+
+<view class='flex-jasc feiyongb themebfff'>
+    <view class='xuanzejihua'>运费</view>
+    <view class='feiyongr'>￥{{data.freight}}</view>
+</view>
+<view class='flex-jasc feiyongb themebfff'>
+    <view class='xuanzejihua'>商品租金</view>
+    <view class='feiyongr'>￥{{data.rent_price}}</view>
+</view>
+<view class='flex-jasc feiyongb themebfff' hidden='{{data.coupon_price=="0.00"}}'>
+    <view class='xuanzejihua'>优惠券</view>
+    <view class='feiyongr'>-￥{{data.coupon_price}}</view>
+</view>
+<!--我的鸟蛋开始-->
+<view class='flex-jasc feiyongb themebfff'>
+    <view class='xuanzejihua'>我的鸟蛋</view>
+    <view wx:if="{{data.score_amount > 0}}" class='feiyongr'>-￥{{data.score_amount}}</view>
+    <view wx:else class='feiyongr'>￥{{data.score_amount}}</view>
+</view>
+<!--我的鸟蛋结束-->
+<view class='flex-jasc feiyongb themebfff'>
+    <view class='xuanzejihua'>押金</view>
+    <view class='feiyongr'>￥{{data.deposit}}</view>
+</view>
+<view class='flex-jasc feiyongb themebfff'>
+    <view class='xuanzejihua'>支付金额</view>
+    <view class='feiyongr'>￥{{data.pay_amount}}</view>
+</view>
+
+<!-- <view class='flex-jasc feiyongb themebfff' hidden='{{havecard}}'>
+    <view class='xuanzejihua'>优惠卷</view>
+    <view class='flex-aic'>
+      <view class='flex-aic' bindtap='checkyouhui'>
+        <view class='jihua'>{{youhuitext}}</view>
+        <view class='feiyongr' wx:if='{{hadyouhui}}'>￥-{{youhuiprice}}.00</view>
+      </view>
+      <image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>
+    </view>
+</view> -->
+<view class='orderb themebfff'>
+  <view class='ordert'>订单编号：{{data.order_sn}}</view>
+  <view class='ordert'>订单创建时间：{{data.order_generation_time}}</view>
+  <view class='ordert' hidden='{{data.status==1}}'>订单支付时间：{{data.order_pay_time}}</view>
+  <view hidden='{{data.status==9||data.status==11||data.status==12}}'>
+    <view class='ordert' hidden='{{data.status<3}}'>订单发货时间：{{data.order_shipping_time}}</view>
+    <view class='ordert' hidden='{{data.status<4}}'>确认收货时间：{{data.order_delivery_time}}</view>
+  </view>
+</view> 
+<view class='themebfff message'>留言：{{data.user_message}}</view>
+<view class='flex-aic themebfff phonew' bindtap='phone'>
+  <view class='flex-aic'>
+    <image src='/img/home/phone2.png' class='phone'></image>
+    <view class='blue'>电话咨询</view>
+  </view>
+</view> 
+
+<view class='forfooter'></view>
+<view class='footer themebfff flex-aic footer2' 
+hidden='{{data.status==4||data.status==9||data.status==8||data.status==11||data.status==12}}'>
+  <!-- <view class='fbtn'>删除订单</view>
+  <view class='fbtn fbtn2'>去支付</view> -->
+  <view class='btn color1' wx:if='{{data.status==1}}' id='{{data.order_id}}'
+     bindtap='deleteorder'>删除订单</view>
+    <view class='btn color1' wx:if='{{data.status==1}}' id='{{data.order_sn}}'
+     bindtap='pay'>支付</view>
+     <view class='btn color1' id='{{data.order_id}}'
+     wx:if='{{data.status==2&&data.pay_type==0}}' 
+     bindtap='quxiaoorder'>撤单</view>
+     <view class='btn color1' wx:if='{{data.status==2&&data.pay_type!=0&&data.pay_type!=6}}'id='{{data.order_id}}'
+     bindtap='tuikuai'>退款</view>
+     <view class='btn color1' wx:if='{{data.status==2&&data.pay_type==6}}' id='{{data.order_id}}'
+     bindtap='tuikuai'>取消订单</view>
+    <!-- <view class='btn color2' wx:if='{{data.status==2}}' id='{{data.order_id}}'
+     bindtap='tixingfahuo'>提醒发货</view> -->
+    <view class='btn color2 mr' wx:if='{{data.status==3}}'id='{{data.order_id}}'
+    data-a='{{data.order_deliver_expressid}}' data-b='{{data.order_logistics_name}}'
+    data-c='{{data.order_deliver_company}}' data-d='delivery'
+     bindtap='wuliu'>查看物流</view>
+    <view class='btn color2' wx:if='{{data.status==3}}'id='{{data.order_id}}'
+     bindtap='querenshouhuo'>确认收货</view>
+    <!-- <view class='btn color2' wx:if='{{data.status==5}}'id='{{data.order_id}}'
+     bindtap='tixingjiesuan'>提醒结算</view> -->
+     <view class='btn color2' wx:if='{{data.status==7}}' bindtap='pingjia'>评价</view> 
+</view>

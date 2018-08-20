@@ -1,0 +1,81 @@
+<view class='a'>
+  <image src='/img/home/ddxq-bg.png' class='abg'></image>
+  <view class='a1 flex-aic'>
+    <image src='/img/home/dfk.png' class='a1a'></image>
+    <view class='a1b' wx:if='{{data.status==0}}'>待付款</view>
+    <view class='a1b' wx:if='{{data.status==1}}'>已支付</view>
+    <view class='a1b' wx:if='{{data.status!=0&&data.status!=1}}'>已取消</view>
+  </view>
+  <view class='a2 flex-aic'>
+    <!-- <view class='a2a' wx:if='{{status==1}}'>剩余：22小时自动关闭</view> -->
+  </view>
+</view>
+
+<view class='cd1 themebfff'>
+订单号：{{data.order_sn}}
+</view>
+
+<view class='mb20 cd2'>
+  <view class='flex-aic imgwrap'>
+    <view class='flex-only'>
+        <image class='mineimg' src='/img/home/ordercard.png'></image>
+    </view>
+    <view class='b2b'>
+      <view class='b2b1'>{{data.card_name}}</view>
+      <view class='b2b2'>￥{{data.pay_amount}}</view>
+    </view>
+  </view>
+</view>
+<wxs module='p'>
+  module.exports.a=function(e){
+    if(typeof e == "string"){
+    return e
+    }
+    return e.toFixed(2) || e 
+  }
+</wxs>
+<view class='flex-jasc feiyongb themebfff'>
+    <view class='xuanzejihua'>订单金额</view>
+    <view class='feiyongr'>￥{{p.a(data.total_amount-data.deposit)}}</view>
+</view>
+<view class='flex-jasc feiyongb themebfff' hidden='{{!coupon.amount}}'>
+    <view class='xuanzejihua'>优惠金额</view>
+    <view class='feiyongr'>-￥{{coupon.coupon_price}}</view>
+</view>
+<view class='flex-jasc feiyongb themebfff' hidden='{{data.deposit=="0.00"}}'>
+    <view class='xuanzejihua'>押金金额</view>
+    <view class='feiyongr'>￥{{data.deposit}}</view>
+</view>
+<!--新增鸟蛋开始-->
+<view class='flex-jasc feiyongb themebfff'>
+    <view class='xuanzejihua'>我的鸟蛋</view>
+    <view class='feiyongr'>-￥{{data.score_amount}}</view>
+</view>
+<!--新增鸟蛋结束-->
+<view class='flex-jasc feiyongb themebfff'>
+    <view class='xuanzejihua'>支付金额</view>
+    <view class='feiyongr'>￥{{data.pay_amount}}</view>
+</view>
+
+<!-- <view class='flex-jasc feiyongb themebfff' hidden='{{havecard}}'>
+    <view class='xuanzejihua'>优惠卷</view>
+    <view class='flex-aic'>
+      <view class='flex-aic' bindtap='checkyouhui'>
+        <view class='jihua'>{{youhuitext}}</view>
+        <view class='feiyongr' wx:if='{{hadyouhui}}'>￥-{{youhuiprice}}.00</view>
+      </view>
+      <image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>
+    </view>
+</view> -->
+<view class='orderb themebfff'>
+  <view class='ordert'>订单编号：{{data.order_sn}}</view>
+  <view class='ordert'>订单创建时间：{{data.create_time}}</view>
+</view> 
+
+<view class='forfooter' wx:if='{{data.status==0}}'></view>
+<view class='footer themebfff flex-aic footer2' wx:if='{{data.status==0}}'>
+  <view class='btn color3' id='{{data.id}}'
+     bindtap='deleteorder'>删除订单</view>
+    <view class='btn color1'  id='{{data.order_sn}}'
+     bindtap='pay'>支付</view>
+</view>

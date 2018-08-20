@@ -1,0 +1,9 @@
+<view class='wrap' wx:if='{{login}}'>
+  <image src='{{src}}' class='img-xinren' mode='widthFix'></image>
+  <view class='ling' bindtap='getCoupon' wx:if='{{btn}}'></view>
+</view>
+
+<view class='ceng' wx:if='{{!login}}'>
+  <image src='/img/shouye/logot.png' class='logo'></image>
+  <view class='login'>登录</view>
+</view>

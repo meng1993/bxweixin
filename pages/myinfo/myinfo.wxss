@@ -1,0 +1,9 @@
+page{background-color: #EFEFF4;padding-top: 20rpx;}
+.a{height: 100rpx;padding: 0 30rpx;}
+.a1{color: #262626;font-size: 32rpx;}
+.a2{color: #b4b4b4;font-size: 32rpx;}
+.a3{width: 18rpx;height: 30rpx;margin-left: 30rpx;}
+.bb{border-bottom: 2rpx solid #e5e6e8;}
+.bt{border-top: 2rpx solid #e5e6e8;}
+.a4{display: block;width: 58rpx;height: 58rpx;}
+.name{text-align: end;width: 300rpx;height: 80rpx;}

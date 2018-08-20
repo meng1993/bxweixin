@@ -1,0 +1,47 @@
+@import '/temp/oldBook/oldBook.wxss';
+.orderDetail{
+    width: 100vw;
+}
+.orderDetail .header{
+    width: 100%;
+    height: 88rpx;
+    line-height: 88rpx;
+    padding-left: 20rpx;
+    font-size: 32rpx;
+    color: #333333;
+    background: #fff;
+}
+.orderDetail .statistical{
+    width: 100%;
+    height: 140rpx;
+    background: #fff;
+    border-bottom: 1rpx solid lightgray;
+}
+.line70{
+    width: 750rpx;
+    height: 70rpx;
+    background:#fff;
+    font-size: 26rpx;
+    color: #333333;
+}
+.line70_left{
+    float: left;
+    line-height: 70rpx;
+    margin-left: 31rpx;
+}
+.line70_right{
+    float: right;
+    line-height: 70rpx;
+    margin-right: 31rpx;
+}
+.line70 .active,
+.line88 .active{
+    color: #fb0025;
+}
+.line88_text{
+    font-size: 30rpx;
+    color: #333333;
+}
+.btn_cancel{
+
+}

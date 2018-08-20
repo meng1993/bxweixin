@@ -1,0 +1,4 @@
+page{padding: 0 10rpx;}
+.text{color: #666;font-size: 28rpx;line-height: 40rpx;margin: 20rpx 0}
+.martop{margin-top: 150rpx;}
+.title{font-weight: bold;margin: 30rpx 0;}

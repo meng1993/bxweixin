@@ -1,0 +1,16 @@
+@import '/temp/book/book.wxss';
+@import '/temp/bottomload/index.wxss';
+@import '/temp/search/index.wxss';
+.listbox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 2rpx;
+}
+.listbox2{
+  display: flex;padding: 0 18rpx;background-color:#fff;flex-wrap: wrap;
+}
+.a{
+  position: fixed;top: 0;left: 0;z-index: 1000;width: 750rpx;
+}
+.fa{height: 88rpx;}

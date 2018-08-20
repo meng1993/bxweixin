@@ -1,0 +1,2 @@
+<input class="a themebfff" placeholder="请输入分类名称" maxlength="10" bindinput='name'></input>
+<view class='f themebgreen' bindtap='add'>确定</view>

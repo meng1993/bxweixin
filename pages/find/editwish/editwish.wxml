@@ -1,0 +1,48 @@
+<view class='header flex-jac'>
+  <!-- <image src='/img/shouye/wenxin.png' class='headimg'></image> -->
+  <view class='headert'>*请提交您想看或建议的书单，我们会评估后尽快上架。</view> 
+</view>
+
+<!-- <view class='a'>
+  <image class='dimg' wx:if='{{!src==""}}' mode='aspectFit' src='{{src}}'></image>
+   <view class='add2 themebfff' bindtap='add' wx:if='{{src==""}}'>+</view> 
+</view> -->
+
+<view class='b themebfff flex-aic'>
+  <view class='b1'>书名</view>
+  <input type='text' class='b2' placeholder='请输入书名' bindinput='bookname' value='{{name}}'></input>
+  <!-- <view class='b2' wx:if='{{from=="wait"}}'>{{name}}</view> -->
+</view>
+
+<view class='c' wx:if='{{from!="wait"}}'>更多信息(选填)</view>
+<view class='c' wx:if='{{from=="wait"}}'>更多信息</view>
+
+<view class='b themebfff flex-aic mb20'>
+  <view class='b1'>系列名</view>
+  <input type='text' class='b2' placeholder='请填写系列名（不是系列图书不用填写）' bindinput='xilie'
+  value='{{xilie}}' ></input>
+  <!-- <view class='b2' wx:if='{{from=="wait"}}'>{{xilie}}</view> -->
+</view>
+<view class='b themebfff flex-aic mb20'>
+  <view class='b1'>作者</view>
+  <input type='text' class='b2' placeholder='请填写作者姓名' bindinput='zuozhe' value='{{zuozhe}}'></input>
+  <!-- <view  class='b2' wx:if='{{from=="wait"}}'>{{zuozhe}}</view> -->
+</view>
+<view class='b themebfff flex-aic mb20'>
+  <view class='b1'>出版社</view>
+  <input type='text' class='b2' placeholder='请填写出版社信息' bindinput='banshe' value='{{banshe}}'></input>
+  <!-- <view  class='b2' wx:if='{{from=="wait"}}'>{{banshe}}</view> -->
+</view>
+<view class='b themebfff flex-jasc mb20'>
+  <view class='flex-aic'>
+    <view class='b1'>出版日期</view>
+    <picker bindchange="bindDateChange" mode="date" value='2018-01-01'>
+      <view class='b2'>{{date}}</view>
+    </picker>
+    <!-- <view class='b2' wx:if='{{from=="wait"}}'>{{date}}</view> -->
+  </view>
+  <image src='/img/home/right2.png' class='r'></image>
+</view>
+
+<view class='tijiao themebgreen'  bindtap='save'>提交</view>
+<!-- <view class='remove themebfff' wx:if='{{from==="wait"}}' bindtap='remove'>删除</view> -->

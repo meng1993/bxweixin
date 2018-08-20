@@ -1,0 +1,13 @@
+<view class='mylistbox'>
+  <view class='mylist flex-only flex-jcs myset-martop' wx:for='{{mylists}}'
+  id='{{item.text}}' bindtap='list2'>
+    <view class='mylistm flex-only flex-aic'>
+      <image src='{{item.src}}' class='icon'></image>
+      <view class='mylist-name'>{{item.name}}</view>
+    </view>
+    <view class='mylistm flex-only flex-aic'>
+        <view class='mylist-text blue'>{{item.text2}}</view>  
+      <image src='/img/shelf/yousanjiao.png' class='mylist-sanjiao'></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+<view class='a flex-aic flex-jcs themebfff' id='home' bindtap='add' wx:if='{{add==2}}'>
+  <view class='flex-aic'>
+    <image src='/img/shuwu/bookstore.png' class='a1'></image>
+    <view class='a3'>从书屋里添加</view>
+  </view>
+  <image src='/img/home/right2.png' class='a2'></image>
+</view>
+<view class='a flex-aic flex-jcs themebfff' id='sao' bindtap='add'>
+  <view class='flex-aic'>
+    <image src='/img/shuwu/scan_yellow.png' class='a1'></image>
+    <view class='a3'>扫书码获取</view>
+  </view>
+  <image src='/img/home/right2.png' class='a2'></image>
+</view>
+<view class='a flex-aic flex-jcs themebfff' id='search' bindtap='add'>
+  <view class='flex-aic'>
+    <image src='/img/shuwu/ss_green.png' class='a1'></image>
+    <view class='a3'>搜索获取</view>
+  </view>
+  <image src='/img/home/right2.png' class='a2'></image>
+</view>
+<view class='a flex-aic flex-jcs themebfff' id='add' bindtap='add'>
+  <view class='flex-aic'>
+    <image src='/img/shuwu/add_red.png' class='a1'></image>
+    <view class='a3'>手动添加</view>
+  </view>
+  <image src='/img/home/right2.png' class='a2'></image>
+</view>
+<view class='a flex-aic flex-jcs themebfff' id='hebin' bindtap='add' wx:if='{{add==2}}'>
+  <view class='flex-aic'>
+    <image src='/img/shuwu/hebin.png' class='a1'></image>
+    <view class='a3'>合并分类</view>
+  </view>
+  <image src='/img/home/right2.png' class='a2'></image>
+</view>

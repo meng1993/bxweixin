@@ -1,0 +1,107 @@
+@import '/pages/searchres/searchres.wxss';
+swiper{height:88rpx;}
+page{height: 100%;position: relative;}
+.a{min-height: 1200rpx;padding-top: 56rpx;padding-bottom: 80rpx;
+  background: url(https://m.zujiekeji.cn/xcximg/shequ/bookstore.png) no-repeat,
+  url(https://m.zujiekeji.cn/xcximg/shequ/bookstore1.png) repeat; 
+  background-size: 100%;padding-left: 80rpx;align-items: flex-start;align-content: flex-start;
+}
+.a1{width: 180rpx;height: 238rpx;margin-right: 22rpx;position: relative;margin-bottom: 70rpx;}
+.a2{margin-bottom: 46rpx;}
+.b{width: 180rpx;height: 238rpx;display: block;}
+.c{position: absolute;top: 550rpx;width: 750rpx;}
+.c1{display: block;width: 152rpx;height: 125rpx;margin: 0 auto;}
+.c2{text-align: center;color: #b05e1b;font-size: 26rpx;margin-top: 30rpx;}
+.d{height: 100rpx;width: 750rpx;position: fixed;bottom: 0;z-index: 1000;}
+.d1{display: block;width: 50rpx;height: 50rpx;margin: 0 auto}
+.d2{font-size: 24rpx;color: #999999;text-align: center}
+.d3{display: block; width:130rpx;height: 130rpx;margin: 0 auto;position: relative;top: -20rpx;}
+.w250{width: 250rpx;}
+
+.czhanwei{height: 196rpx;}
+.gouxuan{position: absolute;display: block;width: 46rpx;height: 46rpx;right: 0rpx;top: 0rpx;
+border-radius: 4px;z-index: 999;padding: 20rpx;}
+
+.e{height: 88rpx;padding: 0 20rpx;border-top:  #EFEFF4 20rpx solid; }
+.e1{font-size: 28rpx;color: #999999}
+.e2{font-size: 28rpx;color: #333333}
+.e3{display: block;width: 38rpx;height: 28rpx;}
+.ee3{display: block;width: 32rpx;height: 32rpx;}
+.e4{font-size: 30rpx;color: #6fd14e;}
+.f1{width: 180rpx;height: 238rpx;position: absolute;top: 0;left: 0;background-color: rgba(0, 0, 0,0.4);}
+
+.footer{position: fixed;z-index: 1000;width: 750rpx;height: 100rpx;bottom: 0;color: white; }
+.btn{height: 100rpx;min-width: 50%; display: flex;align-items: center; justify-content: center;}
+.forfooter{height: 100rpx;}
+.bc1{background-color: #49b126}
+.jia{width: 32rpx;height: 32rpx;display: block;}
+.jia2{font-size: 32rpx;color: #999999;margin-left: 20rpx;}
+
+.ceng2{position: fixed;top: 0;left:0;width: 750rpx;height: 100%;background-color: rgba(0,0,0,0.3);
+z-index: 10000;overflow-y:auto }
+.tishi-1{border-bottom: 1px solid #e8e8e8;padding: 20rpx 30rpx;font-size: 32rpx; display: flex;
+position: relative}
+.quxiao{width: 54rpx;height: 58rpx;right: 30rpx;position: absolute;top: 0}
+.tishi-6{width: 8rpx; height: 36rpx; background-color: #6fd14e; margin-right: 10rpx}
+.k{width: 710rpx;margin: 130rpx auto 0;background-color: #fff;border-radius: 5px;padding-bottom: 30rpx;}
+.dd{padding: 30rpx;flex-wrap: wrap}
+.dimg{display: block;width: 200rpx;height: 200rpx;border-radius: 5px;margin-right: 16rpx;margin-bottom: 16rpx;}
+.dt{font-size: 32rpx;color: #999999; word-wrap:break-word;width: 650rpx;line-height: 50rpx;height: 100rpx;
+border:2rpx solid #dcdcdc;background-color:#e8e8e8;}
+.tijiao{width: 170rpx;height: 64rpx;line-height: 64rpx;text-align: center;color: white;font-size: 32rpx;
+margin-top: 30rpx;border-radius: 5px}
+.w750{width: 750rpx;}
+.degree{
+  position: absolute;
+  width: 82rpx;
+  height: 82rpx;
+  line-height: 82rpx;
+  text-align: center;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-image: url('https://m.zujiekeji.cn/xcximg/shequ/red.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 24rpx;
+  color: #fff;
+}
+.degreei{
+  display: block;
+  width: 8rpx;
+  height: 18rpx;
+  margin-left: 10rpx;
+}
+.ee{height: 88rpx;padding: 0 20rpx;border-top:  #EFEFF4 20rpx solid; align-items: center;}
+.searchimg{
+  width: 34rpx;
+  height: 34rpx;
+  margin-left: 20rpx;
+}
+.searchinput{
+  height: 60rpx;
+  color: #9c9c9c;
+  font-size: 30rpx;
+  width: 500rpx;
+  padding-left: 20rpx;
+}
+.ss{
+  align-items: center;
+  width: 600rpx;
+  border-radius: 15px;
+  margin: 10rpx 0;
+}
+.ee4{
+  padding-right: 40rpx;
+}
+.c9{color: #999999;}
+.f32{font-size: 32rpx;}
+.c3{width: 368rpx;
+	height: 56rpx;
+	background-color: #d3954b;
+	border-radius: 28px;
+	border: solid 1rpx #b06c34;
+  font-size: 26rpx;color: #b05e1b;text-align: center;line-height: 56rpx;margin: 0 auto;margin-top: 25rpx;}
+  .w170{width: 170rpx;}
+  .d11{display: block;width: 38rpx;height: 34rpx;margin: 0 auto}
+  .mt10{margin-top: 10rpx;}

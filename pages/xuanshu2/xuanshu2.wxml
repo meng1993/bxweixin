@@ -1,0 +1,55 @@
+ <view class='themebgray searchinputwrap' hidden='{{zhineng}}'>
+  <view class='searchinputbox  flex-only' bindtap='gosearch'>
+      <image class='searchimg' src='/img/shouye/Magnifier.png'></image>
+      <input confirm-type='search' placeholder='  商品搜索' class='searchinput flex-grow1'
+      value='{{title}}' bindinput='title'></input>
+  </view> 
+</view>
+<view class='fortop' hidden='{{zhineng}}'></view> 
+
+<view class='conditionwrap'>
+  <view class='flex-aie'>
+    <view class='conditiont1'>{{lists1.title}}</view>
+    <view class='conditiont2'>{{lists1.info}}</view>
+  </view>
+  <view class="flex-only flex-wrap" id='{{lists1.condition_id}}'>
+    <view wx:for="{{lists1.data}}" class='condition {{item.checked==true?"condition2":""}}' 
+    id='{{index}}'bindtap='age'>{{item.name}}</view>
+  </view>
+</view>
+
+<view class='conditionwrap'>
+  <view class='flex-aie'>
+    <view class='conditiont1'>{{lists2.title}}</view>
+    <view class='conditiont2'>{{lists2.info}}</view>
+  </view>
+  <view class="flex-only flex-wrap" id='{{lists2.condition_id}}'>
+    <view wx:for="{{lists2.data}}" class='condition {{item.checked==true?"condition2":""}}' 
+    id='{{index}}' bindtap='fenlei'>{{item.name}}</view>
+  </view>
+</view>
+
+<view class='conditionwrap'>
+  <view class='flex-aie'>
+    <view class='conditiont1'>{{lists3.title}}</view>
+    <view class='conditiont2'>{{lists3.info}}</view>
+  </view>
+  <view class="flex-only flex-wrap" id='{{lists3.condition_id}}'>
+    <view wx:for="{{lists3.data}}" class='condition {{item.checked==true?"condition2":""}}' 
+    id='{{index}}' bindtap='language'>{{item.name}}</view>
+  </view>
+</view>
+
+<view class='conditionwrap'>
+  <view class='flex-aie'>
+    <view class='conditiont1'>请选择本数</view>
+    <view class='conditiont2'>{{lists4.info}}</view>
+  </view>
+  <view class="flex-only flex-wrap" id='{{lists4.condition_id}}'>
+    <view wx:for="{{lists4.data}}" class='condition {{item.checked==true?"condition2":""}}' 
+    id='{{index}}' bindtap='benshu'>{{item.name}}</view>
+  </view>
+</view>
+
+<view class='footer themebgreen' bindtap='go'>开始选书</view>
+<view class='forfooter'></view>

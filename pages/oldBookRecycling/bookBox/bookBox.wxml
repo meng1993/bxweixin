@@ -1,0 +1,32 @@
+<import src='/temp/oldBook/oldBook.wxml' />
+<import src='/temp/emptyPage/emptyPage.wxml' />
+<view class="book_box">
+    <!--11111111111111111111111头部-->
+    <view class="header">
+        <view class="icon_cicle"></view>
+        <view class="remind">每次最多可寄<text class="cActive">10</text>本</view>
+        <view class="edit" wx:if="{{editType}}" bindtap="edit">编辑</view>
+        <view class="edit" wx:else bindtap="edit">取消</view>
+    </view>
+    <view class="bg20 line-20"></view>
+
+    <!--22222222222222222222222列表内容部分-->
+    <view class="content">
+        <template is="oldBookBox" data="{{list,num}}" wx:if="{{list.length != 0}}"></template>
+        <template is="emptyPage" data="{{emptyContent,emptyBtnText}}" wx:if="{{list.length == 0}}"></template>
+    </view>
+
+    <!--33333333333333333333333底部-->
+    <view class="bottom">
+        <view class="select_all" catchtap="selectAll">
+            <image class="icon_img" src="{{selectAllType ? '/img/shelf/xuanzhong2.png':'/img/shelf/moren2.png' }}"></image>
+            <view class="quanxuan">全选</view>
+        </view>
+        <view class="num_cal">
+            <view class="select_num">已选：<text>{{selectNum}}本</text></view>
+            <view class="egg_num">鸟蛋共计：<text>{{eggNum}}个</text></view>
+        </view>
+        <view class="btn_xiadan" wx:if="{{editType}}" bindtap="toOrder">下单</view>
+        <view class="btn_xiadan delete_active" wx:else bindtap="delete">删除</view>
+    </view>
+</view>

@@ -1,0 +1,56 @@
+.w{width: 720rpx;margin-left: 30rpx;padding-top: 30rpx;border-left: 2rpx solid #dcdcdc}
+.f28{font-size: 28rpx;}
+.w50{width: 190rpx}
+.zhanwei{flex-grow: 1}
+.a{padding-right: 20rpx;}
+.a1{width: 16rpx;height: 16rpx;border-radius: 50px;background-color: #fff;border:4rpx solid #6ED14E;position: relative;left: -12rpx;}
+.b{flex-wrap: wrap;margin-top: 20rpx;width: 640rpx;}
+.b1{width: 150rpx;height: 150rpx;border-radius: 4px;margin-left: 8rpx;margin-top: 8rpx;position: relative}
+.b1img{width: 150rpx;height: 150rpx;display: block;}
+.jiantou{width: 50rpx;height: 50rpx;}
+.b2{background-color: #eeeeee;width: 50rpx;height: 50rpx;border-radius: 50px;margin-top: 80rpx;
+margin-left: 10rpx;}
+.xz{width: 40rpx;height: 40rpx;display: block;position: absolute;top: 10rpx;right: 10rpx;}
+.ceng{width: 150rpx;height: 150rpx;position: absolute;top: 0;left: 0;background-color: rgba(0, 0, 0, 0.25)}
+.kw{width: 750rpx;min-height: 100%;position: fixed;top: 0;left: 0;z-index: 1000;
+background-color: rgba(0, 0, 0, 0.3)}
+.k{width: 710rpx;margin: 170rpx auto 0;background-color: #fff;border-radius: 5px;padding-bottom: 30rpx;}
+.tishi-1{border-bottom: 1px solid #dcdcdc;padding: 20rpx 30rpx;font-size: 32rpx; display: flex;
+position: relative}
+.quxiao{width: 54rpx;height: 58rpx;right: 30rpx;position: absolute;top: 0}
+.tishi-6{width: 8rpx; height: 36rpx; background-color: #6fd14e; margin-right: 10rpx}
+.k1{padding: 30rpx 50rpx 0;position: relative}
+.bb{border-bottom: 2rpx solid #dcdcdc}
+.bt{border-top: 2rpx solid #dcdcdc}
+.k1a{padding-bottom: 40rpx;}
+.h60{height: 60rpx;line-height: 60rpx;}
+.radio{margin-right:40rpx;}
+.c9{color:#999999}
+.add{width: 650rpx;height: 70rpx;line-height: 70rpx;text-align: center;margin: 0rpx auto 30rpx;
+border: 2rpx dotted #dcdcdc}
+.save{width: 650rpx;height: 86rpx;line-height: 86rpx;text-align: center;background-color: #6ED14E;
+border-radius: 5px;margin: 0 auto;color: white}
+.footer{position: fixed;bottom: 0;left: 0;width: 750rpx;height: 100rpx;background-color: #fff}
+.btn{width: 670rpx;height: 88rpx;margin: 6rpx auto; line-height: 88rpx;border-radius: 5px;
+text-align: center;color: white;font-size: 32rpx;z-index: 900;}
+.forfooter{height: 120rpx;}
+.ceng2{position: fixed;top: 0;left:0;width: 750rpx;height: 100%;background-color: rgba(0,0,0,0.3);z-index: 900}
+.tishi-1{border-bottom: 1px solid #dcdcdc;padding: 20rpx 30rpx;font-size: 32rpx; display: flex;
+position: relative}
+.quxiao{width: 54rpx;height: 58rpx;right: 30rpx;position: absolute;top: 0}
+.tishi-6{width: 8rpx; height: 36rpx; background-color: #6fd14e; margin-right: 10rpx}
+.k{width: 710rpx;margin: 170rpx auto 0;background-color: #fff;border-radius: 5px;padding-bottom: 30rpx;}
+.d{padding: 30rpx;flex-wrap: wrap}
+.dimg{display: block;width: 200rpx;height: 200rpx;border-radius: 5px;margin-right: 16rpx;margin-bottom: 16rpx;}
+.dt{font-size: 32rpx;color: #999999; word-wrap:break-word;width: 650rpx;line-height: 50rpx;height: 100rpx;
+border:2rpx solid #dcdcdc;background-color:#f1f1f1 }
+.tijiao{width: 170rpx;height: 64rpx;line-height: 64rpx;text-align: center;color: white;font-size: 32rpx;
+margin-top: 30rpx;border-radius: 5px}
+.w750{width: 750rpx;}
+.nokookimg{display: block;width: 256rpx;height: 160rpx;margin: 0 auto}
+.nobooktext{font-size: 30rpx;text-align: center;line-height: 100rpx;color: #262626;}
+.nobook{margin-top: 200rpx;}
+.stroll{width: 270rpx;height: 70rpx;border: 6rpx solid #6ed14e;color:#6ed14e;text-align: center;
+border-radius: 10px; margin: 0 auto;line-height: 70rpx;}
+.nobookw{position: absolute;top: 0; width: 750rpx;height: 100%;}
+.dt2{height: auto;min-height: 100rpx;}

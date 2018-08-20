@@ -1,0 +1,200 @@
+.item{
+    width: 100%;
+    height: 225rpx;
+    border-bottom: 1rpx solid lightgray;
+}
+.orderDetail_item{
+    background: #fff;
+    border-bottom: 1rpx solid lightgray;
+}
+.item .icon_check{
+    float: left;
+    width: 40rpx;
+    height: 40rpx;
+    margin: 92rpx 20rpx;
+}
+.item .img_book{
+    float: left;
+    width: 168rpx;
+    height: 168rpx;
+    margin-top: 28rpx;
+}
+.item .book_msg{
+    float: left;
+    width: 480rpx;
+    height: 168rpx;
+    margin: 28rpx 0 0 20rpx;
+    /*background: red;*/
+    display: flex;
+    flex-direction: column;
+}
+.item .book_msg .msg_line{
+    position: relative;
+    flex: 1;
+    font-size: 30rpx;
+    color: #333333;
+    line-height: 56rpx;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.item .book_msg .orderDetail_msg{
+    font-size: 24rpx;
+    color: #999999;
+}
+.item .book_msg .price{
+    font-size: 24rpx;
+    color: #fb0025;
+}
+.item .book_msg .orderDetail_num{
+    font-size: 26rpx;
+    color: #999999;
+    margin-left: 60rpx;
+}
+.item .book_msg .icon_add_reduce{
+    width: 200rpx;
+    height: 48rpx;
+    margin-top: 8rpx;
+}
+.item .book_msg .btn_add,
+.item .book_msg .btn_reduce,
+.item .book_msg .num{
+    position: absolute;
+    width: 60rpx;
+    height: 56rpx;
+    left:5rpx;
+    top:8rpx;
+}
+.item .book_msg .btn_reduce{
+    left: 138rpx;
+}
+.item .book_msg .num{
+    width:74rpx;
+    text-align: center;
+    line-height: 56rpx;
+    left: 65rpx;
+    color: #999999;
+    font-size: 26rpx;
+}
+
+/*111111111111111----------orderList*/
+.orderList_item{
+    width: 100%;
+    height: 448rpx;
+}
+.orderList_item .item_content{
+    width: 100%;
+    /*height: 428rpx;*/
+}
+.orderList_item .item_content .content_top{
+    width: 100%;
+    height: 348rpx;
+    border-bottom: 1rpx solid lightgray;
+}
+.orderList_item .item_content .content_top .icon_select{
+    width: 38rpx;
+    height: 38rpx;
+    float: left;
+    margin: 20rpx 0 20rpx 20rpx;
+}
+.orderList_item .item_content .content_top .message_right{
+    float: left;
+    width: 638rpx;
+    height: 348rpx;
+    /*background: red;*/
+    margin-left: 30rpx;
+}
+.orderList_item .item_content .content_top .message_right .one{
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-top:10rpx;
+    clear: both;
+}
+.orderList_item .item_content .content_top .message_right .one .order_num{
+    float: left;
+    font-size: 30rpx;
+    color: #333333;
+}
+.orderList_item .item_content .content_top .message_right .one .order_status{
+    float: right;
+    font-size: 30rpx;
+    color: #6fd14e;
+}
+.orderList_item .item_content .content_top .message_right .two{
+    width: 100%;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 26rpx;
+    color: #999999;
+}
+.orderList_item .item_content .content_top .message_right .book_img{
+    float: left;
+    width: 140rpx;
+    height: 186rpx;
+    margin-right: 10rpx;
+}
+
+
+/*groups*/
+.orderList_item .item_content .content_btns{
+    width: 100%;
+    height: 80rpx;
+    /*background: blue;*/
+    overflow:hidden;
+    border-bottom: 1rpx solid lightgray;
+}
+.orderList_item .item_content .content_btns .btn_group{
+    float: right;
+    margin-right: 20rpx;
+    margin-top: 10rpx;
+}
+
+/*orderConfirmList*/
+.confirmList_item{
+    float: left;
+    width: 374rpx;
+    height: 590rpx;
+    border-bottom: 1rpx solid lightgray;
+    border-right: 1rpx solid lightgray;
+}
+.confirmList_item .book_img{
+    width: 300rpx;
+    height: 375rpx;
+    margin: 20rpx 37rpx;
+}
+.confirmList_item .book_title{
+    width: 300rpx;
+    min-height: 56rpx;
+    margin: 0 37rpx;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    font-size: 22rpx;
+    color: #535353;
+}
+.confirmList_item .egg_num{
+    float: left;
+    width: 300rpx;
+    margin: 10rpx 37rpx;
+    font-size: 24rpx;
+    color: #fb0025;
+}
+.confirmList_item .market_price{
+    position: relative;
+    float: left;
+    width: auto;
+    position: relative;
+    text-decoration:line-through;
+}
+.confirmList_item .market_price .icon_line{
+    position: absolute;
+    width: 100%;
+    height: 2rpx;
+    background: #333333;
+    left: 0;
+    top: 50%;
+}

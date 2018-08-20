@@ -1,0 +1,58 @@
+<view class='a'>
+    <image src='/img/home/ddxq-bg.png' class='abg'></image>
+    <view class='a1 flex-aic'>
+        <image src='/img/home/dfk.png' class='a1a'></image>
+        <view class='a1b' wx:if="{{message.status == 1}}">待付款</view>
+        <view class='a1b' wx:if="{{message.status == 2}}">已完成</view>
+    </view>
+</view>
+
+<view class="order_num">订单号：{{message.order_sn}}</view>
+
+<view class='themebfff mb20'>
+    <view class='flex-jasc imgwrap' bindtap='gozhanshi'>
+        <view class='flex-only'>
+            <view class='mineimgw' wx:for="{{message.book_list}}" wx:if="{{index<4}}">
+                <image class='mineimg' src='{{item.img_medium}}'></image>
+                <!--<image class='right-tag-img' src='/img/purchased-min.png' wx:if="{{item.is_purchased}}"></image>-->
+            </view>
+        </view>
+        <view class='flex-jasc'>
+            <view class='jiben'>共{{message.book_list.length}}本</view>
+            <image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>
+        </view>
+    </view>
+</view>
+
+<view class='flex-jasc feiyongb themebfff' wx:if="{{data.reclaim == ''}}">
+    <view class='xuanzejihua'>共享图书订单:</view>
+    <view class='feiyongr' style="color: #333333">无</view>
+</view>
+
+<!--<view class="bg20"></view>-->
+
+<view class='flex-jasc feiyongb themebfff'>
+    <view class='xuanzejihua'>赔偿金额：</view>
+    <view class='feiyongr'>￥{{message.amount}}</view>
+</view>
+<view class='flex-jasc feiyongb themebfff'>
+    <view class='xuanzejihua'>我的鸟蛋：</view>
+    <view class='feiyongr'>-￥{{message.score_amount}}</view>
+</view>
+
+<view class='flex-jasc feiyongb themebfff' hidden='{{data.coupon_price=="0.00"}}'>
+    <view class='xuanzejihua'>支付金额</view>
+    <view class='feiyongr'>￥{{message.pay_amount}}</view>
+</view>
+
+<view class="bg20"></view>
+
+<view class='orderb themebfff'>
+    <view class='ordert'>订单编号：{{message.order_sn}}</view>
+    <view class='ordert'>订单创建时间：{{message.create_time}}</view>
+</view>
+
+<view class="bottom_btns" wx:if="{{message.status == 1}}">
+    <view class="btn_common btn_active">去支付</view>
+    <view class="btn_common">取消订单</view>
+</view>

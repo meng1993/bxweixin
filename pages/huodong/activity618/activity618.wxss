@@ -1,0 +1,12 @@
+image{
+display: block;
+ width: 750rpx;
+}
+.activity{
+   position: relatives;
+}
+.ling{
+  position: absolute;
+  top: 1250rpx;
+  width: 750rpx;
+  height: 150rpx;}

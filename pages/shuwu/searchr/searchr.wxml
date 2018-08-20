@@ -1,0 +1,14 @@
+<import src="/temp/book/book.wxml" />
+
+<view class="header flex-jcs flex-only">
+  <view class='searchinputbox  flex-only'>
+    <image class='searchimg' src='/img/shouye/Magnifier.png'></image>
+    <input confirm-type='search' placeholder='  书名' class='searchinput'
+    bindconfirm='search' ></input>
+  </view> 
+</view>
+
+<view class='listbox themebgray'>
+  <template is='book' wx:for='{{list}}' data='{{item:item,index:index,shuwu:true}}'  
+  wx:key="{{item.book_id}}"></template>
+</view>

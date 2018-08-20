@@ -1,0 +1,88 @@
+<import src="/temp/emptyPage/emptyPage.wxml" />
+<view class='topposition'>
+  <swiper display-multiple-items='3' class='themebfff' current='{{swiperindex}}'>
+    <block wx:for='{{titles}}'>
+      <swiper-item>
+        <view bindtap='change' data-index='{{index}}' id='{{item.b}}'  class='themebfff'>
+        <view class='condition1 {{index==_index?"condition2":""}}'>{{item.a}}</view>
+        <view class='Highlight' hidden='{{index==_index?false:true}}'></view>
+      </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='zhanwei'></view>
+
+<view class='b themebfff' wx:for='{{lists}}' wx:key='{{index}}'>
+  <view class='b1 flex-jasc'>
+    <view class='b1a' >{{item.store_name}}<text class='cardid' wx:if='{{item.card_name!=null}}'>{{item.card_name}}</text>
+    </view>
+    <view class='b1b' wx:if='{{item.status==1}}'>待付款</view>
+    <view class='b1b' wx:if='{{item.status==2}}'>待发货</view>
+    <view class='b1b' wx:if='{{item.status==3}}'>待收货</view>
+    <view class='b1b' wx:if='{{item.status==4}}'>待归还</view>
+    <view class='b1b' wx:if='{{item.status==5}}'>待结算</view>
+    <view class='b1b' wx:if='{{item.status==7}}'>待评价</view>
+    <view class='b1b' wx:if='{{item.status==8}}'>已完成</view>
+    <view class='b1b' wx:if='{{item.status==9}}'>已取消</view>
+    <view class='b1b' wx:if='{{item.status==11}}'>退款中</view>
+    <view class='b1b' wx:if='{{item.status==12}}'>退款完成</view>
+  </view>
+  <view class='b2 flex-jasc themebgray' id='{{item.order_id}}' bindtap='orderd'>
+    <view>
+      <view class='b2a flex-aic'>
+        <view wx:for='{{item.books}}' wx:if='{{index<4}}' class="book-img">
+          <image src='{{item.img_medium}}' class='b2aimg'></image>
+          <image class='right-tag-img' src='/img/purchased-min.png' wx:if="{{item.is_purchased}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class='b2b'>共{{item.books.length}}本</view>
+  </view>
+  <view class='jydate flex-jcs' >
+    <view class='datezhi'>借阅时间为：{{item.rent_start_time}}
+    <text wx:if='{{item.rank!=4}}'> 至{{item.rent_end_time}}</text>
+    <text wx:if='{{item.rank==4}}'> 至{{item.invalid_time}}</text>
+    </view>
+    <!-- <view class='sanshitian'>共计三十天</view> -->
+  </view>
+  <view class='flex-jcs flex-aic'>
+    <view class='goumaiw' wx:if='{{item.status==4||item.status==5}}'>
+      <view class='goumai' id='{{item.order_id}}' bindtap='buyone'>赔偿</view>
+    </view>
+    <view class='flex-only b3 flex-grow1'>
+    <view class='btn color1' wx:if='{{item.status==1}}' id='{{item.order_id}}'
+     bindtap='deleteorder'>删除订单</view>
+    <view class='btn color1' wx:if='{{item.status==1}}' id='{{item.order_sn}}'
+     bindtap='pay'>支付</view>
+    <!-- <view class='btn color2' wx:if='{{item.status==2}}' id='{{item.order_id}}'
+     bindtap='tixingfahuo'>提醒发货</view> -->
+    <view class='btn color2' wx:if='{{item.status==3}}'id='{{item.order_id}}'
+    data-a='{{item.order_deliver_expressid}}' data-b='{{item.order_logistics_name}}'
+    data-c='{{item.order_deliver_company}}' data-d='delivery'
+     bindtap='wuliu'>查询物流</view>
+    <view class='btn color2' wx:if='{{item.status==3}}'id='{{item.order_id}}'
+     bindtap='querenshouhuo'>确认收货</view>
+     <view class='btn color2' wx:if='{{item.status==4&&item.returning==0}}'
+    id='{{item.order_id}}' bindtap='xuzu'>续租</view>
+    <view class='btn color2' wx:if='{{item.status==4&&item.returning==0}}'
+    id='{{item.order_id}}' bindtap='guihuan'>归还</view>
+    <view class='btn color2' wx:if='{{(item.status==4&&item.returning==1)||item.status==5}}' 
+    data-a='{{item.return_expressid}}' data-b='{{item.return_logistics_name}}'
+    data-c='{{item.return_deliver_company}}' data-d='return'
+    bindtap='wuliu'>查询物流</view>
+    <view class='btn color2' wx:if='{{item.status==4&&item.returning==1}}' 
+    id='{{item.order_id}}' data-index='{{index}}' bindtap='guihuanzhong'>归还中</view>
+    <!-- <view class='btn color2' wx:if='{{item.status==5}}'id='{{item.order_id}}'
+     bindtap='tixingjiesuan'>提醒结算</view> -->
+     <view class='btn color2' wx:if='{{item.status==7}}' 
+     id='{{item.order_id}}' bindtap='pingjia'>评价</view> 
+     <view class='btn color1' wx:if='{{item.status==8}}' id='{{item.order_id}}'
+     bindtap='deleteorder'>删除订单</view>
+     <view class='btn color1' wx:if='{{item.status==8}}' id='{{item.order_id}}'
+     id='{{item.order_id}}' bindtap='pingjia'>我的评论</view>
+    </view>
+  </view>
+</view>
+
+<template wx:if="{{lists.length == 0}}" is="emptyPage" data="{{emptyContent}}"></template>

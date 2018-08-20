@@ -1,0 +1,11 @@
+@import '/pages/order/order.wxss';
+.b2aimg2{width: 140rpx;height: 140rpx;}
+.b1c{width: 690rpx;height: 88rpx;padding: 0 30rpx;}
+.b1ac{color: #262626;font-size: 30rpx;}
+.b2b{margin-left: 20rpx;}
+.b2b1{color: #333333;font-size: 28rpx;}
+.b2b2{color: #fb0025;font-size: 28rpx;margin-top: 20rpx;}
+.b2{height: 180rpx;}
+.color3{color: #999999;}
+.b1b2{color: #ff556c;font-size: 30rpx;}
+.b1b3{color: #ff8e00;font-size: 30rpx;}

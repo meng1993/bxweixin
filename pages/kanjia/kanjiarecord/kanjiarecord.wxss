@@ -1,0 +1,76 @@
+.record-bac{
+  padding-bottom: 20rpx;
+  position: relative;
+}
+.record-main{
+  background-color: #fff;
+  position: relative;
+  padding: 30rpx 0;
+}
+.record-title{
+  width: 500rpx;
+  font-size: 30rpx;
+  padding-left: 30rpx;
+  color: #333333;
+}
+.cardi{
+  width: 40rpx;
+	height: 32rpx;
+}
+.coui{
+  width: 42rpx;
+	height: 36rpx;
+}
+
+.jindu{
+  width: 80rpx;
+	height: 8rpx;
+  background-color: #ccc;
+  border-radius: 8rpx;
+}
+.green{
+  background-color: #6fd14e;
+  border-radius: 8rpx;
+  height: 8rpx;
+}
+.record-content{
+  margin: 30rpx 0 0 30rpx;
+  display: flex;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.share image{
+  width: 34rpx;
+	height: 32rpx;
+  padding-right: 6rpx;
+}
+.or{
+  color: #ff8e00;
+}
+.status{
+	font-size: 30rpx;
+	line-height: 36rpx;
+	color: #ff8e00;
+  padding-right: 20rpx;
+}
+button{
+  padding: 10rpx 30rpx;
+  position: none;
+  font-size: 26rpx;
+  color: #999;
+  line-height: normal;
+  margin: 0;
+  margin-left: 130rpx;
+  background-color: #fff;
+}
+button::after{
+border: none;
+}
+.cred{color: red}
+.nokookimg{display: block;width: 256rpx;height: 160rpx;margin: 0 auto}
+.nobooktext{font-size: 30rpx;text-align: center;line-height: 100rpx;color: #262626;}
+.nobook{margin-top: 200rpx;}
+.stroll{width: 270rpx;height: 70rpx;border: 6rpx solid #6ed14e;color:#6ed14e;text-align: center;
+border-radius: 10px; margin: 0 auto;line-height: 70rpx;}
+.nobookw{position: absolute;top: 0; width: 750rpx;height: 100%;}

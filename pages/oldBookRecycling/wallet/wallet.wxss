@@ -1,0 +1,82 @@
+.wallet{
+    width: 100%;
+    /*height: 100vh;*/
+    /*overflow-x: hidden;*/
+}
+.wallet .header{
+    position: relative;
+    width: 100%;
+    height: 325rpx;
+}
+.wallet .header .bg_img{
+    position: absolute;
+    width: 100%;
+    height: 325rpx;
+    left: 0;
+    top: 0;
+}
+.wallet .header .egg_num{
+    position: absolute;
+    width: 110rpx;
+    height: 90rpx;
+    left: 50%;
+    top: 50%;
+    margin: -25rpx -55rpx;
+}
+.wallet .header .egg_num .egg_title{
+    font-size: 27rpx;
+    color: #ffffff;
+}
+.wallet .header .egg_num .egg_number{
+    font-size: 59rpx;
+    text-align: center;
+    color: #ffffff;
+}
+.record_title{
+    position: relative;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color: #333333;
+    border-bottom: 1rpx solid lightgray;
+}
+.record_title .icon_record{
+    position: absolute;
+    width: 27rpx;
+    height: 30rpx;
+    left: 280rpx;
+    top: 25rpx;
+}
+
+.list_item{
+    width: 690rpx;
+    height: 150rpx;
+    margin-left: 30rpx;
+    border-bottom: 1rpx solid lightgray;
+}
+.list_item .item_left{
+    float: left;
+    height: 150rpx;
+}
+.list_item .item_left .name{
+    height: 90rpx;
+    line-height: 90rpx;
+
+    font-size: 28rpx;
+    color: #333333;
+}
+.list_item .item_left .time{
+    height: 60rpx;
+    font-size: 24rpx;
+    color: #999999;
+}
+.list_item .item_right{
+    float: right;
+    height: 150rpx;
+    line-height: 150rpx;
+
+    font-size: 36rpx;
+    color: #ff9f00;
+}

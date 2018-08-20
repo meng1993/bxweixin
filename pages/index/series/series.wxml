@@ -1,0 +1,28 @@
+<import src="/temp/book/book.wxml" />
+<import src="/temp/bottomload/index.wxml" />
+
+<!-- <view class='listbox themebgray'>
+  <template is='book' data='{{item:item,index:index}}'wx:for="{{lists}}"wx:key="{{item.book_id}}"></template>
+</view> -->
+<view class='listbox themebgray'>
+  <view class='bookw' wx:for="{{lists}}"wx:key="{{item.book_id}}">
+  <template is='book' data='{{item:item,index:index}}'></template>
+  <image class='gouxuan' catchtap='checked' id="{{index}}"
+  src='{{item.checked!=true?"/img/home/moren3.png":"/img/home/xuanzhong3.png"}}'></image>
+  </view>
+</view>
+
+<template is="zan-loadmore" data="{{bottomload}}"></template>
+<template is="zan-loadend" data="{{bottomend}}"></template>
+
+<view class='footer flex-jcs'>
+  <view class='flex-grow1'></view>
+  <view class='imgb' bindtap='jieshujia'>
+    <image class='footerlimg' src='/img/shouye/shujia.png'></image>
+    <view class='shujia' >借书架</view>
+    <view class='num' hidden='{{num==0}}'>{{num}}</view>
+  </view>
+  <view class='footerr' bindtap='add'>加入借书架</view>
+</view>
+<view class='forfooter'></view>
+

@@ -1,0 +1,138 @@
+
+<view class='topposition' id="{{this}}">
+  <swiper display-multiple-items='3' class='themebfff' current='{{swiperindex}}'>
+    <block wx:for='{{titles}}'>
+      <swiper-item>
+        <view bindtap='change' data-index='{{index}}' id='{{item.b}}'  class='themebfff'>
+        <view class='condition1 {{index==_index?"condition2":""}}'>{{item.a}}</view>
+        <view class='Highlight' hidden='{{index==_index?false:true}}'></view>
+      </view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='e flex-jasc themebfff' wx:if='{{search}}'>
+    <view>
+      <text class='e1'>当前排序是：</text>
+      <text class='e2'>{{paixuname}}</text>
+    </view>
+    <view class='flex-only'>
+      <view class='flex-aic ee4' bindtap='search'>
+        <image src='/img/news/search-green.png' class='ee3'></image>
+        <text class='e4'>搜索</text>
+      </view>
+      <view class='flex-aic' bindtap='pai'>
+        <image src='https://m.zujiekeji.cn/xcximg/shequ/a/px.png' class='e3'></image>
+        <text class='e4'>排序</text>
+      </view>
+    </view> 
+  </view>
+
+  <view class='ee flex-jcs themebfff' wx:if='{{!search}}'>
+    <view class='themebgray flex-only ss '>
+      <image class='searchimg' src='https://m.zujiekeji.cn/xcximg/shequ/ss.png'></image>
+      <input confirm-type='search flex-grow1' placeholder='请输入你要搜索的书名/作者' 
+      class='searchinput' bindconfirm='searchbook'></input>
+    </view>
+    <view class='flex-only' bindtap='back'>
+      <image src='/img/news/back.png' class='ee3'></image>
+      <text class='e4'>返回</text>
+    </view>
+  </view> 
+</view>
+
+<view class='czhanwei'></view>
+
+<view class='a flex-only flex-wrap'>
+    <view  wx:for='{{list}}' wx:key='{{index}}' class='a1 {{index==9||index==10||index==11?"a2":""}}'>
+      <image class='b' src='{{item.img}}' mode='aspectFit' id='{{item.book_id}}' bindtap='detail'></image>   
+      <view class='f1' wx:if='{{(from=="find"||del===1)&&item.checked==true}}'></view>      
+      <image class='gouxuan' catchtap='checked' id="{{index}}" wx:if='{{from=="find"||del===1}}'
+      src='{{item.checked!=true?"https://m.zujiekeji.cn/xcximg/shequ/a/book_default.png":"https://m.zujiekeji.cn/xcximg/shequ/a/book_selected.png"}}'></image> 
+      <view wx:if='{{item.daka_num!=0}}' 
+      id='{{index}}' catchtap='golocus' class='degree flex-jac'>{{item.daka_num}}次
+      <image class='degreei' src='https://m.zujiekeji.cn/xcximg/shequ/right2.png'></image>
+      </view>
+    </view>
+</view>
+
+<view class='c' wx:if='{{list!==""&&list.length===0}}'>
+  <image class='c1' src='https://m.zujiekeji.cn/xcximg/shequ/null.png'></image>
+  <view class='c2' wx:if='{{fenlei===0&&keyword==""}}'>宝贝书屋为空~</view>
+  <view class='c2' wx:if='{{keyword!=""}}'>未搜索到绘本</view>
+  <view class='c3' wx:if='{{fenlei!==0&&keyword==""&&_index===0}}' bindtap='add2'>当前分类为空，立即添加 ></view>
+</view>
+
+<view class='d themebfff flex-aic' wx:if='{{from=="my"&&del===0}}'>
+  <view class='w250' bindtap='fenlei'>
+    <image class='d1' src='/img/shuwu/tab_fl.png'></image>
+    <view class='d2'>分类</view>
+  </view>
+  <view class='w250' bindtap='add' wx:if='{{fenlei===0}}'>
+    <image class='d3' src='/img/shuwu/tj.png'>
+    </image>
+  </view>
+  <view class='w250' bindtap='add2' wx:if='{{fenlei!==0}}'>
+    <image class='d3' src='/img/shuwu/tj.png'>
+    </image>
+  </view>
+  <view class='w250' bindtap='del'>
+    <image class='d1' src='/img/shuwu/tab_del.png'></image>
+    <view class='d2'>删除</view>
+  </view>
+</view>
+
+<view class='footer flex-aic' wx:if='{{del===1}}'>
+  <view class='btn f32 flex-grow1 themebfff' bindtap='del' >
+    <view class='c9'>取消</view>
+  </view>
+  <view class='btn f32 flex-grow1 themebgreen' wx:if='{{del_add===0}}' bindtap='deltrue' >
+    <view>确定({{checkeds.length}})本</view>
+  </view>
+  <view class='btn f32 flex-grow1 themebgreen' wx:if='{{del_add===1}}' bindtap='addinfenlei' >
+    <view>添加({{checkeds.length}})本</view>
+  </view>
+</view>
+
+<view class='forfooter'></view>
+<view class='footer flex-aic' wx:if='{{from=="find"&&del===0}}'>
+  <view class='btn f32 flex-grow1 themebfff'>
+    <view class='w170' bindtap='fenlei' >
+        <image class='d11' src='/img/shuwu/fl.png'></image>
+        <view class='d2 mt10'>分类</view>
+    </view>
+    <view class='w170' bindtap='add' wx:if='{{fenlei===0}}'>
+        <image class='d11' src='/img/shuwu/add.png'></image>
+        <view class='d2 mt10'>添加</view>
+    </view>
+    <view class='w170' bindtap='add2' wx:if='{{fenlei!==0}}' >
+        <image class='d11' src='/img/shuwu/add.png'></image>
+        <view class='d2 mt10'>添加</view>
+    </view>
+  </view>
+  <view class='btn f32 flex-grow1 themebgreen' wx:if='{{edit!==1}}' bindtap='queren' >
+    <view>确定({{checkeds.length}})本</view>
+  </view>
+  <view class='btn f32 flex-grow1 themebgreen' wx:if='{{edit===1}}' bindtap='edit' >
+    <view>确定({{checkeds.length}})本</view>
+  </view>
+</view>
+
+<view class='ceng2' wx:if='{{queren}}' bindtap='quxiao'>
+  <view class='k'>
+    <view class='tishi-1 flex-aic'>
+      <view class='tishi-6'></view><view>我选择的绘本（只展示前9本）</view>   
+      <image src='/img/home/qx.png' class='quxiao' bindtap='quxiao2'></image>
+    </view>
+    <view class='flex-aic dd' catchtap='zudang'>
+      <image class='dimg' wx:for='{{checkeds}}' src='{{item.img}}' wx:key='{{index}}' 
+      id='{{index}}' wx:if='{{index<9}}' bindtap='remove'></image>
+      <textarea class='dt dt2' bindinput='beizhu' placeholder='亲，请填写今日的心得体会!'
+      show-confirm-bar='{{ougsd}}' fixed="true" maxlength='300'></textarea>
+      <view class='flex-jcs w750'>
+        <view class=''></view>
+        <view class='tijiao themebgreen' bindtap='tijiao'>提交</view>
+      </view>
+    </view>
+  </view>
+</view>

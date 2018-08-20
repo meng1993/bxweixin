@@ -1,0 +1,72 @@
+.list-comment{
+  min-height: 296rpx;
+  /* background-color: rgba(0,0,0,0.3); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.title{
+  text-align: center;
+  padding-top: 20rpx;
+  font-size: 36rpx;
+  color: #fff;
+   font-weight: 600;
+}
+.recommend{
+  padding: 20rpx 20rpx;
+  text-indent: 2em;
+  font-size: 28rpx;
+  color: #fff;
+  font-weight: 600;
+}
+.themebgray{
+  padding-bottom: 2rpx;
+}
+.pd1{
+  background-color: #fff;
+  padding-bottom: 1rpx;
+}
+.content{
+  display: flex;
+  margin:  20rpx 40rpx;
+}
+.content-main{
+  margin-left: 10rpx
+}
+.content-img{
+  width: 110rpx;
+	height: 138rpx;
+}
+.content-image{
+  width: 110rpx;
+  height: 138rpx;
+}
+.content-title{
+  font-size: 28rpx;
+  color: #333333;
+  line-height: 40rpx;
+  width: 550rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.content-author{
+  width: 550rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+	font-size: 24rpx;
+	line-height: 60rpx;
+	color: #999999;
+}
+.content-publisher{
+  width: 550rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+	font-size: 22rpx;
+	line-height: 60rpx;
+	color: #999999;
+}
+.goshouye{position: fixed;width: 100rpx;height: 100rpx;border-radius: 50px;
+bottom: 160rpx;right: 30rpx;}
+.gohome{display: block;width: 100rpx;height: 100rpx;border-radius: 50px;}

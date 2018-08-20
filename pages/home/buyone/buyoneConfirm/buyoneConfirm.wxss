@@ -1,0 +1,118 @@
+@import '/pages/shelf/orderinfo/orderinfo.wxss';
+.order_confirm{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background: #f0f2f5;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    height: 120rpx;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 999;
+}
+.header .icon_cicle{
+    float: left;
+    width: 16rpx;
+    height: 16rpx;
+    border-radius: 50%;
+    background-color: #6fd14e;
+    margin: 52rpx 30rpx;
+}
+.header .remind{
+    float: left;
+    width: 675rpx;
+    /*height: 60rpx;*/
+    font-size: 28rpx;
+    color: #ff8e00;
+    margin-top: 25rpx;
+}
+.line-20{
+    position: fixed;
+    top: 120rpx;
+}
+.order_confirm .img_book{
+    position:relative;
+    width: 750rpx;
+    height: 180rpx;
+    /*margin-top: 140rpx;*/
+    background:#fff;
+}
+.order_confirm .img_book .image{
+    float: left;
+    width: 130rpx;
+    height: 134rpx;
+    margin-left: 20rpx;
+    margin-top: 23rpx;
+}
+.order_confirm .img_book .book_num{
+    float: left;
+    width: 130rpx;
+    height: 134rpx;
+    margin-left: 20rpx;
+    margin-top: 23rpx;
+    line-height: 134rpx;
+    color: #262626;
+    font-size: 24rpx;
+}
+.order_confirm .img_book .czy_right{
+    width: 18rpx;
+    height: 30rpx;
+    top: 75rpx;
+}
+.text_left_cf{
+    font-size: 28rpx;
+    color: #262626;
+}
+.text_right_cf{
+    font-size: 28rpx;
+    color: #333333;
+}
+.text_right_cf >text{
+    color: #fb0025;
+}
+
+/*新增*/
+.buyoneConfirm_bottom {
+    position: fixed;
+    width: 750rpx;
+    height: 100rpx;
+    bottom: 0;
+}
+.buyoneConfirm_bottom .bottom_left{
+    float: left;
+    width: 520rpx;
+    height: 100rpx;
+    text-indent: 18rpx;
+    background-color: #fff;
+}
+.buyoneConfirm_bottom .bottom_left .pay_money{
+    height: 28rpx;
+    line-height: 28rpx;
+    font-size: 30rpx;
+    color: #262626;
+    margin-top: 20rpx;
+}
+.buyoneConfirm_bottom .bottom_left .pay_money .num{
+    color: #ff001e;
+}
+.buyoneConfirm_bottom .bottom_left .reduce_money{
+    height: 23rpx;
+    line-height: 23rpx;
+    margin-top: 14rpx;
+    font-size: 24rpx;
+    color: #999999;
+}
+.buyoneConfirm_bottom .bottom_right{
+    float: left;
+    width: 230rpx;
+    height: 100rpx;
+    text-align: center;
+    line-height: 100rpx;
+    font-size: 32rpx;
+    color: #ffffff;
+    background-color: #6fd14e;
+}

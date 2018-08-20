@@ -1,0 +1,23 @@
+<view class='box themebfff' wx:for='{{lists}}'>
+  <view class='flex-jasc box1'>
+    <view>
+      <view class='flex-aic'>
+        <view class='c26 f32 name'>{{item.address_name}}</view>
+        <view class='c26 f32 phone'>{{item.mobile}}</view>
+        <view class='moren' wx:if='{{item.is_set_default==1}}'>默认</view>
+      </view>
+      <view class='c26 f24 address'>
+      {{item.province}}{{item.city}}{{item.district}}{{item.address}}
+      </view>
+    </view>
+    <view bindtap='xuanzhong' id='{{index}}' hidden='{{nogouxuan}}'>
+      <image src='/img/home/xuanzhong3.png' class='xuan' wx:if='{{index==xuanzhong}}'></image>
+      <image src='/img/home/moren3.png' class='xuan' wx:if='{{index!=xuanzhong}}'></image>
+    </view>
+  </view>
+  <view class='flex-only bj'>
+    <view class='btn c26' bindtap='edit' id='{{item.id}}'>编辑</view>
+    <view class='btn c26' bindtap='remove' id='{{item.id}}' data-index='{{index}}'>删除</view>
+  </view>
+</view>
+<view class='add' bindtap='add'>新增地址</view>

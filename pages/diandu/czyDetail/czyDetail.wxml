@@ -1,0 +1,79 @@
+<!--pages/diandu/czyDetail/czyDetail.wxml-->
+<view class='a'>
+    <image src='/img/home/ddxq-bg.png' class='abg'></image>
+    <view class='a1 flex-aic'>
+        <image src='/img/home/dfk.png' class='a1a'></image>
+        <view class='a1b' wx:if='{{detail.status == "wait"}}'>待付款</view>
+        <view class='a1b' wx:elif='{{detail.status == "pay"}}'>待发货</view>
+        <view class='a1b' wx:elif='{{detail.status == "delivery"}}'>已发货</view>
+        <view class='a1b' wx:elif='{{detail.status == "finish"}}'>已完成</view>
+        <view class='a1b' wx:elif='{{detail.status == "cancel"}}'>已取消</view>
+        <view class='a1b' wx:elif='{{detail.status == "refund"}}'>退款中</view>
+        <!--<view class='a1b' wx:if='{{data.status==8}}'>已完成</view>-->
+        <!--<view class='a1b' wx:if='{{data.status==9}}'>已取消</view>-->
+        <!--<view class='a1b' wx:if='{{data.status==11}}'>退款中</view>-->
+        <!--<view class='a1b' wx:if='{{data.status==12}}'>退款完成</view>-->
+    </view>
+    <view class='a2 flex-aic'>
+        <!-- <view class='a2a' wx:if='{{status==1}}'>剩余：22小时自动关闭</view> -->
+    </view>
+</view>
+
+<view class='order_number'>订单号：{{detail.order_sn}}</view>
+<view class='content'>
+  <!--左边图片-->
+  <image src='{{detail.img}}' class='content_img'></image>
+  <!--右边内容-->
+  <view class='content_describe'>
+    <view class='describe_top'>{{detail.product_title}}</view>
+    <view class='describe_price' style="float:left;width: auto;">￥{{detail.price}}元</view>
+
+    <view class="f28" style="margin-left: 30rpx;float:left;height:70rpx;line-height:70rpx;color: #fb0025">{{detail.sku1_title}}<text wx:if="{{detail.sku1_title != ''}}">/</text>{{detail.sku2_title}}</view>
+    <view class="f28" style="margin-left: 30rpx;float:left;height:70rpx;line-height:70rpx;color: #fb0025">x{{detail.num}}</view>
+  </view>
+</view>
+
+<view class='message'>
+  <view class='message_left'>订单金额：</view>
+  <view class='message_right'>￥{{detail.amount}}</view>
+</view>
+<view class='message'>
+  <view class='message_left'>优惠金额：</view>
+  <view class='message_right'>-￥{{detail.coupon_amount}}</view>
+</view>
+<!--新增鸟蛋开始-->
+<view class='message'>
+    <view class='message_left'>我的鸟蛋：</view>
+    <view class='message_right'>-￥{{detail.score_amount}}</view>
+</view>
+<!--新增鸟蛋结束-->
+<view class='message'>
+  <view class='message_left'>支付金额：</view>
+  <view class='message_right'>￥{{detail.pay_amount}}</view>
+</view>
+
+<!--留言-->
+ <view class='flex-only b themebfff'>
+  <text class='f28 c333 b1'>留言：</text>
+  <textarea class='themebfff ly' placeholder='' value='{{detail.remark}}' disabled="true" bindinput='message'></textarea>
+</view> 
+<!--订单编号、日期-->
+<view class='order_message'>
+  <view class='order_num c999'>订单编号：{{detail.order_sn}}</view>
+  <view class='order_time c999'>订单创建时间：{{createTime}}</view>
+</view>
+
+<!--111111111111111111111底部按钮111111111111111111111-->
+<!--待付款-->
+<view class='czy_bottom' wx:if='{{detail.status == "wait"}}'>
+  <view class='btn_pay btn_common c2' catchtap="toPay" data-ordersn="{{detail.order_sn}}">去支付</view>
+  <view class='btn_delete btn_common c2' catchtap="cancelOrder">取消订单</view>
+</view>
+<!--待发货-->
+<!--<view class='czy_bottom' wx:elif='{{detail.status == "pay"}}'>-->
+  <!--<view class='btn_delete btn_common'>取消订单</view>-->
+<!--</view>-->
+<!--已发货-->
+<view class='czy_bottom' wx:elif='{{detail.status == "delivery"}}'>
+  <view class='btn_pay btn_common' catchtap="wuliu" data-a="{{detail.deliver.deliver_expressid}}" data-b="{{detail.deliver.logistics_name}}" data-c="{{detail.deliver.deliver_company}}" data-d="{{detail.status}}">查看物流</view>
+</view>

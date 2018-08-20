@@ -1,0 +1,32 @@
+.box{height: 100rpx;padding: 0 30rpx;border-bottom: 2rpx solid #EFEFF4}
+.text{color:#262626;font-size:32rpx;}
+.sanjiao{display:block;width:16rpx;height:30rpx;}
+.out{width: 400rpx;height: 100rpx;line-height: 100rpx;text-align: center;border-radius: 10px;
+color: #fff;margin: 170rpx auto}
+page{background-color: #EFEFF4;padding-top: 20rpx;}
+.a{height: 100rpx;padding: 0 30rpx;}
+.a1{color: #262626;font-size: 30rpx;}
+.a2{color: #b4b4b4;font-size: 30rpx;}
+.a3{width: 18rpx;height: 30rpx;margin-left: 20rpx;}
+
+.kw{width: 750rpx;min-height: 100%;position: fixed;top: 0;left: 0;z-index: 1000;
+background-color: rgba(0, 0, 0, 0.3)}
+.k{width: 710rpx;margin: 250rpx auto 0;background-color: #fff;border-radius: 5px;padding-bottom: 30rpx;}
+.tishi-1{border-bottom: 1px solid #e8e8e8;padding: 20rpx 30rpx;font-size: 32rpx; display: flex;
+position: relative}
+.quxiao{width: 54rpx;height: 58rpx;right: 30rpx;position: absolute;top: 0}
+.tishi-6{width: 8rpx; height: 36rpx; background-color: #6fd14e; margin-right: 10rpx;border-radius: 10px;}
+.save{width: 650rpx;height: 86rpx;line-height: 86rpx;text-align: center;background-color: #6ED14E;
+border-radius: 4px;margin: 0 auto;color: white;margin-top: 16rpx;}
+.k2{padding: 60rpx;}
+.mb60{margin-bottom: 60rpx;}
+.k4{color: #333333; font-size: 30rpx;height: 50rpx;margin-right: 20rpx;line-height: 50rpx;}
+.bb{border-bottom: 2rpx solid #d0d0d0}
+.k5{background-color: #6fd14e;color: #fff;width: 210rpx;height: 64rpx;text-align: center;line-height: 64rpx;
+position: relative;top: -20rpx;border-radius:4px; }
+.w150{width: 150rpx;}
+.w400{width: 400rpx;}
+.k7{display: flex;justify-content: flex-end;}
+.k8{width: 200rpx;}
+.mb{margin-bottom: 20rpx;}
+.a52{background-color: #efefef;color: #999999}

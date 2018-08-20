@@ -1,0 +1,121 @@
+/* pages/diandu/czyDetail/czyDetail.wxss */
+@import '/pages/shelf/orderinfo/orderinfo.wxss';
+@import '/pages/order/order.wxss';
+view{font-family: PingFangSC}
+.a{width: 750rpx;height: 154rpx;position: relative}
+img{display: block}
+.abg{width: 750rpx;height: 154rpx;}
+.a1{height: 54rpx;position: absolute;top: 50rpx;}
+.a1a{width: 42rpx;height: 36rpx;margin: 0 30rpx;}
+.a1b{font-size: 40rpx;color: #fff;}
+.a2{height: 54rpx;position: absolute;top: 50rpx;right: 30rpx;}
+.a2a{font-size: 26rpx;color: #fff;}
+
+.order_number{width: 730rpx;height:88rpx;line-height: 88rpx;padding-left: 20rpx;color: #262626;font-size: 30rpx;background: #fff;}
+.content{
+  width: 750rpx;
+  height: 180rpx;
+  background-color: #f9f8f8;
+  border-bottom: 1rpx solid lightgray;
+  border-top: 1rpx solid lightgray;
+}
+.content .content_img{
+  float: left;
+  width: 140rpx;
+	height: 140rpx;
+	border-radius: 4rpx;
+  margin: 20rpx;
+}
+.content .content_describe{
+  float: left;
+  width: 548rpx;
+  height: 140rpx;
+  margin-top: 20rpx;
+}
+.content .content_describe .describe_top{
+  width: 548rpx;
+    height: 70rpx;
+  font-size: 28rpx;
+	line-height: 40rpx;
+	color: #333333;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
+}
+.content .content_describe .describe_price{
+  width: 548rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+	color: #fb0025;
+}
+.message{
+  width: 710rpx;
+  height: 88rpx;
+  background: #fff;
+  padding: 0 20rpx;
+  border-bottom: 1rpx solid lightgray;
+}
+.message .message_left{
+  float: left;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 28rpx;
+	color: #333333;
+}
+.message .message_right{
+  float: right;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 28rpx;
+	color: #fb0025;
+}
+.b{padding-top: 20rpx;} 
+.b1{width: 100rpx;line-height: 80rpx;}
+.ly{height: 100rpx;font-size:28rpx;width: 610rpx;}
+.order_message{
+  width: 730rpx;
+	height: 117rpx;
+  padding-left: 20rpx;
+	background-color: #fff;
+}
+.order_message .order_num{
+  height: 58rpx;
+  line-height: 58rpx;
+  font-size: 24rpx;
+}
+.order_message .order_time{
+  height: 58rpx;
+  line-height: 58rpx;
+  font-size: 24rpx;
+}
+.czy_bottom{
+  position: fixed;
+  width: 750rpx;
+	height: 88rpx;
+	background-color: #fff;
+  left: 0;
+  bottom: 0;
+}
+.czy_bottom .btn_common{
+  float: right;
+  height: 56rpx;
+  text-align: center;
+  line-height: 56rpx;
+  margin-right: 20rpx;
+  border: 1rpx solid red;
+  font-size: 28rpx;
+  padding:0 15rpx;
+  margin-top: 16rpx;
+}
+.czy_bottom .btn_delete{
+  color: #999999;
+  border: none;
+}
+.czy_bottom .btn_pay{
+	color: #fb0025;
+}
+.czy_bottom .c2{height: 52rpx;border: solid 2rpx;margin-left: 20rpx;border-radius: 4px;
+  text-align: center;line-height: 52rpx;}

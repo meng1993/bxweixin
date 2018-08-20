@@ -1,0 +1,13 @@
+.logob{display: block;width: 220rpx;height: 280rpx;margin: 50rpx auto;}
+.logo{display: block; width: 66rpx;height:76rpx;margin: 0 auto;}
+.center{text-align: center}
+.text1{font-size: 28rpx;color: #666;margin-top: 20rpx;margin-bottom: 50rpx;}
+.zm4{display: block; width: 50rpx;height: 40rpx;}
+.zm5{display: block; width: 44rpx;height: 38rpx;}
+.a{width: 600rpx;height: 80rpx;border: 2rpx solid #d9d9d9;border-radius: 5px;margin: 30rpx auto;}
+.iconw{width: 100rpx;}
+input{font-size: 30rpx;}
+.btn{width: 604rpx;height: 84rpx;border: none;background-color: #2196f3;color: #fff;
+margin:60rpx auto 0;border-radius: 5px;text-align: center;line-height: 84rpx;font-size: 36rpx; }
+.text2{color: rgb(33, 150, 243);font-size: 28rpx;margin-top: 80rpx;}
+.text3{color: #666;font-size: 26rpx;}

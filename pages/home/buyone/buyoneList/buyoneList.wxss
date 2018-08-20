@@ -1,0 +1,86 @@
+@import '/pages/order/order.wxss';
+.zhanwei{height: 84rpx;}
+.item{
+    background-color: #fff;
+    margin-top: 20rpx;
+}
+.item .item_top{
+    width: 750rpx;
+    height: 80rpx;
+    /*background-color: red;*/
+}
+.item .item_top .top_order_num{
+    float: left;
+    height: 100%;
+    line-height: 80rpx;
+    margin-left: 20rpx;
+
+    font-size: 28rpx;
+    color: #262626;
+}
+
+.item .item_top .top_order_status{
+    float: right;
+    height: 100%;
+    line-height: 80rpx;
+    margin-right: 25rpx;
+    font-size: 28rpx;
+    color: #fb0025;
+}
+
+.item .book_content{
+    width: 750rpx;
+    height: 180rpx;
+    background-color: #f9f8f8;
+    border-top: 1rpx solid lightgray;
+    border-bottom: 1rpx solid lightgray;
+}
+.item .book_content .book_img{
+    float: left;
+    width: 133rpx;
+    height: 132rpx;
+    margin-left: 18rpx;
+    margin-top: 24rpx;
+}
+.item .book_content .book_number{
+    float: right;
+    height: 180rpx;
+    line-height: 180rpx;
+    font-size: 28rpx;
+    color: #535353;
+    margin-right: 30rpx;
+}
+.item .item_describe{
+    width: 720rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-right: 30rpx;
+    font-size: 26rpx;
+    color: #535353;
+    text-align: right;
+    border-bottom: 1rpx solid lightgray;
+}
+.item .item_describe .jj{
+    color: #fb0025;
+}
+.item .btn_groups{
+    width: 750rpx;
+    height: 80rpx;
+}
+.item .btn_groups .btn_common{
+    width: 146rpx;
+    height: 54rpx;
+    float: right;
+    text-align: center;
+    line-height: 54rpx;
+    color: #b0b0b0;
+    font-size: 28rpx;
+    margin-top: 13rpx;
+    border: solid 1px #b0b0b0;
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+}
+.item .btn_groups .btn_active{
+    border: solid 1px #fb0025;
+    color: #fb0025;
+}

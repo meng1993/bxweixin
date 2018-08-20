@@ -1,0 +1,46 @@
+<view class='themebgray'>
+<view class='banner'>
+<image src="https://m.zujiekeji.cn/xcximg/xcxpintuan/banner.png?a=1"></image>
+</view>
+<view class='content-bac' wx:for="{{list}}" id='{{item.id}}'  bindtap='detail' wx:key='{{index}}' data-mystatus='{{item.status_for_user}}'>
+<view class='content flex-aic'>
+<view class='content-img'>
+<image src='https://m.zujiekeji.cn/xcximg/xcxpintuan/pt_pic230x230.png' mode='aspectFit' class='content-img2'></image>
+
+<image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/yijiewan2.png' class='img104'
+wx:if='{{item.status_for_user=="going"}}'></image>
+<image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/yiwancheng2.png' class='img104'
+wx:if='{{item.status_for_user=="success"}}'></image>
+</view>
+<view class='content-main flex-grow1'>
+<view class='main'>{{item.name}}</view>
+<view class='flex-aic'>
+<view>
+<view class='people'>参团人数{{item.attend}}人</view> 
+</view>
+<view> 
+<view class='price'>团长价￥{{item.captain_price}}元</view>
+</view>
+</view>
+<view class='pintuanbtn flex-jcs'>
+<image class='user' src='https://m.zujiekeji.cn/xcximg/xcxpintuan/pt_icon.png'></image>
+<view>去拼团({{item.success_number}}人成团)</view>
+<image class='right' src='https://m.zujiekeji.cn/xcximg/xcxpintuan/right_white.png'></image>
+</view>
+<!-- <view class='kanjiabtn' wx:if='{{item.give_type=="coupon"}}'>砍价0元得 ></view>
+<view class='kanjiabtn' wx:if='{{item.give_type=="card"}}'>砍价{{item.floor_price}}元得 ></view> -->
+</view> 
+</view>
+</view>
+
+<view wx:if='{{list.length==0}}'>
+<image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/nolist.png' class='nolist'></image>
+<view class='nohuodong'>暂时没有拼团活动，敬请期待~</view>
+</view>
+</view>
+
+<view class='forfooter'></view>
+<view class='footer flex-jac' wx:if='{{user_id!=""}}' bindtap='mypintuan'>
+<image src='https://m.zujiekeji.cn/xcximg/xcxpintuan/pt_grey.png' class='futou'></image>
+<view class='themebfff fbtn f32'>查看我的拼团</view>
+</view>

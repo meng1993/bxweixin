@@ -1,0 +1,5 @@
+@import '/pages/searchres/searchres.wxss';
+.h4{font-size: 34rpx;margin: 22rpx 20rpx; font-weight: bold;}
+.text-bg{background-color: #f0f2f5;font-size: 26rpx;display:block; padding-top: 7rpx;padding-bottom: 110rpx;}
+.text-bg .p{width:90%; margin:7rpx auto;line-height: 45rpx;font-size: 27rpx;}
+.ptlcimg{width: 750rpx;height: 584rpx;margin: 0 auto; display: block;}

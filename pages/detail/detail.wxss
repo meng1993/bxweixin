@@ -1,0 +1,67 @@
+@import '/temp/bookDetail/bookDetail.wxss';
+page{
+  background-color: #EFEFF4; font-family: PingFangSC;
+}
+.bigimg{
+  display: block;height: 430rpx;margin: 24rpx auto;
+}
+.detailbox{padding: 30rpx;padding-bottom: 20rpx;margin-top: 20rpx;}
+.title{color: #262626;font-size: 34rpx;line-height: 40rpx;}
+.text1{color: #535353;font-size: 28rpx;line-height: 40rpx;margin-top: 10rpx;}
+.label-mr{margin-right: 20rpx;}
+.labelbox{margin-top: 20rpx;}
+.introduce{color: #878787;font-size: 26rpx;line-height: 40rpx;margin-top: 20rpx;}
+.nopaddingb{padding-bottom: 0;}
+.detailimgbox{padding: 20rpx 0;}
+.detailimg{display: block;width: 710rpx;margin: 0 auto; margin-top: 20rpx;border-radius: 3px;}
+.processimg{display: block; width: 750rpx;height: 1430rpx;background-color: #fff;margin-bottom: 20rpx;}
+.userwrap{margin-bottom: 20rpx;}
+.userevaluation{padding-left: 30rpx;line-height: 100rpx;color: #262626;font-size: 34rpx;margin-bottom: 2rpx;background-color: #fff;}
+/*.userbox{padding: 20rpx;margin-bottom: 2rpx;background-color: #fff}*/
+/*.userimg{display: block;width: 70rpx;height: 70rpx;margin-right: 10rpx;}*/
+/*.username{color: #535353;font-size: 24rpx;}*/
+/*.commenttime{color: #b3b3b3;font-size: 24rpx;margin-right: 10rpx;}*/
+/*.content{color: #262626;font-size: 24rpx;margin-top: 20rpx;line-height: 30rpx;position: relative;}*/
+.footer{position: fixed;bottom: 0;width: 750rpx;height: 100rpx;z-index: 10000;background-color: #fff;}
+.footerlimg{position: relative;display: block; width: 144rpx;height: 100rpx;}
+.footerlimg .footerlimg_icon_img{
+  position: absolute;
+  width: 36rpx;
+  height: 42rpx;
+  left: 50%;
+  margin-left: -18rpx;
+  top: 17rpx;
+}
+.footerlimg .footerlimg_kefu{
+  position: absolute;
+  width: 100%;
+  /*height: ;*/
+  text-align: center;
+  font-size: 22rpx;
+  color: #878787;
+  bottom: 5rpx;
+}
+.footerlimg .contact{
+  width: 144rpx;
+  height: 100rpx;
+  background: transparent;
+  color: black;
+  font-size: 0;
+  z-index: 99999;
+}
+.footerlimg .contact::after {
+  border: none;
+}
+.footerr{background: #6ed14e;color: #fffefe;font-size: 32rpx;line-height: 100rpx;text-align: center;}
+.forfooter{height: 100rpx;}
+.blue{color:#235793;margin-right: 20rpx;}
+.shujiaw{position: relative;}
+.num{position: absolute;top: 6rpx;right: 10rpx;min-width: 40rpx;height: 40rpx;border-radius: 100px;
+background-color: rgb(244, 53, 48);color: #fff;font-size: 24rpx;text-align: center;line-height: 40rpx;}
+.jieshuimg{display: block;width: 210rpx;height: 178rpx;}
+.yijie{position: absolute;top: 20rpx;right: 0}
+.yijiewan{width: 84rpx;height: 40rpx;display: block;padding-bottom: 10rpx;}
+.yijieguo{width: 84rpx;height: 40rpx;display: block;}
+.goshouye{position: fixed;width: 100rpx;height: 100rpx;border-radius: 50px;
+bottom: 160rpx;right: 30rpx;}
+.gohome{display: block;width: 100rpx;height: 100rpx;border-radius: 50px;}

@@ -1,0 +1,25 @@
+@import '/pages/pintuan/list/list.wxss';
+.jindu{
+  width: 80rpx;
+	height: 8rpx;
+  background-color: #ccc;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+.green{
+  background-color: #6fd14e;
+  border-radius: 8rpx;
+  height: 8rpx;
+}
+.record-content{
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+.or{
+  color: #ff8e00;
+}
+.main{
+  min-height: 180rpx;
+}
+.abimg{position: absolute;bottom: 20rpx;right: 40rpx;width: 190rpx;height: 105rpx;}

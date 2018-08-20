@@ -1,0 +1,17 @@
+<template name="zan-loadmore">
+
+    <view class="zan-loadmore" hidden="{{bottomload}}">
+      <view class='zan-loadposition'>
+        <view class="zan-loading"></view>
+        <view class="zan-loadmore__tips">加载中...</view>
+      </view>
+    </view>
+    
+</template>
+<template name="zan-loadend">
+
+    <view class="zan-loadmore zan-loadmore--nodata" wx:if="{{bottomend}}">
+      <view class="zan-loadmore__tips">{{ nodata_str || '没有更多内容啦' }}</view>
+    </view>
+
+</template>

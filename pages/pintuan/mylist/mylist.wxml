@@ -1,0 +1,49 @@
+<view class='themebgray'>
+  <view class='record-bac' wx:for='{{list}}' wx:key='{{index}}'>
+    <view class='record-main flex-jasc' id='{{item.group_id}}' data-type='{{item.group_type}}' bindtap='detail'>
+      <view class=''>
+      <view class='record-title'>     
+        <image class='cardi' src='https://m.zujiekeji.cn/xcximg/xcxkanjia/icon_vip.png'></image>
+         {{item.name}}
+      </view>
+      <view class='record-content flex-aic' catchtap='zudang'>
+        <view class='jindu'>
+          <view class='green' style='width: {{item.join_number/item.success_number*100}}%'></view>
+        </view>
+      <view class='flex-jcs'><view class='or'>{{item.join_number}}</view>/{{item.success_number}}</view>
+      <button class='share flex-jcs' open-type="share" id='{{item.group_id}}' data-type='{{item.group_type}}'
+      data-title='{{item.name}}'>
+      <image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/share_gray.png?a=1'></image>
+      分享</button>
+      </view>
+      </view>
+
+      
+      <view wx:if='{{item.give_type=="card"}}'>
+        <view class='status' wx:if='{{item.status=="success"&&item.another_buy==0&&item.hade==1}}'>
+        已免费获得</view>
+        <view class='status cred' wx:if='{{item.status=="success"&&item.another_buy==0&&item.hade==0}}'>
+        可底价购买></view>
+        <view class='status' wx:if='{{item.status=="success"&&item.another_buy==1&&item.hade==0}}'>已底价购买         </view>
+      </view>
+      <view wx:if='{{item.give_type=="coupon"}}'>
+        <view class='status' wx:if='{{item.status=="success"&&item.floor_price==0}}'>已免费获得</view>
+      </view>
+
+
+
+
+      <view class='status' wx:if='{{item.status===1}}'>进行中</view>
+      <view class='status' wx:if='{{item.status===2}}'>拼团成功</view>
+      <view class='status' wx:if='{{item.status===-1}}'>已结束</view>
+    </view>
+  </view>
+</view>
+
+<view class='nobookw themebgray' wx:if='{{list.length==0}}'>
+<view class='nobook'>
+  <image class='nokookimg' src='/img/shelf/bookshelfno.png'></image>
+  <view class='nobooktext'>拼团记录为空的~</view>
+  <view class='stroll' bindtap='gopintuan'>我要去拼团</view>
+</view>
+</view>

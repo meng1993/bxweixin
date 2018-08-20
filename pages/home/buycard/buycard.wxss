@@ -1,0 +1,46 @@
+@import '/pages/home/mycard/mycard.wxss';
+view{font-family: PingFangSC;}
+page{background-color: #EFEFF4}
+.header{width: 750rpx;height: 80rpx;background-color: #fdf3df;position: fixed;top: 0;z-index: 10000}
+.headimg{width: 32rpx;height: 34rpx;display: block;}
+.headert{color: #f09f00;font-size: 30rpx;}
+.fortop{height: 80rpx;}
+.w1{padding: 20rpx 0;padding-top: 20rpx;}
+.pb0{padding-bottom: 0}
+.pb20{padding-bottom: 10rpx;}
+.b20{margin-bottom: 20rpx;}
+.name{color: #262626;font-size: 32rpx;}
+.box{border: 2rpx solid #c0c0c0;border-radius: 10px;padding: 20rpx;}
+.box2{border: 2rpx solid #498fe1;}
+.gou{width: 40rpx;height: 40rpx;display: block;}
+.riqi{color: #262626;font-size: 32rpx;margin-left: 20rpx;}
+.text1{color: #262626;font-size: 28rpx;}
+.text2{color: #ff001d;font-size: 28rpx;height: 40rpx;line-height: 40rpx;}
+.text3{color: #878787;font-size: 28rpx;height: 40rpx;line-height: 40rpx;position: relative;margin-left: 20rpx;}
+.text3g{position: absolute;top: 18rpx;border: 2rpx solid #878787;width: 100%;}
+.jiage{margin-top: 20rpx;justify-content: flex-end;}
+.matop{margin-top: 20rpx;}
+.jihua2{padding: 20rpx 0;}
+.footer{position: fixed;bottom: 0;width: 750rpx;height: 100rpx;z-index: 10000;justify-content: flex-end;}
+.footera{margin-right: 20rpx;}
+.forfooter{height: 100rpx;}
+.btn{ width: 230rpx; line-height: 100rpx;text-align: center;color: white;font-size: 36rpx;}
+.ying{color: #262626;font-size: 32rpx;padding-left: 20rpx;padding-top: 10rpx;}
+.ya{color: #878787;font-size: 24rpx;padding-left: 20rpx;}
+.zhima{color: #ff001d;font-size: 24rpx;padding: 30rpx;}
+.shuoming{font-size: 26rpx;color: #666;padding: 0 30rpx 20rpx;}
+.shuomingp{padding-bottom: 40rpx;}
+.blue{color: #2196f3}
+.baoyou{font-size: 26rpx;color: red;margin-top: 20rpx;}
+.mtop{margin-top: 20rpx;}
+.c11{padding: 50rpx 30rpx 30rpx 50rpx;}
+.c1a2{font-size: 38rpx;margin-right: 10rpx;color: red;}
+.c1a3{font-size: 28rpx;margin-right: 20rpx;text-decoration: line-through;}
+.gou{display: block;width: 50rpx;height: 50rpx;}
+.xu{font-size: 24rpx;}
+.xu1{color: #f5ab1b; font-weight: bold}
+.xu2{color: #666666}
+.xuw{padding: 10rpx 20rpx;}
+.wenhao{width: 40rpx;display: block;height: 40rpx;background-color: #f5ab1b;text-align: center;
+line-height: 40rpx;color: #fff;font-size: 30rpx;border-radius: 100px;}
+.bt20{border-top: 20rpx solid #EFEFF4}

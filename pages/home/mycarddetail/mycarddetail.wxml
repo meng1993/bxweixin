@@ -1,0 +1,19 @@
+<view class='themebfff w'>
+  <view class='wrap'>
+    <view class='sectiona flex-jcs'>
+      <view class='text1b'>
+        <view class='name themegreen'>{{data.name}}</view>
+        <view class='text1'>有效期：{{data.effect_time}}至{{data.invalid_time}}</view>
+      </view>
+      <view class='text2'>剩余：{{data.total_remain==0?"无限次":data.total_remain+"次"}}</view>
+    </view>
+    <view class='sectionb flex-only flex-wrap'>
+      <view class='box'>每次可以借阅：<text class='c'>{{data.one_rent_num}}本</text></view>
+      <view class='box'>可以借阅次数：<text class='c'>{{data.total_use_times==0?"无限制":data.total_use_times+"次"}}</text></view>
+      <view class='box' hidden='{{data.rank==4}}'>每次借阅周期：<text class='c'>{{data.lease_day}}天</text></view>
+      <view class='box' hidden='{{data.rank==4}}'>已经使用次数：
+        <text class='c'>{{data.total_use_times-data.total_remain}}次</text>
+      </view>
+    </view>
+  </view>
+</view>

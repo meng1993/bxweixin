@@ -1,0 +1,52 @@
+<view class='themebgray'>
+  <view class='record-bac' wx:for='{{list}}' wx:key='{{index}}'>
+    <view class='record-main flex-jasc' id='{{item.user_bargain_id}}' bindtap='detail'>
+      <view class=''>
+      <view class='record-title'>     
+        <image wx:if='{{item.give_type=="card"}}' class='cardi'
+        src='https://m.zujiekeji.cn/xcximg/xcxkanjia/icon_vip.png'></image>
+        <image wx:if='{{item.give_type=="coupon"}}' class='coui'
+         src='https://m.zujiekeji.cn/xcximg/xcxkanjia/discount.png'></image>
+         {{item.title}}
+      </view>
+      <view class='record-content flex-aic' catchtap='zudang'>
+        <view class='jindu'>
+          <view class='green' style='width: {{item.finish/item.total*100}}%'></view>
+        </view>
+      <view class='flex-jcs'><view class='or'>{{item.finish}}</view>/{{item.total}}</view>
+      <button class='share flex-jcs' open-type="share" id='{{item.user_bargain_id}}'
+      data-title='{{item.title}}'>
+      <image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/share_gray.png?a=1'></image>
+      分享</button>
+      </view>
+      </view>
+
+      
+      <view wx:if='{{item.give_type=="card"}}'>
+        <view class='status' wx:if='{{item.status=="success"&&item.another_buy==0&&item.hade==1}}'>
+        已免费获得</view>
+        <view class='status cred' wx:if='{{item.status=="success"&&item.another_buy==0&&item.hade==0}}'>
+        可底价购买></view>
+        <view class='status' wx:if='{{item.status=="success"&&item.another_buy==1&&item.hade==0}}'>已底价购买         </view>
+      </view>
+      <view wx:if='{{item.give_type=="coupon"}}'>
+        <view class='status' wx:if='{{item.status=="success"&&item.floor_price==0}}'>已免费获得</view>
+      </view>
+
+
+
+
+      <view class='status' wx:if='{{item.status=="develop"}}'>进行中</view>
+      <view class='status' wx:if='{{item.status=="buy"}}'>已购买</view>
+      <view class='status' wx:if='{{item.status=="end"}}'>已结束</view>
+    </view>
+  </view>
+</view>
+
+<view class='nobookw themebgray' wx:if='{{list.length==0}}'>
+<view class='nobook'>
+  <image class='nokookimg' src='/img/shelf/bookshelfno.png'></image>
+  <view class='nobooktext'>砍价记录为空的~</view>
+  <view class='stroll' bindtap='gokanjia'>我要去砍价</view>
+</view>
+</view>

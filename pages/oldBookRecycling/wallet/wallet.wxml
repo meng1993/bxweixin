@@ -1,0 +1,28 @@
+<import src='/temp/emptyPage/emptyPage.wxml' />
+<view class="wallet">
+    <view class="header">
+        <image class="bg_img" src="/img/oldBook/wallet_bg.png"></image>
+        <view class="egg_num">
+            <view class="egg_title">当前鸟蛋</view>
+            <view class="egg_number">{{score}}</view>
+        </view>
+    </view>
+    <!--<view class="record_title">-->
+        <!--<image class="icon_record" src="/img/oldBook/record.png"></image>-->
+        <!--鸟蛋记录-->
+    <!--</view>-->
+    <!--滚动区域-->
+    <scroll-view class="scroll-view_H" scroll-y bindscrolltolower="loadMore" bindscrolltoupper="refresh" style ="width: 100%;height: 800rpx;">
+
+        <view class="scroll-view-item list_item" wx:for="{{list}}" wx:if="{{list.length != 0}}">
+            <view class="item_left">
+                <view class="name">{{item.source}}</view>
+                <view class="time">{{item.create_time}}</view>
+            </view>
+            <view class="item_right" wx:if="{{item.num < 0}}">{{item.num}}</view>
+            <view class="item_right" wx:else>+{{item.num}}</view>
+        </view>
+        <template is="emptyPage" data="{{emptyContent,emptyBtnText}}" wx:if="{{list.length == 0}}"></template>
+
+    </scroll-view>
+</view>

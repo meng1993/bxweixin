@@ -1,0 +1,27 @@
+page{background-color: #EFEFF4;}
+view{font-family: PingFangSC;}
+.greenl{width: 10rpx;height: 38rpx;}
+.yigoumai{color: #262626;font-size: 32rpx;margin-left: 20rpx;}
+.h100{height: 100rpx;background-color: #fff;}
+.bb{border-bottom: 2rpx solid #EFEFF4}
+.mb20{margin-bottom: 20rpx;}
+.text{color: #5ccd35;font-size: 28rpx;}
+.text2{color:#878787;}
+.sanjiao{display: block;width: 16rpx;height: 30rpx;}
+.p30{padding: 0 30rpx;}
+.color2{color: #878787;margin-left: 20rpx;}
+.c{width: 710rpx;height: 236rpx;background-image: url(https://m.zujiekeji.cn/img/new-card.png);
+margin: 0 auto 20rpx;border-radius: 2px;position: relative}
+.c1{padding: 50rpx 100rpx 30rpx;}
+.c1a{font-size: 32rpx;color: #fff}
+.c1b{font-size: 38rpx;color: #fff}
+.c2{padding: 0 100rpx;}
+.c2a{width: 170rpx;text-align: center}
+.c2b{color: #926b0d;font-size: 28rpx;}
+.c2c{color: #926b0d;font-size: 24rpx;}
+.cimg{display: block;width: 194rpx;height: 114rpx;position: absolute;left: 250rpx;top: 50rpx;}
+.footer{width: 750rpx;position: fixed;bottom: 0;z-index: 10000}
+.blue{text-align: center;line-height: 100rpx;color: #3b7ada;font-size: 28rpx;}
+.forfooter{height: 100rpx;}
+.cardno{font-size: 24rpx;position: absolute;bottom: 8rpx;right: 20rpx;color: #FFF;}
+.w170{width: 170rpx;}

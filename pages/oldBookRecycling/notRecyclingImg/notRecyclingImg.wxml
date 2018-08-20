@@ -1,0 +1,2 @@
+<!--pages/oldBookRecycling/notRecyclingImg/notRecyclingImg.wxml-->
+<image src="/img/oldBook/not_recy.png" class="img" mode="widthFix"></image>

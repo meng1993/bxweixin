@@ -1,0 +1,12 @@
+view{font-family: PingFangSC;}
+page{background-color: #EFEFF4}
+input{font-size: 28rpx;}
+.list1{height: 88rpx;padding: 0 30rpx;}
+.bb{border-bottom: 2rpx solid #EFEFF4;}
+.list1a{color: #262626;font-size: 28rpx;}
+textarea{width: 500rpx;color: #262626;font-size: 28rpx;min-height: 60rpx;}
+.list2a{padding-left: 30rpx;}
+.dizhi{padding-top: 26rpx;margin-bottom: 20rpx;}
+.xuan{width: 40rpx;height: 40rpx;display: block;margin-right: 10rpx;}
+.save{width: 310rpx;height: 88rpx;margin: 300rpx auto 0; text-align: center;line-height: 88rpx;
+color: white;font-size: 32rpx;background-color: #6ed14e}

@@ -1,0 +1,69 @@
+.s-header{
+  padding: 14rpx 20rpx;
+  background-color: #EFEFF4;
+}
+.s-searchinputbox{
+  background-color: #fff; 
+  border-radius: 15px;
+  overflow: hidden;
+}
+.s-picker{
+  color: #535353;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  font-family: PingFangSC;
+  margin: 0 30rpx;
+}
+.s-typearr{
+  width: 90rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #9c9c9c;
+  font-family: PingFangSC;
+  font-size: 30rpx;
+}
+.s-sanjiao{
+  width: 14rpx;
+  height: 7rpx;
+  margin-left: 6rpx;
+}
+.s-verticalline1{
+  width: 2rpx;
+  height: 44rpx;
+}
+.s-searchimg{
+  width: 34rpx;
+  height: 34rpx;
+  margin: 0 20rpx;
+}
+.s-searchinput{
+  background-color: #fff;
+  height: 60rpx;
+  color: #9c9c9c;
+  font-family: PingFangSC;
+  font-size: 30rpx;
+  font-style: normal;
+}
+
+
+.p-classification{
+  background-color: #fff;
+  width: 750rpx;
+  height: 88rpx;
+}
+
+.p-condition1{
+  width: 250rpx;
+  color: #878787;
+  font-family: PingFangSC;
+  font-size: 32rpx;
+  line-height: 80rpx; height: 80rpx;
+  text-align: center;
+}
+.p-condition2{
+  color: #5ccd35;
+}
+.p-Highlight{
+  width: 40rpx; height: 8rpx; background-color: #6ed14e; margin: 0 auto; border-radius: 10px;
+}

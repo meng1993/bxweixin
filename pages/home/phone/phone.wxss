@@ -1,0 +1,14 @@
+page{background-color: #EFEFF4;padding-top: 20rpx;}
+.a{padding: 0 30rpx;}
+.a1{color: #333333;font-size: 28rpx;width: 690rpx;height: 100rpx;}
+.bb{border-bottom: 2rpx solid #e8e8e8;}
+.a2{width: 100rpx;height: 50rpx;border-right: 2rpx solid #dddddd;text-align: center;line-height: 50rpx;}
+.a3{}
+.a4{display: block;width: 36rpx;height: 36rpx;}
+.a5{background-color: #6fd14e;color: #fff;width: 210rpx;height: 64rpx;text-align: center;line-height: 64rpx;
+border-radius: 4px;}
+.save{width: 650rpx;height: 86rpx;line-height: 86rpx;text-align: center;background-color: #6ED14E;
+border-radius: 4px;margin: 0 auto;color: white;margin-top: 120rpx;}
+.save2{width: 650rpx;height: 86rpx;line-height: 86rpx;text-align: center;background-color: #e2e2e2;
+border-radius: 4px;margin: 0 auto;color: #999999;margin-top: 120rpx;}
+.a52{background-color: #efefef;color: #999999}

@@ -1,0 +1,50 @@
+<import src="/temp/bottomload/index.wxml" />
+<view class='header'>
+  <view class='flex-jasc'>
+    <view class='flex-aic'>
+      <image src='/img/shelf/bluespot.png' class='bluespot'></image>
+      <view class='shaixuan'>当前筛选选项</view>
+    </view>
+    <view class='chongxin' bindtap='back'>重新选择</view>
+  </view>
+  <view class='flex-only flex-wrap biaoqianb'>
+    <view class='biaoqian' wx:for='{{searchbiaoqian}}'>{{item}}</view>
+  </view>
+</view>
+<view class='fortop toph'></view>
+
+<view class='flex-only flex-wrap bookwrap' hidden='{{nobook}}'>
+<view class='book' wx:for='{{lists}}' wx:key='{{item.book_id}}'>
+  <image class='image' src='{{item.img_medium}}' id='{{item.book_id}}' bindtap='detail'
+  mode='aspectFit'></image>
+  <view class='text'>{{item.title}}</view>
+  <image class='gouxuan' catchtap='checked' id="{{index}}"
+  src='{{item.checked!=true?"/img/home/moren3.png":"/img/home/xuanzhong3.png"}}'></image>
+</view>
+</view>
+
+<!-- <template is="zan-loadmore" data="{{bottomload}}"></template>
+<view hidden='{{nobook}}'>
+<template is="zan-loadend" data="{{bottomend}}"></template>
+</view> -->
+
+<view class='nobookbox' hidden='{{!nobook}}'>
+     <image src='/img/shelf/nobook.png' class='nobook'></image>
+     <view class='nobooktext'>抱歉，没有搜索到相关图书</view>
+</view>
+
+<view class='footer flex-jcs'>
+  <view class='flex-grow1'></view>
+  <view class='imgb' bindtap='jieshujia'>
+    <image class='footerlimg' src='/img/shouye/shujia.png'></image>
+    <view class='shujia' >借书架</view>
+    <!--<view class='num' hidden='{{num==0}}'>{{num}}</view>-->
+    <view class='num' hidden='{{num==0}}'>{{num}}</view>
+  </view>
+  <view class='imgb' bindtap='huan'>
+    <image class='footerlimg' src='/img/shouye/shujia.png'></image>
+    <view class='shujia' >换一批</view>
+  </view>
+  <view class='footerr' bindtap='add'>加入借书架</view>
+</view>
+<view class='forfooter'></view>

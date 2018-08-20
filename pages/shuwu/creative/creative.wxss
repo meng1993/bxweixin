@@ -1,0 +1,19 @@
+.sbook{
+  /* background-color: #fff; */
+  margin-top: 20rpx;
+}
+.f{width: 730rpx;padding-left: 20rpx;border-bottom: 2rpx solid #e4e4e4;padding-top: 28rpx;}
+.f1{width: 88rpx;height: 96rpx;background-color: #f6f6f6;position: relative;}
+.f2{color: #333333;font-size: 44rpx;line-height: 54rpx;text-align: center}
+.f3{color: #333333;font-size: 24rpx;text-align: center;width: 66rpx;margin: 0 auto;
+border-top: 2rpx solid #333;line-height: 40rpx;}
+.f5{width: 620rpx;margin-left: 20rpx;}
+.f4{color: #333;font-size: 30rpx;line-height: 36rpx;margin-bottom: 20rpx;}
+.f6{width: 620rpx;overflow-x: auto;}
+.f7{width: 210rpx;margin-right: 20rpx;}
+.f8{width: 210rpx;display: block;height: 210rpx;}
+.f9{line-height: 60rpx;font-size: 24rpx;height: 60rpx;text-overflow:ellipsis;overflow:hidden;color:#999;white-space: nowrap;text-align: center}
+.ff1{width: 58rpx;height: 195rpx;position: relative;margin: 0 auto;}
+.ff2{width: 58rpx;height: 195rpx;}
+.ff3{position: absolute;width: 30rpx;height: 176rpx;left: 14rpx;bottom: 0;font-size: 26rpx;
+color: #999;flex-direction:column;text-align: center;}

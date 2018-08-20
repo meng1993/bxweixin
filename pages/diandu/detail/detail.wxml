@@ -1,0 +1,82 @@
+<!--<image class='a1' src='{{productMessage.product_img}}'></image>-->
+<swiper indicator-dots="{{swiperMessage.indicatorDots}}" style="width: 750rpx; height: 420rpx;"
+        autoplay="{{swiperMessage.autoplay}}" interval="{{swiperMessage.interval}}" duration="{{swiperMessage.duration}}">
+  <block wx:for="{{productMessage.product_img_main}}">
+    <swiper-item>
+      <image src="{{item.src}}" class="slide-image" style="width: 750rpx; height: 420rpx;"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='a2'>
+  <view class='a3 f28 c333'>{{productMessage.product_info.title}}</view>
+
+  <view class='a4 flex-jasc'>
+
+    <block wx:if="{{!priceMessage}}">
+      <view class='flex-aie'>
+        <view>
+          <text class='f24 cred'>￥</text><text class='f32 cred'>300</text>
+        </view>
+        <view class='f26 a5 c999'>￥999</view>
+      </view>
+      <view class='f26 c999'>库存74件</view>
+    </block>
+
+    <block wx:else>
+      <view class='flex-aie'>
+        <view>
+          <text class='f24 cred'>￥</text><text class='f32 cred'>{{priceMessage[0].price}}</text>
+        </view>
+        <view class='f26 a5 c999'>￥{{priceMessage[0].original_price}}</view>
+      </view>
+      <view class='f26 c999'>库存{{priceMessage[0].stock}}件</view>
+    </block>
+
+  </view>
+
+</view>
+<view class='b'>
+  <!--11111111111sku1_list(颜色)开始-->
+  <view class='b5' style="" wx:if="{{sku1_list[0] != ''}}">
+    <view class='f26 c333 b1' style="float: left;width: 15%;margin-top: 6rpx;">{{productMessage.product_info.attr1_title}}</view>
+    <view style="width: 85%;float: left;">
+      <view class='b2 {{index == click_id1?"b3":"b4"}}' style="float: left;margin: 0 20rpx 10rpx 0;" wx:for="{{sku1_list}}" bindtap='check1' id='{{index}}' data-title="{{item}}">{{item}}</view>
+    </view>
+    <view style="clear: both;"></view>
+  </view>
+  <!--11111111111sku1_list结束-->
+
+  <!--11111111111sku2_list(类别)开始-->
+  <!--<view class='flex-aic b5' wx:if="{{sku2_list[0] != ''}}">-->
+    <!--<view class='f26 c333 b1'>{{productMessage.product_info.attr2_title}}</view>-->
+    <!--<view class='b2 {{index == click_id2?"b3":"b4"}}' wx:for="{{sku2_list}}" bindtap='check2' id='{{index}}' data-title="{{item}}">{{item}}</view>-->
+  <!--</view>-->
+  <view class='b5' style="" wx:if="{{sku2_list[0] != ''}}">
+    <view class='f26 c333 b1' style="float: left;width: 15%;margin-top: 6rpx;">{{productMessage.product_info.attr2_title}}</view>
+    <view style="width: 85%;float: left;">
+      <view class='b2 {{index == click_id2?"b3":"b4"}}' style="float: left;margin: 0 20rpx 10rpx 0;" wx:for="{{sku2_list}}" bindtap='check2' id='{{index}}' data-title="{{item}}">{{item}}</view>
+    </view>
+    <view style="clear: both;"></view>
+  </view>
+  <!--11111111111sku2_list结束-->
+
+
+  <view class='flex-aic'>
+    <view class='f26 c333 b1'>数量</view>
+    <view class='b8 flex-aic'>
+      <view class='b6' bindtap='jian'></view>
+      <view class='b7 f26 c999'>{{num}}</view>
+      <view class='b6' bindtap='jia'></view>
+    </view>
+  </view>
+</view>
+
+<view class="bg20"></view>
+
+<!--下边详情图-->
+<image class="product_detail_image" wx:for="{{productMessage.product_img_detail}}" mode="widthFix" src="{{item.src}}"></image>
+
+<view class='forfooter'></view>
+<view class='footer themebgreen flex-jac' data-num="{{num}}" data-message="{{priceMessage}}" data-img="{{productMessage.product_img_main[0].src}}" data-title="{{productMessage.product_info.title}}" bindtap="toBuy">
+  <view class='themefff f36'>立即购买</view>
+</view>

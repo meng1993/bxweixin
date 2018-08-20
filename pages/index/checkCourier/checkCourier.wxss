@@ -1,0 +1,15 @@
+.checkCourier{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+.checkCourier .courier_name{
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    background-color: #fff;
+    padding-left: 30rpx;
+    font-size: 32rpx;
+    color: #333333;
+    margin-top: 1rpx;
+}

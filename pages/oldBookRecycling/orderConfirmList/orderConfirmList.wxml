@@ -1,0 +1,4 @@
+<import src='/temp/oldBook/oldBook.wxml' />
+<view class="orderConfirmList">
+    <template is="orderConfirmList" data="{{list}}"></template>
+</view>

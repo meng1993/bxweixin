@@ -1,0 +1,32 @@
+page{font-family: PingFangSC}
+button{margin: 0;padding: 0;}
+.logo{width: 140rpx;height:162rpx;display: block;margin: 50rpx auto 20rpx;margin-left: 305rpx;}
+.text{text-align: center;color: #5fcb3d;font-size: 54rpx;}
+.text2{font-size: 24rpx;}
+.wrap{padding: 20rpx 100rpx 0;}
+.list{margin-top: 50rpx;}
+.phonet{color: #262626;font-size: 28rpx;margin-left: 20rpx;}
+.phoneimg{width: 28rpx;height:38rpx;}
+.inputw{margin-top: 20rpx;padding-bottom: 20rpx;border-bottom: 4rpx solid #e4e4e4;}
+.input{color: #c5c5ca;font-size: 32rpx;}
+.inputwid{width: 350rpx;}
+.photobtn{width: 200rpx;}
+.inputerror{color:red;font-size: 32rpx;}
+.bordererror{border-bottom: 4rpx solid red;}
+.codeimg{width: 38rpx;height: 28rpx;}
+.pwdimg{width: 32rpx;height: 38rpx;}
+.otherway{color: #5fcb3d;font-size: 28rpx;margin-top: 20rpx;}
+.otherway2{color: #5fcb3d;font-size: 32rpx;margin-top: 40rpx;padding-right: 40rpx;}
+.rbtn{width: 550rpx;height: 100rpx;background: #6ed14e;border-radius: 20px;
+text-align: center;line-height: 100rpx;color: #fffefe;font-size: 36rpx;margin-top: 100rpx;}
+.rbtn2{margin-top: 60rpx;color:#6ed14e;background-color: #fff;border: 4rpx solid #6ed14e;
+height: 92rpx;line-height: 92rpx;width: 542rpx;border-radius: 20px;text-align: center;}
+.rbtn3{margin-top: 30rpx;width: 250rpx;height: 100rpx;background: #6ed14e;border-radius: 20px;
+text-align: center;line-height: 100rpx;color: #fffefe;font-size: 36rpx;}
+.codeimg{width: 38rpx;height: 28rpx;}
+.ybtn{width: 164rpx;height: 64rpx;background: #6ed14e;color: #fffefe;font-size: 26rpx;
+text-align: center;line-height: 64rpx;border-radius: 10px;}
+.inputw{margin-top: 20rpx;padding-bottom: 20rpx;border-bottom: 4rpx solid #e4e4e4;}
+.input{color: #c5c5ca;font-size: 32rpx;flex-grow: 1}
+.logow{width: 600rpx;}
+.a52{background-color: #efefef;color: #999999}

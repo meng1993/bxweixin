@@ -1,0 +1,16 @@
+<textarea class='remark' id='item.id'  value='{{remark}}' focus='true' bindinput='remark'
+placeholder='亲，请填写心得体会~' show-confirm-bar='{{xvzxcc}}'></textarea>
+<view class='date'>{{date}}</view>
+
+<view class='time'></view>
+<view  class='flex-only main'>
+     <view class='m1'  wx:for='{{dayimgs}}' wx:key='{{item.book_id}}' id='{{item.book_id}}' 
+     data-src='{{item.img}}' bindtap='detail'>
+        <image src='{{item.img}}' class='mimg' mode='aspectFit'></image>
+        <view class='title'>{{item.title}}</view> 
+        <image src='/img/news/remove.png' class='remove' id='{{index}}' catchtap='remove'></image>
+     </view>
+     <view class='add' bindtap='goshuwu' wx:if='{{dayimgs.length<20}}'>+</view>
+</view>
+<view class='save' bindtap='save'>保存</view>
+<view class='forbottom'></view>

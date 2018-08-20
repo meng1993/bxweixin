@@ -1,0 +1,113 @@
+<wxs module="filters" src="./pay.wxs"></wxs>
+<view class='header flex-jac'>
+  <image src='/img/shouye/wenxin.png' class='headimg'></image>
+  <view class='headert'>暂不支持黑龙江,吉林,内蒙古,新疆,云南,青海,海南,西藏等地区</view>
+</view>
+
+<!--选择地址-->
+<view class='themebfff' style="margin-top: 80rpx;">
+  <view class='flex-jasc pr40' wx:if='{{addressid==0}}' bindtap='checkaddress'>
+    <view class='qingxuandizhi'>请选择收货地址</view>
+    <image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>
+  </view>
+  <view class='flex-jasc adresswrap pr40' wx:if='{{addressid!=0}}' bindtap='checkaddress'id='{{addressid}}'>
+    <view>
+      <view class='flex-aic'>
+        <view class='name'>{{address.address_name}}</view>
+        <view class='phone'>{{address.mobile}}</view>
+        <view class='moren' wx:if='{{address.is_set_default==1}}'>默认</view>
+      </view>
+      <view class='flex-aic mt'>
+        <view><image class='adressimg' src='/img/shelf/adress.png'></image></view>    
+        <view class='adress'>{{address.province}}{{address.city}}{{address.district}}
+        {{address.address}}</view>
+      </view> 
+    </view>
+    <image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>
+  </view> 
+</view> 
+<image class='fgx' src='/img/shelf/fgx.png'></image>
+
+<view class='a flex-aic'>
+  <view class='a1'>
+    <image class='a2' src='{{img}}'></image>
+  </view>
+  <view>
+    <view class='a3 f28 c333'>{{title}}</view>
+    <view class='flex-aie'>
+      <view class='f28 cred'>￥{{message[0].price}}元</view>
+      <view class="f28 cred" style="margin-left: 30rpx;">{{message[0].sku1_title}}<text wx:if="{{message[0].sku1_title != ''}}">/</text>{{message[0].sku2_title}}</view>
+      <view class='f24 c999 a4'>x{{num}}</view>
+    </view>
+  </view>
+</view>
+
+<view class='flex-jasc feiyongb themebfff' hidden='{{havecard}}' bindtap='checkyouhui'>
+    <view class='xuanzejihua'>优惠券</view>
+    <view class='flex-aic'>
+      <view class='flex-aic'>
+        <view class='feiyongr' wx:if='{{hadyouhui}}'>-￥{{youhuiprice}}</view>
+        <view class='jihua' wx:else>{{youhuitext}}</view>
+      </view>
+      <image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>
+    </view>
+</view>
+<!--czy新增鸟蛋开始-->
+
+<view class='flex-jasc feiyongb themebfff'>
+  <view class='xuanzejihua'>我的鸟蛋:<text style="color: #ff001e">{{myEggNum}}</text>个</view>
+  <view class='flex-aic'>
+    <image src='/img/close.png' class='btn_switch' data-id="0" wx:if="{{!switchType}}" catchtap="changeSwitch"></image>
+    <image src='/img/open.png' class='btn_switch' data-id="1" wx:if="{{switchType}}" catchtap="changeSwitch"></image>
+  </view>
+</view>
+
+<view class='flex-jasc feiyongb themebfff' hidden='{{havecard}}' wx:if="{{switchType}}">
+  <view class='xuanzejihua' style="margin-left: -10rpx;">
+    当前可用鸟蛋<text style="color: #ff001e">{{eggNum}}</text>个，抵扣<text style="color: #ff001e">￥{{eggNum/100}}</text>元
+  </view>
+  <view class='flex-aic'>
+
+  </view>
+</view>
+<!--czy新增鸟蛋结束-->
+
+
+<view class='flex-only b themebfff'>
+  <text class='f28 c333 b1'>留言：</text>
+  <textarea class='themebfff ly' placeholder='期待您的宝贵意见~~' value='{{liuyan}}' bindinput='message'></textarea>
+</view>
+
+<view class='forfooter'></view>
+<view class='footer flex-jcs themebfff'>
+  <view class='f1'>
+    <!--如果没有优惠券-->
+    <block wx:if="{{!youhuiprice && eggNum=='0'}}">
+      <view class='f2'>
+        <text>支付金额：</text><text class='cred'>￥{{filters.toFix(message[0].price * num)}}</text>
+      </view>
+      <view class='f3 f24'>优惠金额：0.00元</view>
+    </block>
+    <!--如果有优惠券-->
+    <block wx:else>
+
+      <!--如果优惠总价格小于等于商品价格-->
+      <block wx:if="{{converPrice < message[0].price * num}}">
+        <view class='f2'>
+          <text>支付金额：</text><text class='cred' v-model="{{message[0].price * num - youhuiprice}}">￥{{filters.toFix(message[0].price * num - youhuiprice - eggNum/100)}}</text>
+        </view>
+        <view class='f3 f24'>优惠金额：{{ filters.toFix(converPrice) }}元</view>
+      </block>
+      <!--如果优惠券大于商品总价格-->
+      <block wx:else>
+        <view class='f2'>
+          <text>支付金额：</text><text class='cred'>￥0</text>
+        </view>
+        <view class='f3 f24'>优惠金额：{{ filters.toFix(message[0].price * num) }}元</view>
+      </block>
+
+    </block>
+
+  </view>
+  <view class='themebgreen themefff flex-jac f4' bindtap="payMoney">支付</view>
+</view>

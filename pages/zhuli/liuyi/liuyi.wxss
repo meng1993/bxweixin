@@ -1,0 +1,9 @@
+.a{
+  position: relative
+}
+.b{display: block;width: 750rpx;}
+.c{width: 750rpx;position: absolute;top: 1000rpx;}
+.c1{width: 750rpx;height: 150rpx;}
+.c2{width: 750rpx;height: 500rpx;margin-top: 80rpx;}
+.c3{width: 750rpx;height: 550rpx;margin-top: 30rpx;}
+.c4{width: 750rpx;height: 450rpx;margin-top: 50rpx;}

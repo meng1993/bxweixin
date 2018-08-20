@@ -1,0 +1,33 @@
+<template name='search'>
+  <view class='s-header'>
+    <view class=' s-searchinputbox  flex-only flex-aic' bindtap='gosearch'>
+      <picker mode="selector"  value='{{typearrindex}}'range-key="name" range='{{typearr}}' bindchange="Sbooktypechange">
+        <view class="s-picker flex-only flex-aic">
+          <view class='s-typearr'>{{typearr[typearrindex].name}}</view>
+          <image src='/img/shouye/triangle.png' class='s-sanjiao'></image>
+        </view>
+      </picker>
+      <image class='s-verticalline1' src='/img/shouye/verticalline1.png'></image>
+      <image class='s-searchimg' src='/img/shouye/Magnifier.png'></image>
+      <input confirm-type='search' placeholder='{{pla?pla:"绘本搜索"}}' class='s-searchinput flex-grow1'
+      bindconfirm='Ssearchconfirm' maxlength="15" value='{{novalue}}'></input>
+    </view> 
+  </view>
+</template>
+
+<template name='paixu'>
+  <view class='p-classification flex-only' hidden='{{nobook}}'>
+    <view bindtap='changecondition' id='0'>
+      <view class='p-condition1 {{condition=="0"?"p-condition2":""}}'>综合</view>
+      <view class='p-Highlight' hidden='{{condition=="0"?false:true}}'></view>
+    </view>
+    <view bindtap='changecondition' id='1'>
+      <view class='p-condition1 {{condition=="1"?"p-condition2":""}}'>销量</view>
+      <view class='p-Highlight' hidden='{{condition=="1"?false:true}}'></view>
+    </view>
+    <view bindtap='changecondition' id='2'>
+      <view class='p-condition1 {{condition=="2"?"p-condition2":""}}'>最新</view>
+      <view class='p-Highlight' hidden='{{condition=="2"?false:true}}'></view>
+    </view>
+  </view>
+</template>

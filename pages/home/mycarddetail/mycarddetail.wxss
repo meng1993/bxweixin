@@ -1,0 +1,11 @@
+page{background-color: #EFEFF4;}
+view{font-family: PingFangSC;}
+.w{padding: 20rpx;}
+.wrap{width: 650rpx;border: 2rpx solid #6ED14E;margin: 0 auto;border-radius: 10px;padding: 30rpx;}
+.sectiona{height: 150rpx;border-bottom: 2rpx solid #6ED14E;}
+.sectionb{height: 180rpx;}
+.text1{color: #fc8c08;font-size: 24rpx;height: 70rpx;line-height: 70rpx;}
+.text2{color: #535353;font-size: 24rpx;}
+.name{font-size: 32rpx; height: 80rpx;line-height: 80rpx;}
+.box{width: 324rpx;height:90rpx;line-height: 90rpx;font-size: 28rpx;color: #535353;}
+.c{color: #fc8c08;}

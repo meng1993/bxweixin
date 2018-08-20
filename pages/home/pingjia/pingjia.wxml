@@ -1,0 +1,15 @@
+<view wx:for='{{data}}'>
+  <view class='flex-aic a'>
+    <view> <image src='{{item.book_img}}' class='img' mode='aspectFit'></image></view>
+    <view class='text flex-aic'>{{item.book_title}}</view>
+  </view>
+  <view class='flex-aic b'>
+    <text class='ping ' wx:if='{{item.is_comment==0}}'>评论：</text>
+    <input class='ping' placeholder='{{item.default_comment}}' class='flex-grow1' id='{{index}}'
+    placeholder-style='font-size:30rpx;'  bindinput='input' wx:if='{{item.is_comment==0}}'></input>
+    <view class='ping ping2' wx:if='{{item.is_comment==1}}'>我的评论：</view>
+    <view class='ping ping3' wx:if='{{item.is_comment==1}}'>{{item.comment_content}}</view>
+  </view>
+</view>
+<view class='fortop'></view>
+<view class='footer themebgreen' bindtap='btn' wx:if='{{data[0].is_comment==0}}'>提交评论</view>

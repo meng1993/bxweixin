@@ -1,0 +1,28 @@
+@import '/pages/searchres/searchres.wxss';
+
+view{font-family: PingFangSC;}
+page{background-color: #EFEFF4}
+.b{margin: 20rpx 0;}
+.b1{width: 690rpx;height: 80rpx;padding: 0 30rpx;}
+.b1a{color: #262626;font-size: 32rpx;}
+.b1b{color: #fb0025;font-size: 28rpx;}
+.b2a{margin:  10rpx 20rpx;}
+.b2aimg{width: 130rpx;height: 130rpx;display: block;margin-right: 10rpx;}
+.b2b{color:#535353;font-size:28rpx;margin-right: 30rpx;}
+.jydate{padding: 0 20rpx;}
+.datezhi{color: #262626;font-size: 28rpx;line-height: 90rpx;}
+.sanshitian{color: #878787;font-size: 24rpx;line-height: 90rpx;}
+.b3{justify-content: flex-end;padding: 10rpx 30rpx;border-top: 2rpx solid #EFEFF4}
+.btn{height: 54rpx;line-height: 54rpx; border: 2rpx solid;font-size: 28rpx;
+padding: 0 20rpx; border-radius: 5px;margin-left: 20rpx;}
+.color1{border-color: red;color: red;}
+.color2{border-color: #6ED14E;color:#6ED14E;}
+swiper{height:88rpx;}
+.mr{margin-right: 30rpx;}
+.jihuaname{font-size: 28rpx;color: #6ED14E}
+.cardid{font-size: 26rpx;padding-left: 20rpx;color:#6ED14E}
+.goumai{width: 120rpx;height: 40rpx;border-radius: 5px;line-height: 40rpx;
+text-align: center;color: #3b7ada;border: 2rpx solid #3b7ada;font-size: 20rpx;}
+.goumaiw{padding-left: 20rpx;}
+.right-tag-img{width: 74rpx;height: 74rpx;position: absolute;right: 10rpx;top: 0;}
+.book-img{position: relative;display: inline-block;}

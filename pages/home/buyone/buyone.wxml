@@ -1,0 +1,26 @@
+<import src="/temp/book/book.wxml" />
+<view class='listbox flex-aic'>
+  <!-- <template is='book' data='{{item:item,index:index}}'wx:key="{{item.book_id}}"></template> -->
+  <view class='book1 pd20' wx:for="{{lists}}" wx:key='{{index}}'>
+    <image class='book-image' id='{{item.book_id}}' bindtap='getdetail' src='{{item.img_medium}}' mode='aspectFit'></image>
+    <image class='right-tag-img'  wx:if='{{item.is_purchased}}' src='/img/purchased-max.png'></image>
+    <view class='padding1'>
+      <view class='book-text'>{{item.title}}</view>
+      <view class='flex-jasc'>
+        <view class='goumai color1'>￥{{item.price}}</view>
+        <view class='goumai' id='{{item.book_id}}' bindtap='buyone' wx:if='{{item.is_purchased==0}}'>赔偿</view>
+      </view>
+    </view>
+    <image class='gouxuan' catchtap='checked' id="{{index}}" wx:if='{{item.is_purchased==0}}' src='{{item.checked!=true?"/img/home/moren3.png":"/img/home/xuanzhong3.png"}}'></image> 
+  </view>   
+</view>
+
+ <view class='footer flex-jcs'>
+  <view class='flex-grow1'></view>
+   <view class='qx flex-aic' bindtap='checkall'>
+      <image class='quanxuan' src='{{checkall==false?"/img/home/moren3.png":"/img/home/xuanzhong3.png"}}'></image>
+      <view class='f30'>全选</view>
+  </view>
+  <view class='footerr' bindtap='buyall'>合并赔偿</view>
+</view>
+<view class='forfooter'></view> 

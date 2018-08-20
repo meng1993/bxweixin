@@ -1,0 +1,45 @@
+<view class='topposition'>
+  <swiper display-multiple-items='3' class='themebfff' current='{{swiperindex}}'>
+    <block wx:for='{{titles}}'>
+      <swiper-item>
+        <view bindtap='change' data-index='{{index}}' id='{{item.b}}'  class='themebfff'>
+        <view class='condition1 {{index==_index?"condition2":""}}'>{{item.a}}</view>
+        <view class='Highlight' hidden='{{index==_index?false:true}}'></view>
+      </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='zhanwei'></view>
+
+<view class='b themebfff' wx:key='{{index}}' wx:for='{{lists}}'>
+  <view class='b1 flex-jasc'>
+    <view class='b1a' >订单号:{{item.order_sn}}</view>
+    <view class='b1b2' wx:if='{{item.group_id!=null&&item.group_id!=""}}'>拼团</view>
+    <view class='b1b3' wx:if='{{item.user_bargain_id!=0}}'>砍价</view>
+  </view>
+  <view class='b2 flex-aic themebgray' id='{{item.id}}' bindtap='orderd'>
+    <view>
+      <view class='b2a flex-aic'>
+        <!-- <view wx:for='{{item.books}}' wx:if='{{index<4}}' class="book-img"> -->
+          <image src='/img/home/ordercard.png' class='b2aimg2'></image>
+        <!-- </view> -->
+      </view>
+    </view>
+    <view class='b2b'>
+      <view class='b2b1'>{{item.card_name}}</view>
+      <view class='b2b2'>￥{{item.pay_amount}}</view>
+    </view>
+  </view>
+  <view class='jydate flex-jasc' >
+    <view class='datezhi'>{{item.create_time}}</view>
+    <view class='flex-aic'>
+      <view class='btn color3' wx:if='{{checked==="wait"}}' id='{{item.id}}'
+      bindtap='deleteorder'>取消订单</view>
+      <form report-submit='true' bindsubmit='formid'>
+      <button class='btn color1' wx:if='{{checked==="wait"}}' id='{{item.order_sn}}'
+      data-group_id='{{item.group_id}}' data-card_id='{{item.id}}' form-type='submit' bindtap='pay'>去支付</button>
+      </form>
+    </view>   
+  </view>
+</view>

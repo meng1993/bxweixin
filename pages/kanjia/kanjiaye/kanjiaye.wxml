@@ -1,0 +1,41 @@
+<view class='themebgray'>
+  <view class='banner'>
+    <image src="https://m.zujiekeji.cn/xcximg/xcxkanjia/banner.png"></image>
+  </view>
+  <view class='content-bac' wx:for="{{list}}" id='{{item.id}}' wx:if='{{item.enable_show=="1"}}' bindtap='detail' wx:key='{{index}}' data-mystatus='{{item.status_for_user}}'>
+  <view class='content flex-aic'>
+    <view class='content-img'>
+      <image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/cardimg.png' mode='aspectFit' wx:if='{{item.give_type=="card"}}' class='content-img2'></image>
+      <image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/dis_small.png' mode='aspectFit' wx:if='{{item.give_type=="coupon"}}' class='content-img2'></image>
+      <image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/yijiewan2.png' class='img104'
+      wx:if='{{item.status_for_user=="going"}}'></image>
+      <image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/yiwancheng2.png' class='img104'
+      wx:if='{{item.status_for_user=="success"}}'></image>
+    </view>
+    <view class='content-main flex-grow1'>
+      <view class='main'>{{item.title}}</view>
+      <view class='flex-aie flex-jcs'>
+        <view>
+          <view class='people'>{{item.total}}人已0元拿</view> 
+          <view class='price'>原价{{item.old_price}}元</view>  
+        </view>
+        <view>
+          <view class='kanjiabtn' wx:if='{{item.give_type=="coupon"}}'>砍价0元得 ></view>
+          <view class='kanjiabtn' wx:if='{{item.give_type=="card"}}'>砍价{{item.floor_price}}元得 ></view>
+        </view>
+      </view>
+    </view>   
+  </view>
+  </view>
+
+  <view wx:if='{{list.length==0}}'>
+    <image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/nolist.png' class='nolist'></image>
+    <view class='nohuodong'>暂时没有砍价活动，敬请期待~</view>
+  </view>
+</view>
+
+<view class='forfooter'></view>
+<view class='footer flex-jac' wx:if='{{user_id!=""}}'>
+  <image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/futou.png' class='futou'></image>
+  <view class='themebfff fbtn f32' bindtap='mykanjia'>查看我发起的砍价</view>
+</view>

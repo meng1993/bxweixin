@@ -1,0 +1,20 @@
+<!--评价-->
+<template name="leaveMessage">
+    <view class='userevaluation '>
+        <view class="message_left">用户评价（{{leaveMessageList.length}}）</view>
+        <view class="btn_lookAll" data-bookid="{{bookid}}" catchtap="lookAllMessage" wx:if="{{messageType == 0}}">查看全部></view>
+    </view>
+    <!--留言列表-->
+    <view class='userbox' wx:for="{{leaveMessageList}}" wx:if="{{(index < 5 && messageType == 0) || messageType == 1}}">
+        <view class='flex-only flex-jcs'>
+            <view class='flex-only flex-aic'>
+                <image class='userimg' src='{{item.userface}}'></image>
+                <view class='username'>{{item.username}}</view>
+            </view>
+            <view class='flex-only flex-aic commenttime'>{{item.czyTime}}</view>
+        </view>
+        <view class='content'>
+            {{item.comment_content}}
+        </view>
+    </view>
+</template>

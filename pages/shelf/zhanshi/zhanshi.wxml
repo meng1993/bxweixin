@@ -1,0 +1,4 @@
+<import src="/temp/book/book.wxml" />
+<view class='listbox'>
+  <template is='book' data='{{item:item,index:index}}'wx:for="{{lists}}"wx:key="{{item.book_id}}"></template>
+</view>

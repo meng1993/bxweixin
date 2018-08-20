@@ -1,0 +1,131 @@
+<wxs module='quzheng'>
+  module.exports.a = function(e){
+    if(e.split('.')){
+      return e.split('.')[0];
+    }else{
+      return e;
+    }   
+  }
+</wxs>
+
+
+<view class='header flex-jac'>
+  <image src='/img/shouye/wenxin.png' class='headimg'></image>
+  <view class='headert'>往返包邮，芝麻免押，正版图书，全面消毒</view>
+</view>
+<view class='fortop'></view>
+
+<view class='mb20 themebfff pb20'>
+
+<view wx:for='{{lists1}}'>
+  <view class='w1 themebfff flex-jac bt20' wx:if='{{item.rank_id==0 && item.rank == 2}}'>
+      <view class='name jihua1' bindtap='shuoming'>小博士计划</view>
+      <view class='wenhao' bindtap='shuoming'>?</view>
+  </view>
+  <view class='w1 themebfff flex-jac' wx:if='{{item.rank_id==0 && item.rank == 4}}'>
+      <view class='name jihua1' bindtap='shuoming3'>小博士无限次卡</view>
+      <view class='wenhao' bindtap='shuoming3'>?</view>
+  </view>
+  <view class='w1 themebfff flex-jac bt20' wx:if='{{item.rank_id==0 && item.rank == 1}}'>
+    <view class='name jihua1' bindtap='shuoming'>小状元计划</view>
+    <view class='wenhao' bindtap='shuoming'>?</view>
+  </view>
+  <view class='c'  id='{{index}}' bindtap='checkcard'>
+    <view class='c11 flex-jcs '>
+      <view class='c1a'>{{item.name}}</view>
+      <view class='flex-only flex-aic'>
+        <view class='c1a c1a2'>￥{{quzheng.a(item.price)}}</view>
+        <!--<view class='c1a c1a2'>￥{{item.price}}</view>-->
+        <view class='c1a c1a3'>￥{{quzheng.a(item.origin_price)}}</view>
+        <image src='{{item.checked==true?"/img/home/cardgou1.png":"/img/home/cardgou2.png"}}'
+        class='gou'></image>
+      </view>
+    </view>
+    <view class='c2 flex-only'>
+      <view class='c2a'>
+        <view class='c2b'>{{item.one_rent_num}}本</view>
+        <view class='c2c'>每次可借</view>
+      </view>
+      <view class='c2a'>
+        <view class='c2b'>{{item.total_use_times==0?"无限次":item.total_use_times+"次"}}</view>
+        <view class='c2c'>借阅次数</view>
+      </view>
+      <view class='c2a'>
+        <view class='c2b'>{{item.type==2?"90":"365"}}天</view>
+        <view class='c2c'>有效天数</view>
+      </view>
+
+      <view class='c2a' wx:if="{{item.total_use_times != 0}}">
+        <view class='c2b'>{{item.lease_day}}天</view>
+        <view class='c2c'>每次租期</view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class='xuw xu xu2' wx:if='{{item.rank_last && item.rank == 2}}'>
+    <text class='xu1'>次卡借阅须知：</text>
+    在不超过总次数的情况下，用户可以同时借阅多单，每月借阅次数没有限制。
+  </view>
+  <view class='xuw xu xu2' wx:if='{{item.rank_last && item.rank == 4}}'>
+    <text class='xu1'>无限次卡借阅须知：</text>
+    用户同时在途订单（未结算）最多不超过两单。在途订单达到两单以后，用户需要归还部分在途订单并由平台确认结算后才能继续借阅。
+  </view>
+</view>
+  
+</view>
+
+
+<!-- <view class='mb20 themebfff pb20'> -->
+  <view class='c' wx:for='{{lists2}}' id='{{index}}' bindtap='checkcard2'>
+    <view class='c11 flex-jcs'>
+      <view class='c1a'>{{item.name}}({{item.total_use_times==0?"无限次卡":item.total_use_times+"次卡"}})        </view>     
+      <view class='flex-only'>
+        <view class='c1a c1a2'>￥{{item.price}}</view>
+        <image src='{{item.checked==true?"/img/home/cardgou1.png":"/img/home/cardgou2.png"}}'
+        class='gou'></image>
+      </view>
+    </view>
+    <view class='c2 flex-only'>
+      <view class='c2a'>
+        <view class='c2b'>{{item.one_rent_num}}本</view>
+        <view class='c2c'>每次可借</view>
+      </view>
+      <view class='c2a'>
+        <view class='c2b'>{{item.total_use_times==0?"无限次":item.total_use_times+"次"}}</view>
+        <view class='c2c'>借阅次数</view>
+      </view>
+      <view class='c2a'>
+        <view class='c2b'>{{item.type==2?"90":"365"}}天</view>
+        <view class='c2c'>有效天数</view>
+      </view>
+
+      <view class='c2a' wx:if="{{item.total_use_times != 0}}">
+        <view class='c2b'>{{item.lease_day}}天</view>
+        <view class='c2c'>每次租期</view>
+      </view>
+
+    </view>
+  </view>
+  <!-- <view class='xuw xu xu2'>
+    <text class='xu1'>有限次卡：</text>
+    在不超过总次数的情况下，用户可以同时借阅多单，每月借阅次数没有限制。
+  </view> -->
+<!-- </view> -->
+
+<view class='zhima themebfff' wx:if='{{jianyajin=="1"}}'>平台已为您减免押金~</view> 
+<view class='zhima themebfff' wx:if='{{jianyajin=="0"}}' bindtap='gozm'>芝麻信用可减免押金，去授权~  >></view> 
+
+<view class='shuoming themebfff shuomingp' bindtap='shuoming'>
+说明：订阅计划一旦购买生效使用后，不可退订。购买前请详细阅读
+<text class='blue'>订阅计划使用规则与政策</text></view>
+
+<view class='footer themebfff flex-jcs'>
+  <view class='footera'>
+    <view class='ying'>应付金额：<text>{{price+yajin}}</text>元</view>
+    <view class='ya' hidden='{{jianyajin=="1"}}'>押金可退：<text>{{yajin}}.00</text>元</view>
+    <view class='ya' hidden='{{jianyajin!="1"||checked==""}}'>已减免<text>{{olddeposit}}</text>元押金</view> 
+  </view>
+  <view class='btn themebgreen' bindtap='buy'>结算</view>
+</view>
+<view class='forfooter'></view>

@@ -1,0 +1,19 @@
+<view>
+  <view class='a' wx:for='{{lists}}' id='{{index}}' bindtap='use'>
+    <image class='bgimg' src='/img/home/yhq.png'></image>
+    <view class='a1 flex-aic'>
+      <view class='qian flex-jac'><text class='yuan'>￥</text>{{item.amount}}</view>
+      <view class='ar flex-grow1'>
+        <view class='flex-jasc pr'>
+          <view class='lei'>{{item.coupon_name}}</view>
+          <view class='liji'>立即使用</view>
+        </view>
+        <!--<view class='riqi'>有效期2017-11-11至2017-11-22</view>-->
+        <view class='riqi'>有效期{{item.start_time}}至{{item.end_time}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='h100 flex-jasc p30' id='no' bindtap='use'>
+    <view class='text'>不使用优惠券</view>
+  </view>

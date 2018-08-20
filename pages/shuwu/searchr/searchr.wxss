@@ -1,0 +1,43 @@
+.header{
+  padding: 14rpx 20rpx;
+  background-color: #EFEFF4;
+  width: 730rpx;
+  z-index: 10000;
+}
+.forheader{
+  height: 88rpx;
+}
+.picker{
+  width: 200rpx; 
+  text-align: center;
+  color: #535353;
+  font-size: 30rpx;
+  line-height: 60rpx;  
+}
+.searchinputbox{
+  width: 710rpx;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden; align-items: center;
+}
+.searchimg{
+  width: 34rpx;
+  height: 34rpx;
+  margin-left: 20rpx;
+}
+.searchinput{
+  width: 600rpx;
+  background-color: #fff;
+  height: 60rpx;
+  color: #9c9c9c;
+  font-family: PingFangSC;
+  font-size: 30rpx;
+  font-style: normal;
+}
+@import '/temp/book/book.wxss';
+.listbox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 2rpx;
+}

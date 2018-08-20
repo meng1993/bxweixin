@@ -1,0 +1,18 @@
+<view class="header flex-jcs flex-only">
+  <view class='searchinputbox  flex-only' bindtap='gosearch'>
+    <image class='searchimg' src='/img/shouye/Magnifier.png'></image>
+    <input confirm-type='search' placeholder='  书名、作者' class='searchinput'
+    bindconfirm='search' ></input>
+  </view> 
+</view>
+ <view>
+  <view class='historuposition' wx:if='{{historyarr.length>0}}'>
+    <view class='flex-only flex-jcs'>
+      <view class='family1 historyt'>历史搜索</view>
+      <image src='/img/shouye/clearhistory.png' class='clearhistory' bindtap='clearhistory'></image>
+    </view>
+    <view class='flex-only flex-wrap'>
+      <view class='history family1' wx:for='{{historyarr}}' id='{{item}}' bindtap='historysearch' bindlongpress='removeonehistory'>{{item}}</view>
+    </view>
+  </view>
+</view> 

@@ -1,0 +1,146 @@
+<view class='w flex-jac'>
+  <view class='w2 w3'>
+    <image src='/img/shouye/wenxin2.png' class='w2'></image>
+  </view>
+  <view class='f26 w1'>温馨提示：拼团不成功，付款金额退回原帐户</view>
+</view>
+<view class='a'>
+  <image class='a1' src='https://m.zujiekeji.cn/xcximg/xcxpintuan/hyk.png'></image>
+  <view class='a2 f28'>拼团</view>
+</view>
+
+<view class='b flex-aic flex-jcs'>
+  <view class='f26 cofff flex-aic'>
+    <view>距结束仅剩</view><view class='b1'>{{day}}</view><view>天</view>
+    <view  class='b1'>{{hours}}</view><view>时</view><view  class='b1'>{{minute}}</view>
+    <view>分</view><view  class='b1'>{{time}}</view><view>秒</view>
+  </view>
+  <view class='f26 cofff' bindtap='wanfa'>玩法详情 》</view>
+</view>
+
+<view class='c'>
+  <view class='co10 f30 c1 flex-aic'>{{group.name}}</view>
+  <view class='flex-aie c3'>
+    <!-- <view class='co5 f24'>成团：{{group.sold}}张</view> -->
+    <view class='co5 f24'>参团人数：{{group.attend}}人</view>
+    <view class='co5 f24 c4 flex-aie'>原价：￥<text class='f28 hx'>{{card.price}}</text></view>
+  </view>
+  <view class='flex-aic c2'>
+    <view class='flex-aie co4'>
+      <text class='f28'>团长价：</text><text class='f24'>￥</text><text class='f32'>{{group.captain_price}}</text>
+    </view>
+    <view class='flex-aie co4 pl20'>
+      <text class='f28'>团员价：</text><text class='f24'>￥</text><text class='f32'>{{group.price}}</text>
+    </view>
+    <!-- <view class='flex-aie pl20'>
+      <text class='f28'>原价：</text><text class='f24'>￥</text><text class='f32 hx'>{{card.price}}</text>
+    </view> -->
+  </view>
+</view>
+
+<view class='tuijian flex-jac' wx:if='{{launch_list.length>0}}'>
+  <view class='tujiant'>我发起正在进行中的拼团</view>
+  <image src='https://m.zujiekeji.cn/xcximg/xcxpintuan/tile.png'></image>
+</view>
+
+<view>
+  <view class='e themebfff' wx:for='{{launch_list}}' wx:key='{{index}}' hidden='{{item.join_number===0&&item.surplus_pay_time===0}}'>
+    <view id='{{item.group_id}}' bindtap='groupinfo'>
+      <view class='flex-aic p30 pt15'>
+        <image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/icon/vip.png' class='eimg'></image>
+        <view class='e2 co10 f28'>拼团剩余时间：{{item.surplus_time}}</view>
+      </view>
+      <view class='flex-aic p30 mb20'>
+        <view class='jindu ml60'>
+          <view class='green' style='width: {{item.join_number/item.success_number*100}}%'></view>
+        </view>
+        <view class='flex-jcs f26'><view class='or'>{{item.join_number}}</view>
+        <text class='co5'>/{{item.success_number}}</text></view>
+      </view>
+    </view>
+
+    <view class='flex-aic e4 p30' wx:if='{{item.join_number!=0}}'>
+        <view class='flex-jac e33 e3' id='{{index}}' catchtap='jilu'>
+          <image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/icon/jl.png' class='e3i'></image>
+          <text class='f26 co5 h60'>拼团记录</text>
+        </view>
+        <view class='flex-jac e3' id='{{item.group_id}}' catchtap='share'>
+          <image src='https://m.zujiekeji.cn/xcximg/xcxpintuan/share_small.png' class='e3i2'></image>
+          <text class='f26 co5 h60' >分享</text>
+        </view>
+    </view>
+    <view wx:if='{{item.join_number===0}}' class='e10'>
+      <view class='e5 '>
+        <view class='e7 co3 f26'>支付倒计时：{{item.surplus_pay_time}}</view> 
+        <view class='e7 co3 f26'>立即支付<text class='co4'>{{item.captain_price}}</text>元，分享好友！</view>  
+      </view>
+    </view>
+    <view class='e6' id='{{index}}' bindtap='buy2' wx:if='{{item.join_number===0}}'></view>
+  </view>
+</view>
+
+<view class='d themebgray'>
+  <view class='d1 f28 co5'>会员卡使用说明：</view>
+  <!-- <view class='d2 f24 co5'>1、会员卡开卡时间可设置3个月内使用</view>
+  <view class='d2 f24 co5'>2、使用会员卡租书均来回包邮</view> -->
+  <view class='d2 f24 co5'>1、会员卡一经售出，不退不换</view>
+  <view class='d2 f24 co5'>2、本次活动最终解释权归博鸟绘本所有，若有任何疑问添加客服微信号BN20171215或拨打电话 0571-86113050</view>
+</view>
+
+<view class='forfooter'></view>
+<view class='footer flex-aic' wx:if='{{pay_status===1&&is_start_launch===1}}'>
+  <view class='bc1 btn f32 flex-grow1' bindtap='buy' >
+    <view>团长发起拼团，价格{{group.captain_price}}元</view>
+    <!-- <view class='f1'>￥</view> -->
+  </view>
+</view>
+
+<view class='footer flex-jac themebfff' 
+wx:if='{{(pay_status!=1||is_start_launch!=1)&&launch_list.length===0&&user_id!=""}}'>
+  <image src='https://m.zujiekeji.cn/xcximg/xcxpintuan/pt_grey.png' class='futou'></image>
+  <view class='themebfff fbtn f32' bindtap='mypintuan'>已达到拼团上限</view>
+</view>
+
+<view  class='tishi' bindtap='closeshare' wx:if='{{share}}'>
+  <view class='tishikuang' >
+    <view class='tishi-1'>
+      <view class='tishi-6'></view>
+    分享
+    </view>
+    <view class='tishi-2'>
+        <button open-type="share">
+          <image class='bgs-img' src='/img/group/wx.png'></image>
+          直接转发我的好友
+        </button>
+        <button bindtap="savephoto" >
+          <image class='bgs-img' src='/img/group/phone.png'></image>
+          保存图片发朋友圈
+        </button>
+    </view>
+  </view>
+</view>
+
+<!-- <view class='goshouye' bindtap='goshouye'>
+  <image src='/img/group/home.png' class='gohome'></image>
+</view> 
+<view class='goshouye zhuanfa' bindtap='share' >
+  <image src='/img/group/zf.png' class='gohome'></image>
+</view>  -->
+<view class='kanjiachuang' wx:if='{{showblist}}' bindtap='closeblist'>
+  <view class='cc'>
+    <view class='f28 c1c'>
+      <text>——</text><text class='pl20 pr20'>拼团好友</text><text>——</text>
+    </view>
+    <view catchtap='zudang'>
+    <view class='flex-jasc c2' wx:for='{{blist}}' wx:key='{{index}}'>
+      <view class='flex-aic'>
+        <image class='fhead' src='{{item.face!=""?item.face:"/img/shouye/logo.png"}}'></image>
+        <text class='co10 f26 pl20'>{{item.user_phone}}</text>
+      </view>
+      <view class='co10 f26'>
+        {{item.create_time}}
+      </view>
+    </view>  
+    </view>
+  </view>
+</view>

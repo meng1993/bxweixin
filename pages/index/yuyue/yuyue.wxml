@@ -1,0 +1,192 @@
+
+<!--<view class="tab_btns">-->
+    <!--<view class="btn_common {{tabType == 0 ? 'active': ''}}" data-id="0" catchtap="autoCourier">自主预约快递</view>-->
+    <!--<view class="btn_common {{tabType == 1 ? 'active': ''}}" data-id="1" catchtap="autoCourier">自主联系快递</view>-->
+<!--</view>-->
+<view class="bg20"></view>
+<view class='marked-words' bindtap='gozhanshi'>
+    <image src='/img/remind.png'></image>
+    您已购买的绘本不需要归还，当前需归还 <view>{{total_num}}</view> 本
+    <image src='/img/shelf/yousanjiao2.png' class='yousanjiao' style="width:15rpx;height: 25rpx;right: -630rpx;"></image>
+</view>
+<block wx:if="{{tabType == 0}}">
+
+    <!--<view class='themebfff'>-->
+      <!--<view class='flex-jasc imgwrap' bindtap='gozhanshi'>-->
+        <!--<view class='flex-only'>-->
+          <!--<view class='mineimgw' wx:for="{{lists}}" wx:if="{{index<4}}" id='{{item.book_id}}'>-->
+            <!--<image class='mineimg' src='{{item.img_medium}}'></image>-->
+            <!--<image class='right-tag-img' src='/img/purchased-min.png' wx:if="{{item.is_purchased}}"></image>-->
+          <!--</view>-->
+        <!--</view>-->
+        <!--<view class='flex-jasc'>-->
+          <!--<view class='jiben'>共{{lists.length}}本</view>-->
+          <!--<image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>-->
+        <!--</view>-->
+      <!--</view>-->
+    <!--</view>-->
+    <!--<view class='select-tab flex-jasc pr40' bindtap='editExpress'>-->
+        <!--<view class='select-opt flex-aic'>-->
+        <!--{{shipper_name}}快递</view>-->
+        <!--<view class='flex-aic'>-->
+            <!--<image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>-->
+        <!--</view>-->
+    <!--</view>-->
+    <view class='flex-aic bb themebfff'>
+      <view>
+        <image src='/img/shelf/orangespot.png' class='orangespot'></image>
+      </view>
+      <view class='quyu'>
+        预约{{shipper_name}}上门取件<text>(请填写寄件地址和联系电话)</text>
+      </view>
+    </view>
+    <view class='themebfff'>
+      <view class='flex-jasc pr40' wx:if='{{addressid==0}}' bindtap='checkaddress'>
+        <view class='qingxuandizhi'>请设置寄件地址</view>
+        <image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>
+      </view>
+      <view class='flex-jasc adresswrap pr40' wx:if='{{addressid!=0}}' bindtap='checkaddress'id='{{addressid}}'>
+        <view>
+          <view class='flex-aic'>
+            <view class='name'>{{address.address_name}}</view>
+            <view class='phone'>{{address.mobile}}</view>
+            <view class='moren' wx:if='{{address.is_set_default==1}}'>默认</view>
+          </view>
+          <view class='flex-aic mt'>
+            <view><image class='adressimg' src='/img/shelf/adress.png'></image></view>
+            <view class='adress'>{{address.province}}{{address.city}}{{address.district}}
+            {{address.address}}</view>
+          </view>
+        </view>
+        <view class='flex-aic'>
+          <text class='dizhixiugai'>修改</text>
+         <image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>
+        </view>
+      </view>
+    </view>
+    <image class='fgx' src='/img/shelf/fgx.png'></image>
+
+    <!--<view class='pickerw'>-->
+       <!--<picker mode="date" value="{{date}}" start="{{startdate}}" end="{{enddate}}" bindchange="bindDateChange">-->
+        <!--<view class="flex-jasc">-->
+          <!--<view class="picker">-->
+            <!--日期: {{date}} {{dateDay}}-->
+          <!--</view>-->
+           <!--<view class='choicetime'>-->
+
+             <!--<view class="czy_xiugai">选择</view>-->
+             <!--<image src="/img/shelf/yousanjiao.png" class="yousanjiao" style="float: right"></image>-->
+           <!--</view>-->
+        <!--</view>-->
+       <!--</picker>-->
+    <!--</view>-->
+    <!--<view class='pickerw'>-->
+      <!--<picker mode="time" value="{{time}}" start="09:00" end="17:00" bindchange="bindTimeChange">-->
+        <!--<view class="flex-jasc">-->
+          <!--<view class="picker">-->
+          <!--时间: {{time}}-->
+          <!--</view>-->
+          <!--<view class='choicetime'>-->
+            <!--<view class="czy_xiugai">选择</view>-->
+            <!--<image src="/img/shelf/yousanjiao.png" class="yousanjiao" style="float: right"></image>-->
+          <!--</view>-->
+        <!--</view>-->
+      <!--</picker>-->
+    <!--</view>-->
+
+    <!--jjjjjjjjjjjj开始-->
+    <view class='pickerw'>
+        <picker mode="multiSelector" bindchange="bindDateTimeChange" bindcolumnchange="bindColumnChange" value="{{dateTime}}" range="{{dateTimeArr}}" range-key="name">
+            <view class="flex-jasc">
+                <view class="picker">
+                    日期时间：{{dateTimeArr[0][dateTime[0]].name}} {{dateTimeArr[1][dateTime[1]].name}}
+                </view>
+                <view class='choicetime'>
+                    <view class="czy_xiugai">选择</view>
+                    <image src="/img/shelf/yousanjiao.png" class="yousanjiao jj" style="float: right"></image>
+                </view>
+            </view>
+        </picker>
+    </view>
+    <!--jjjjjjjjjjjj结束-->
+
+    <!--czy新增开始-->
+    <view class="bg20" style="margin-top:-20rpx;"></view>
+    <view class='pickerw {{mailCheck == "我参与"? "czy_active" : ""}}'>
+      <picker disabled="{{hasOrder}}" bindchange="bindMailChange" value="{{array}}" range="{{array}}">
+        <view class="flex-jasc">
+          <view class="picker" style="padding:10rpx 0 10rpx 30rpx;">
+            共享图书：{{mailCheck}}
+          </view>
+          <view class='choicetime'>
+            <view class="czy_xiugai">（只能选择一个订单）</view>
+            <image src="/img/shelf/yousanjiao.png" class="yousanjiao jj" style="float: right"></image>
+          </view>
+
+        </view>
+      </picker>
+    </view>
+    <!--czy新增结束-->
+    <!--鸟蛋订单号-->
+    <view class="line88 order_eggs" wx:if="{{mailCheck == '我参与'}}" data-id="{{book_reclaim_order_id}}" catchtap="toOrderDetail">
+      <view class="line88_left" style="margin-left: 30rpx">订单号：{{order_sn}}</view>
+      <view class="line88_right" style="color: #3b7ada">{{oldBook}}本/{{score}}个鸟蛋</view>
+    </view>
+
+    <!--如果上次是自己叫快递，不显示上次预约时间和重新预约按钮-->
+    <!--<block wx:if="{{orderType !== 1}}">-->
+    <view class='picker' wx:if='{{shipper_type!==undefined && orderType !== 1 }}' style="font-size:28rpx;margin-top:20rpx;padding: 10rpx;">
+      <text class='red'>上次预约时间:</text>
+      <!--【{{shipper_type}}】{{olddate}} {{oldtime}}-->
+      【{{shipper_type}}】{{olddate}}
+    </view>
+
+    <!--<view class='out themebgreen' bindtap='yuyue'>{{text}}</view>-->
+    <form bindsubmit="yuyue" report-submit='true'>
+        <button class='out themebgreen cSubmit' form-type="submit" type="default" style="line-height:100rpx;background-color:#6ed14e;color:#fff;font-size:36rpx;margin-left:175rpx;">{{text}}</button>
+    </form>
+    <view bindtap="toOneself" class="oneself_btn">手动输入快递单号></view>
+
+    <!--</block>-->
+
+    <view>
+      <view class='flex-aic'>
+        <image src='/img/shouye/wenxin.png' class='wenxin'></image>
+        <view class='title'>温馨提示：</view>
+      </view>
+      <view class='text'>1. 若您要取消顺丰预约，请在顺丰快递员上门或电话核实您的预约时间时，告知顺丰即可！</view>
+      <view class='text'>2. 若您要自主叫快递归还绘本，目前平台不接收圆通快递寄回，其他快递正常！</view>
+      <view class='text'>3. 预约成功后快递公司会在预约时间内联系寄件人并上门揽件，如果快递未及时上门取件，请您联系快递特惠到付寄回即可,</view>
+      <view class='text'>4. 预约成功，把绘本交给快递员后，归还即完成，无需其它操作,</view>
+    </view>
+</block>
+<block wx:if="{{tabType == 1}}">
+
+    <view class="toCheckCourier" catchtap="toCheckCourier">
+        <view class="courier">{{courierName}}</view>
+        <image src='/img/shelf/yousanjiao.png' class='yousanjiao icon_right'></image>
+    </view>
+    <view class="bg20"></view>
+    <view class="toCheckCourier">
+        <view class="courier">运单号：</view>
+        <input type="text" placeholder="请输入运单号" class="order_number" confirm-type="提交" bindinput="changeInputText" value="{{express_no}}"></input>
+    </view>
+
+    <view class='picker' wx:if='{{shipper_type!==undefined && orderType !== 0}}' style="font-size:28rpx;margin-top:20rpx;">
+        <text class='red'>上次操作时间:</text>
+        【{{shipper_type}}】{{orderDate}} {{orderTime}}
+    </view>
+
+    <view class="btn-671-88-c" catchtap="submitOrder">提交</view>
+
+
+    <view>
+        <view class='flex-aic'>
+            <image src='/img/shouye/wenxin.png' class='wenxin'></image>
+            <view class='title'>温馨提示：</view>
+        </view>
+        <view class='text'>1. 若您要自主叫快递归还绘本，目前平台不接收圆通快递寄回，其他快递正常！</view>
+    </view>
+
+
+</block>

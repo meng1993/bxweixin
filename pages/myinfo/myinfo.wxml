@@ -1,0 +1,24 @@
+<view class='a flex-jasc themebfff bt bb' bindtap='change'>
+  <view class='a1 '>头像</view>
+  <view class='a2 flex-aic' bindtap='face'>
+    <image class='a4' src='{{face}}' ></image>
+    <image src='/img/home/right2.png' class='a3'></image>
+  </view>
+</view>
+<view class='a flex-jasc themebfff bb' bindtap='change'>
+  <view class='a1 '>昵称</view>
+  <view class='a2 flex-aic' bindtap='cname'>
+    <input value='{{name}}' class='name' focus='{{cname}}' disabled='{{!cname}}' bindblur='name'
+     confirm-type='完成' maxlength='11'></input>
+    <image src='/img/home/right2.png' class='a3'></image>
+  </view>
+</view>
+<view class='a flex-jasc themebfff bb' bindtap='change'>
+  <view class='a1 '>性别</view>
+  <view class='a2 flex-aic'>
+    <picker bindchange="bindPickerChange" value="{{sexindex}}" range="{{sex}}" range-key="a">
+      <view>{{sex[sexindex].a}}</view>
+    </picker>
+    <image src='/img/home/right2.png' class='a3'></image>
+  </view>
+</view>

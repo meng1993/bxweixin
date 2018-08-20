@@ -1,0 +1,158 @@
+@import '/pages/kanjia/kanjiaye/kanjiaye.wxss';
+.aw{background-image: url(https://m.zujiekeji.cn/xcximg/xcxkanjia/cut_bg.png);
+width: 750rpx;height: 674rpx;padding-top: 20rpx;background-size: 100% 100%;}
+.aw2{background-image: url(https://m.zujiekeji.cn/xcximg/xcxkanjia/bg.png);
+width: 750rpx;padding-top: 20rpx;background-size: 100%;padding-bottom: 10rpx;
+background-color: rgb(275, 74, 68);background-repeat: no-repeat;}
+page{background-color: #EFEFF4;}
+.aw3{background-image: url(https://m.zujiekeji.cn/xcximg/xcxkanjia/icon/bg.png);
+width: 750rpx;padding-top: 20rpx;background-size: 100%;padding-bottom: 10rpx;
+background-repeat: no-repeat;background-color: rgb(275, 74, 68)}
+page{background-color: #EFEFF4;}
+.a{width: 710rpx;background-color: #fff3ee;margin: 0 auto;padding-bottom: 20rpx;
+box-shadow: 0px 3px 7px 0px rgba(210, 38, 26, 0.3);border-radius: 5px;}
+.a1{width: 710rpx;height:365rpx;background-image: url(https://m.zujiekeji.cn/xcximg/xcxkanjia/vipcard.png);background-size: 100% 100%;position: relative}
+.a12{width: 710rpx;height:365rpx;background-image: url(https://m.zujiekeji.cn/xcximg/xcxkanjia/couponcard.png);background-size: 100% 100%;position: relative}
+.a2{width: 710rpx;height: 76rpx;background-color: #ffdba0;}
+.f28{font-size: 28rpx;}
+.f30{font-size: 30rpx;}
+.f26{font-size: 26rpx;}
+.co1{color: #fe6969}
+.co2{color: #cf920f}
+.pl20{padding-left: 20rpx;}
+.pr20{padding-right: 20rpx;}
+.date-num{background-color: #fe6969; color: white; padding: 5rpx 9rpx; line-height: 30rpx;margin: 0 2rpx; border-radius: 8rpx;}
+.a3a{color: #333333;font-size: 28rpx;padding-left: 20rpx;line-height: 76rpx;}
+.a3b1{color: 1}
+.f24{font-size: 24rpx;}
+.co3{color: #666666}
+.co4{color: #ff001e}
+.co5{color: #999}
+.co6{color: #ffde00}
+.co7{color: #b5b5b5}
+.co8{color: #ffc8c2}
+.co9{color: #ffcb0c}
+.co10{color: #333333}
+.bc1{background-color: #49b126}
+.xian{height: 2rpx;background-color:#999; position: absolute;top: 20rpx;width: 100%;}
+.lh40{line-height: 40rpx;position: relative}
+.pl10{padding-left: 10rpx;}
+.cow{color: white}
+.cowad{color: #adadad}
+.a4a{line-height: 90rpx;}
+.b{padding: 30rpx 20rpx;}
+.mt10{margin-top: 10rpx;}
+.footer{position: fixed;z-index: 1000;width: 750rpx;height: 100rpx;bottom: 0;color: white;}
+.btn{height: 100rpx;min-width: 50%; display: flex;align-items: center; justify-content: center;}
+.forfooter{height: 100rpx;}
+.cw{padding: 0 20rpx 50rpx;}
+.cbtn{width: 710rpx;height: 86rpx;background-color: #ffc000;border-radius: 5px;
+box-shadow: 0px 10rpx #ff9c00;text-align: center;line-height: 86rpx}
+.cbtn2{background-color: #d8d8d8}
+.c{border: 2rpx solid #ff7764;background-color: #ff5139;width: 646rpx;margin: 0 auto;
+padding: 20rpx 30rpx 30rpx;border-radius: 5px;}
+
+.c1{color: #ffc8c2;text-align: center}
+.c1c{color: #333333;text-align: center;line-height: 100rpx;}
+.fhead{width: 66rpx;height: 66rpx;display: block;border-radius: 100px;}
+.c2{margin-top: 20rpx;}
+.cardname{padding-top: 120rpx;text-align: center;width: 600rpx;font-weight: 600;}
+.cardname2{padding-top: 140rpx;text-align: center;width: 600rpx;font-weight: 600;}
+.min50{min-width: 50%;}
+.tishikuang{position: absolute;  left: 80rpx;top: 400rpx; height: 327rpx;width: 600rpx;background-color: #fff;z-index: 999;border-radius: 10px;}
+.tishi-1{border-bottom: 1px solid #dcdcdc;padding: 20rpx 30rpx;font-size: 26rpx; display: flex}
+.tishi-6{width: 8rpx; height: 36rpx; background-color: #6fd14e; margin-right: 10rpx}
+.tishi-2{font-size: 26rpx;display: flex;padding: 60rpx 30rpx}
+.tishi-2 .bgs-img{width: 62rpx; height:62rpx;display:block;margin: 0 auto;padding-bottom: 20rpx}
+.tishi-2 button{background-color: #fff;color: black;font-size: 26rpx;line-height: 30rpx}
+.tishi{background-color: rgba(0,0,0,0.3); position: fixed; width: 100%; height: 100%; top: 0; left: 0;z-index: 1000;}
+button::after{border: none}
+.tuijian{font-size: 30rpx;text-align: center;line-height: 100rpx;height: 100rpx;position: relative}
+.tuijian image{position: absolute;display: block;width: 190rpx;height: 12rpx;left: 280rpx;top: 44rpx;}
+.pb20{padding-bottom: 20rpx;padding-top: 0;}
+
+.tishikuang2{
+position: absolute; 
+left: 80rpx;top: 200rpx; 
+height: 450rpx;
+width: 600rpx;
+z-index: 999; 
+border-radius: 10px;
+background-image: url(https://m.zujiekeji.cn/xcximg/xcxkanjia/bg_success.png);
+background-size: cover;
+background-repeat: no-repeat;
+}
+.yuan{
+width: 80rpx;
+height: 80rpx;
+margin: 200rpx auto 0;
+display: block;
+}
+.min{
+font-size: 28rpx;
+padding: 50rpx 0 0 128rpx;
+}
+.min-red{
+color: red;
+}
+.goshouye{position: fixed;width: 100rpx;height: 100rpx;border-radius: 50px;
+bottom: 160rpx;right: 30rpx;z-index: 1000}
+.zhuanfa{bottom: 280rpx;}
+.gohome{display: block;width: 100rpx;height: 100rpx;border-radius: 50px;}
+.jindu{
+  width: 80rpx;
+	height: 8rpx;
+  background-color: #ccc;
+  border-radius: 8rpx;
+}
+.green{
+  background-color: #6fd14e;
+  border-radius: 8rpx;
+  height: 8rpx;
+}
+.or{
+  color: #ff8e00;margin-left: 10rpx;
+}
+.d{height: 148rpx;padding-left: 20rpx;}
+.d view{padding-top: 20rpx;}
+.tc{text-align: center}
+.cofff{color: #fff}
+.mylist{border-top: 2rpx solid #ff6e52;line-height: 80rpx;}
+.e{width: 710rpx;margin: 0 auto;border-radius: 5px;margin-bottom: 20rpx;}
+.eimg{width: 40rpx;height: 32rpx;}
+.eimg2{width: 42rpx;height: 36rpx;}
+.e2{height: 70rpx;line-height: 70rpx;padding-left: 20rpx;}
+.jindu{
+  width: 80rpx;
+	height: 8rpx;
+  background-color: #ccc;
+  border-radius: 8rpx;
+}
+.green{
+  background-color: #6fd14e;
+  border-radius: 8rpx;
+  height: 8rpx;
+}
+.or{
+  color: #ff8e00;
+}
+.ml60{margin-left: 60rpx;}
+.e4{padding: 0 20rpx;border-top: 2rpx solid #dddddd;height: 80rpx;}
+.e3{height: 60rpx;width: 50%}
+.e3i{display: block;width: 32rpx;height: 36rpx;margin-right: 20rpx;}
+.e3i2{display: block;width: 38rpx;height: 38rpx;margin-right: 20rpx;}
+.e5{width: 100%;height: 80rpx;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;}
+.p30{padding: 0 30rpx;}
+.i36{display: block;width: 36rpx;height: 36rpx;margin-right: 20rpx}
+.btntext{line-height: 50rpx;width: 100%;text-align: center;}
+.kanjiachuang{position: fixed;top: 0;left: 0;width: 750rpx;height: 100%;
+background-color: rgba(0,0,0,0.5);z-index: 1200}
+.cc{background-color: #fff;width: 620rpx;margin: 0 auto;min-height: 300rpx;max-height: 500rpx;
+padding: 20rpx 30rpx 30rpx;border-radius: 5px;margin-top: 250rpx;overflow-y:auto }
+.pt15{padding-top: 15rpx;}
+.e33{border-right: 2rpx solid #dddddd}
+.e34{width: 100%;border: none;}
+.h60{line-height: 30rpx;max-width: 220rpx;}
+.w{background-color: #fff7e9;height: 90rpx;}
+.w1{color: #ffa100}
+.w2{display: block;width: 34rpx;height: 28rpx;}

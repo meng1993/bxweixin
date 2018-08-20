@@ -1,0 +1,19 @@
+<image src='/img/shouye/logot.png' class='logob'></image>
+<image src='/img/home/zhimalogo.png' class='logo'></image>
+<view class='text1 center'>芝麻信用</view>
+<view class='a flex-aic'>
+  <view class='iconw flex-jac'><image src='/img/home/zm4.png' class='zm4'></image></view>
+  <view class='flex-grow1'>
+    <input class='flex-grow1' placeholder='真实姓名' value='{{name}}' bindinput='name'></input>
+  </view>
+</view>
+<view class='a flex-aic'>
+  <view class='iconw flex-jac'><image src='/img/home/zm5.png' class='zm5'></image></view>
+  <view class='flex-grow1'>
+    <input class='flex-grow1' placeholder='身份证号' value='{{zheng}}' bindinput='zheng'></input>
+  </view>
+</view>
+<view class='btn' bindtap='shouquan'>确认授权</view>
+<view class='center text2'>博鸟绘本将根据您的芝麻信用分数减免产品押金</view>
+<view class='center text3'>您的认证信息只用于芝麻免押金认证，</view>
+<view class='center text3'>博鸟绘本不会用作任何其他用途</view>

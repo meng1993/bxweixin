@@ -1,0 +1,37 @@
+<!--pages/oldBookRecycling/index/index.wxml-->
+<view class="oldIndex">
+    <view class='czy_header'>
+        <image src='/img/shouye/wenxin.png' class='czy_headimg'></image>
+        <view class='czy_headert' bindtap="toRules">共享图书规则<text>请点击此处查看></text></view>
+    </view>
+
+    <view class="liucheng">一、博鸟收书流程如下：</view>
+    <view class="oldIndex_content">
+        <view class="line"></view>
+        <view class="item {{index == 0 ? 'itemActive' : ''}}" wx:for="{{message}}" wx:key="{{index}}">
+            <image class="img_process" src="{{item.src}}"></image>
+            <text class="num">{{index+1}}</text>
+            <view wx:if="{{index == 4}}" class="process_text {{index>=0 ? 'active': ''}}">
+                {{item.text}}<text class="qianbao" bindtap="toWallet">您的账户></text>
+            </view>
+            <view wx:else class="process_text {{index>=0 ? 'active': ''}}">{{item.text}}</view>
+        </view>
+    </view>
+    <view class="bg20"></view>
+    <view class="liucheng">二、博鸟哪些书不收？</view>
+    <view class="notBack">
+        当书籍已经影响下一位读者阅读体验；主要表现在封面完整性和美观度，是否破损、污渍、老化、异味；以及非卖品、盗版书和非法出版物；这些书籍博鸟平台都不回收！
+        <text style="color: #6fd14e;" bindtap="toImgs">图片示例></text>
+    </view>
+    <view class="bottom">
+        <view class="btn_group" data-type="ss" bindtap="toCheck">
+            <image class="icon_common" src="/img/oldBook/icon_ss.png"></image>
+            <view class="btn_common">搜索共享</view>
+        </view>
+        <view class="btn_group" data-type="scan" bindtap="toCheck">
+            <image class="icon_common" src="/img/oldBook/icon_scan.png"></image>
+            <view class="btn_common">扫码共享</view>
+        </view>
+    </view>
+</view>
+

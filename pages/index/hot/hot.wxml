@@ -1,0 +1,15 @@
+<import src="/temp/book/book.wxml" />
+<import src="/temp/bottomload/index.wxml" />
+<import src="/temp/search/index.wxml" />
+
+<view class='a' hidden='{{xinshu===1}}'>
+  <template is='paixu' data='{{condition}}'></template>
+</view>
+<view class='fa' hidden='{{xinshu===1}}'></view>
+
+<view class='{{book=="book"?"listbox":"listbox2"}} themebgray'>
+  <template is='{{book}}' data='{{item:item,index:index,chengren:icon_id}}'wx:for="{{lists}}"wx:key="{{item.book_id}}"></template>
+</view>
+
+<template is="zan-loadmore" data="{{bottomload}}"></template>
+<template is="zan-loadend" data="{{bottomend}}"></template>

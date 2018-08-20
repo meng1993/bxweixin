@@ -1,0 +1,21 @@
+<view class='list-comment' style='background-image: url({{lists.img}})'>
+  <view class="title" >{{lists.title}}</view>
+  <view class='recommend'>{{lists.recommend}}</view>
+</view>
+<view class='themebgray' wx:for="{{books}}" wx:key='{{index}}'>
+<view class='pd1'>
+<view class='content'  id='{{item.book_id}}' bindtap='gobook'>
+  <view class='content-img'>
+    <image class='content-image' mode='aspectFit' src='{{item.img_medium}}'></image>
+  </view>
+  <view class='content-main'>
+    <view class='content-title'>{{item.title}}</view>
+    <view class='content-author'>{{item.author}}</view>
+    <view class='content-publisher'>{{item.publisher}}</view>
+  </view>
+</view>
+</view>
+</view>
+<view class='goshouye' bindtap='goshouye' wx:if='{{_from==="2"}}'>
+  <image src='/img/group/home.png' class='gohome'></image>
+</view>

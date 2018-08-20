@@ -1,0 +1,4 @@
+<view class='activity'>
+  <image src='https://m.zujiekeji.cn/img/activity618.png' mode='widthFix'></image>
+  <view class='ling' bindtap='getCoupons'></view>
+</view>

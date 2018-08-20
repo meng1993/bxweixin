@@ -1,0 +1,7 @@
+@import '/pages/kanjia/kanjiarecord/kanjiarecord.wxss';
+.nokookimg2{
+  display: block;width: 128rpx;height: 142rpx;margin: 0 auto
+}
+.p{position: absolute;right: 20rpx;bottom: 30rpx; }
+.p1{display: block;width: 190rpx;height: 105rpx;}
+.of{overflow: hidden;}

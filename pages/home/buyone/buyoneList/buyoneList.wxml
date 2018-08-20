@@ -1,0 +1,37 @@
+<import src="/temp/emptyPage/emptyPage.wxml" />
+<view class='topposition'>
+    <swiper display-multiple-items='3' class='themebfff' current='{{swiperindex}}'>
+        <block wx:for='{{titles}}'>
+            <swiper-item>
+                <view bindtap='change' data-index='{{index}}' id='{{item.b}}'  class='themebfff'>
+                    <view class='condition1 {{index==_index?"condition2":""}}'>{{item.a}}</view>
+                    <view class='Highlight' hidden='{{index==_index?false:true}}'></view>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+<view class='zhanwei'></view>
+
+<view class="item" wx:for="{{objData}}" wx:for-item="witem" wx:for-index="windex">
+    <view class="item_top">
+        <view class="top_order_num">订单号：{{witem.order_sn}}</view>
+        <view class="top_order_status" wx:if="{{witem.status == 1}}">待付款</view>
+        <view class="top_order_status" wx:if="{{witem.status == 2}}">订单完成</view>
+    </view>
+    <view class="book_content" data-id="{{witem.id}}" catchtap="toDetail">
+        <image src="{{item.img_medium}}" class="book_img" wx:for="{{witem.book_list}}" wx:if="{{index < 4}}"></image>
+        <view class="book_number">共{{witem.book_list.length}}本></view>
+    </view>
+    <view class="item_describe">
+        共1件商品 待付款：<text class="jj">￥{{witem.pay_amount}}</text>
+    </view>
+
+    <view class="btn_groups" wx:if="{{witem.status == 1}}">
+        <view class="btn_common btn_active" data-id="{{witem.id}}" catchtap="toPay">去支付</view>
+        <view class="btn_common" data-id="{{witem.id}}" catchtap="cancelOrder">取消</view>
+    </view>
+</view>
+
+
+<template wx:if="{{objData.length == 0}}" is="emptyPage" data="{{emptyContent}}"></template>

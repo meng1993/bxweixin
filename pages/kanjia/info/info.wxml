@@ -1,0 +1,160 @@
+<view class='t'>
+</view>
+
+<view class='a'>
+  <view class='a1 co10 f32'>用户：{{owner_phone}}</view>  
+  <view class='a2 co5 f28'>发起砍价时间：{{items.start_time}}</view>
+  <image class='a3' src='https://m.zujiekeji.cn/xcximg/xcxkanjia/info/fgy.png'></image>
+</view>
+
+<view class='b flex-aic'>
+  <view class='b1'>
+    <image class='b1' wx:if='{{items.give_type=="card"}}' 
+    src='https://m.zujiekeji.cn/xcximg/xcxkanjia/info/pic2.png' ></image>   
+    <image class='b1' wx:if='{{items.give_type=="coupon"}}'  
+    src='https://m.zujiekeji.cn/xcximg/xcxkanjia/couponcard.png'></image>
+  </view>
+  <view class='b2'>
+    <view class='b3 co10 f30'>我发起了【{{items.give_name}}】砍价，请帮我砍价~</view>
+    <view class='b4 flex-aie'>
+      <view class=' f24 co3'>底价：</view>
+      <view class=' f32 co4 b8'>{{items.floor_price}}元</view>
+      <view class='b9 f24 co10'>{{yuanjia}}元 <view class='b10'></view></view>
+    </view>
+    <view class='b5 flex-aic'>
+      <view class='b6 f26 co5'>砍价倒计时：</view>
+      <view class='b7 f26 cofff'>{{hours}}</view>
+      <view class='b6 f26 co5'>时</view>
+      <view class='b7 f26 cofff'>{{minute}}</view>
+      <view class='b6 f26 co5'>分</view>
+      <view class='b7 f26 cofff'>{{time}}</view>
+      <view class='b6 f26 co5'>秒</view>
+    </view>
+  </view>
+</view>
+
+<view class='b'>
+  <view class='c1'>
+    <view class='c3 f28 co1'>当前砍价</view>
+    <view class='c2 flex-aie flex-jcs'>
+      <view class='co10 f26 c4'>可砍金额：{{(dangqianjia*10-dijia*10)/10}}元</view>
+      <view class='co10 f26 c4'>已砍金额：{{(yuanjia*10-dangqianjia*10)/10}}元</view>
+    </view>
+  </view>
+  <view class='c1 mt25'>
+    <view class='c3 f28 co1'>砍价进度</view>
+    <view class='c2 flex-aie flex-jcs'>
+      <view class='co10 f26 c4'>已砍人数：{{items.finish}}人</view>
+      <view class='co10 f26 c4'>目标人数：{{items.user_total}}人</view>
+    </view>
+  </view>
+</view>
+<view class='dw' wx:if='{{items.surplus_time>0&&from=="share"}}'>
+  <view class='d'>
+  <view class='d d3 flex-aic flex-jcs'>
+    <view class='cofff f32  d1' bindtap='otherfaqi' wx:if='{{judge.is_enjoy=="0"}}'>您已发起砍价</view>
+    <view class='cofff f32  d1' bindtap='otherfaqi' wx:if='{{judge.is_enjoy=="1"}}'>我也要发起</view>
+    <form report-submit='true' bindsubmit='formid'>
+      <button class='cofff f32  d1 d2' wx:if='{{from==="share"&&judge.is_bargain=="yes"&&user_id===""}}'
+      open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber" 
+      form-type='submit'>帮好友砍价</button>
+    </form>
+    <view class='cofff f32  d1 d2' wx:if='{{from==="share"&&judge.is_bargain=="yes"&&user_id!=""}}'
+    bindtap='bangkanjia'>帮好友砍价</view>
+    <view class='cofff f32  d1' wx:if='{{from==="share"&&judge.is_bargain=="hade"}}'>您已砍过价了！</view>
+    <view class='cofff f32  d1' wx:if='{{from==="share"&&judge.is_bargain=="no"}}'>已结束</view>
+  </view>
+  </view>
+</view>
+
+<view class='dw' wx:if='{{items.surplus_time>0&&from=="my"&&judge.is_get==1&&items.give_type=="card"}}'>
+  <view class='h f32' bindtap='buy'>您可{{items.price}}元购买</view>
+</view>
+<view class='dw' wx:if='{{items.surplus_time>0&&from=="my"&&dangqianjia==0&&items.give_type=="coupon"}}'>
+  <view class='h f32'>已免费获得</view>
+</view>
+<view class='dw' wx:if='{{items.surplus_time<=0}}'>
+  <view class='h2 f32'>发起的活动已结束</view>
+</view>
+
+<image class='a3' src='https://m.zujiekeji.cn/xcximg/xcxkanjia/info/fgy.png'></image>
+
+<view class='e flex-aic'>
+  <view id='1' class='flex-grow1 e2' wx:for='{{list1}}' wx:key='{{item.v}}' id='{{item.v}}' bindtap='list1'>
+    <view class='e1 f30 {{item.v==list1c?"co11":""}}'>{{item.t}}</view>
+    <view class='Highlight' wx:if='{{item.v==list1c}}'></view>
+  </view>
+</view>
+
+<view class='b' wx:if='{{list1c=="1"}}'>
+  <view class='f1 co5 f26' wx:if='{{list1.length==0}}'>暂无帮砍记录~</view>
+  <view class='flex-jasc f' wx:for='{{bangkanlist}}' wx:key='{{index}}'>
+      <view class='flex-aic'>
+        <image class='fhead' src='{{item.face!=""?item.face:"/img/shouye/logo.png"}}'></image>
+        <text class='co10 f26 pl20'>{{item.user_phone}}</text>
+      </view>
+      <view class='co10 f26'>
+        砍了<text class='f26 co12'>{{item.price}}</text>元
+      </view>
+    </view> 
+</view>
+
+<view class='b' wx:if='{{list1c=="2"&&items.give_type=="coupon"}}'>
+  <view class='f28 co7 mt20'>1、助力砍价成功获得优惠券，请在'我的'-->'优惠券'查看</view>
+  <view class='f28 co7 mt20'>2、优惠券数量有限，先到先得；请在有效期内使用优惠券，逾期作废</view>
+  <view class='f28 co7 mt20'>3、如有任何疑问请添加客服微信号：BN20171215 或拨打电话0571-86113050</view>
+  <view class='f28 co7 mt20'>4、本次砍价活动最终解释权归博鸟绘本所有</view>
+</view>
+<view class='b' wx:if='{{list1c=="2"&&items.give_type=="card"}}'>
+  <view class='f28 co7 mt20'>1、助力砍价成功获得会员卡，请在'我的'-->'我的会员'查看</view>
+  <view class='f28 co7 mt20'>2、会员卡数量有限，先到先得；使用会员卡免费租书，往返包邮</view>
+  <view class='f28 co7 mt20'>3、如有任何疑问请添加客服微信号：BN20171215 或拨打电话0571-86113050</view>
+  <view class='f28 co7 mt20'>4、本次砍价活动最终解释权归博鸟绘本所有</view>
+</view>
+
+<view class='g'  wx:if='{{list1c=="3"}}'>
+  <image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/wanfa.png' class='g1' mode='widthFix'></image>
+  <view class='f30 pl20'>砍价规则：</view>
+  <view class='g2'>    
+    <view class='f26 co3 mt10'>1. 每次砍价活动，平台给予的砍价发起人名额有限，且发起砍价的有效时间是24小时</view>
+    <view class='f26 co3 mt10'>2. 若发起砍价有效时间24小时内，邀请好友砍价，砍到0元，发起人可免费获得会员卡 或 优惠券</view>
+    <view class='f26 co3 mt10'>3. 若发起砍价有效时间24小时内，邀请好友砍价，未砍到0元；发起人可按砍到的价格购买</view>
+    <view class='f26 co3 mt10'>4. 每个好友只能帮你砍价一次，每次砍价金额随机，你邀请好友越多，越容易砍到0元</view>
+    <view class='f26 co3 mt10'>5. 砍价免费获得会员卡会立即生效</view>
+    <view class='f26 co3 mt10'>6. 平台每次发放的砍价奖品（会员卡/优惠券）数量有限，先砍到0元先得，送完为止</view>
+    <view class='f26 co3 mt10'>7. 本次活动最终解释权归博鸟绘本所有，若有任何疑问添加客服微信号：BN20171215 或 拨打电话 0571-86113050</view>
+  </view>
+</view>
+
+<view class='goshouye' bindtap='goshouye' wx:if='{{xcxpages1}}'>
+  <image src='/img/group/home.png' class='gohome'></image>
+</view> 
+<view class='goshouye zhuanfa' bindtap='share'  wx:if='{{from!="list"}}'>
+  <image src='/img/group/zf.png' class='gohome'></image>
+</view>
+
+<view wx:if="{{share}}" class='tishi' bindtap='closeshare'>
+<view class='tishikuang' >
+  <view class='tishi-1'>
+    <view class='tishi-6'></view>
+   分享
+  </view>
+  <view class='tishi-2'>
+      <button open-type="share" class='tishi-zi'>
+        <image class='bgs-img' src='/img/group/wx.png'></image>
+        直接转发我的好友
+    </button>
+      <button  class='tishi-zi' bindtap="savephoto" >
+        <image class='bgs-img' src='/img/group/phone.png'></image>
+        保存图片发朋友圈
+    </button>
+  </view>
+</view>
+</view>
+
+<view wx:if="{{kanchenggong}}" class='tishi' bindtap='tishi'>
+  <view class='tishikuang2'>
+  <image class='yuan' src='/img/shouye/yuan.png'></image>
+  <view class='min flex-only'>您已成功帮他砍价 <view class='min-red'>{{kanprice}}</view>元~</view>
+  </view>
+</view>

@@ -1,0 +1,122 @@
+/* pages/oldBookRecycling/index/index.wxss */
+.oldIndex{width: 750rpx;overflow-x: hidden;}
+.czy_header{width: 750rpx;height: 80rpx;background-color: #fdf3df;top: 0;z-index: 10000;}
+.czy_headimg{
+    position:absolute;
+    top:20rpx;
+    left:20px;
+    width: 32rpx;
+    height: 34rpx;
+    display: block;
+}
+.czy_headert{
+    color: #f09f00;
+    font-size: 25rpx;
+    margin-left:80rpx;
+    height:80rpx;
+    line-height:80rpx;
+}
+.czy_headert >text{
+    color: #6fd14e;
+}
+.oldIndex .liucheng{
+    height: 60rpx;
+    line-height: 60rpx;
+    margin: 30rpx 40rpx;
+    font-size: 30rpx;
+    color: #333333;
+}
+
+.oldIndex_content{
+    position: relative;
+    width: 100%;
+    height: 580rpx;
+    margin-left: 20rpx;
+    /*background: red;*/
+}
+.oldIndex_content .line{
+    position: absolute;
+    width: 1rpx;
+    height: 480rpx;
+    background: #e4e4e4;
+    left: 20rpx;
+    top: 40rpx;
+}
+.oldIndex_content .item{
+    position: relative;
+    margin-top: 90rpx;
+}
+.oldIndex_content .itemActive{
+    margin-top: 0;
+}
+
+.oldIndex_content .img_process{
+    position: absolute;
+    width: 40rpx;
+    height: 40rpx;
+    left: 0;
+    top: 0;
+}
+.oldIndex_content .num{
+    position: absolute;
+    width: 40rpx;
+    height: 40rpx;
+    text-align: center;
+    line-height: 40rpx;
+    left: 0;
+    top: 0;
+    font-size: 26rpx;
+    color: #ffffff;
+}
+
+.oldIndex_content .process_text{
+    /*width: 305px;*/
+    height: 40rpx;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    color: #6fd14e;
+    /*color: #333333;*/
+    margin-left: 57rpx;
+}
+.oldIndex_content .active{
+    color: #333333;
+}
+.qianbao{
+    color: #6fd14e;
+}
+.oldIndex .bottom{
+    display: flex;
+    width: 750rpx;
+    height: 98rpx;
+    background-color: #6fd14e;
+    /*text-align: center;*/
+    line-height: 98rpx;
+    font-size: 28rpx;
+    color: #ffffff;
+    margin-bottom: 20rpx;
+}
+.oldIndex .bottom .btn_group{
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+.oldIndex .bottom .btn_group:nth-child(1){
+    background-color: #6fd14e;
+}
+.oldIndex .bottom .btn_group:nth-child(2){
+    background-color: #49b126;
+}
+.oldIndex .bottom .btn_group .icon_common{
+    position: absolute;
+    width:42rpx;
+    height:42rpx;
+    left: 70rpx;
+    top: 30rpx;
+}
+
+.notBack{
+    font-size: 28rpx;
+    margin:40rpx;
+    color:#333333;
+
+}

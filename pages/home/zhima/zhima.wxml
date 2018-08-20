@@ -1,0 +1,12 @@
+<view class='w'>
+  <image src='/img/home/zm1.png' class='zm1'></image>
+  <view class='s1'>
+    <view class='text1 center'>{{xinyong}}</view>
+    <view class='text2 center'>{{pingfen}}</view>
+    <view class='text3 center'>芝麻信用评分</view>
+  </view>
+</view>
+<view class='center text6' wx:if='{{pingfen>=600}}'>恭喜您已获取免押金额度</view>
+<view class='text4'>芝麻信用<text class='text5'>600分及以上用户</text>，享受
+<text class='text5'>免押金特权</text></view>
+<!-- <image src='/img/home/zm6.png' class='img1'></image> -->

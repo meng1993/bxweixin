@@ -1,0 +1,34 @@
+<import src='/temp/oldBook/oldBook.wxml' />
+<import src='/temp/emptyPage/emptyPage.wxml' />
+<view class="checkList">
+    <view class="header">
+        <view class="input_box">
+            <image class="icon_input" src="/img/oldBook/ss.png"></image>
+            <input type="text" class="input_search" placeholder="请输入书名，ISBN码" value="{{keyword}}" bindinput="changeKeyword" confirm-type="search" bindconfirm="toSearch" focus="{{focus}}"></input>
+            <image class="icon_input" class="icon_scan" src="/img/oldBook/scan.png" catchtap="toSweep"></image>
+        </view>
+        <view class="btn_search" catchtap="toSearch">搜索</view>
+    </view>
+    <view class="content">
+
+        <template wx:if="{{list.length != 0}}" is="oldBook" data="{{list,num}}"></template>
+        <template wx:elif="{{list.length == 0}}" is="emptyPage" data="{{emptyContent}}"></template>
+
+    </view>
+    <!--bottom-->
+    <view class="bottom">
+        <view class="select_num" bindtap="toBookBox">
+            <image class="select_img" src="/img/oldBook/bookstore.png"></image>
+            <!--<view class="select_text">筐中共<text class="cActive">{{boxNum}}</text>本</view>-->
+            <view class="select_text">书筐</view>
+            <view class="icon_top">{{boxNum}}</view>
+        </view>
+        <view class="num_cal">
+            <view class="select_num">已选：<text>{{selectNum}}本</text></view>
+            <view class="new_egg_num">鸟蛋共计：<text>{{eggNum}}个</text></view>
+        </view>
+        <view wx:if="{{list.length != 0}}" class="btn_add_box" catchtap="addBookBox">加入书筐</view>
+        <view wx:elif="{{list.length == 0}}" class="btn_add_box" style="background: lightgray">加入书筐</view>
+    </view>
+
+</view>

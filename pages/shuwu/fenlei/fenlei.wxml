@@ -1,0 +1,33 @@
+<wxs module="a">
+  module.exports.a=function(a,b){
+    if(b==0){
+      return 0.00
+    }
+    var c =a/b*100;
+    return c.toFixed(2)
+  }
+</wxs>
+
+<view class='flex-aic flex-wrap a'>
+  <view class='a1 themebfff'  bindtap='check2' hidden='{{cate_id}}'>
+    <view class='a2'>全部({{all_book.book_num}})</view>
+    <view class='a3'>100%</view>
+    <!-- <image class='a4' src='/img/shuwu/delete.png'></image> -->
+  </view>
+  <view class='a1 themebfff' wx:for='{{list}}' id='{{item.cate_id}}' data-t='{{item.title}}' bindtap='check'>
+    <view class='a2' wx:if='{{edit!==1}}'>{{item.title}}({{item.book_num}})</view> 
+    <input class='a5' wx:if='{{edit===1}}'  id='{{item.cate_id}}' data-index='{{index}}'
+    bindblur='input' value='{{item.title}}' maxlength='10'></input>
+    <view class='a3'>{{a.a(item.book_num,all_book.book_num)}}%</view>
+    <image class='a4' src='/img/shuwu/delete.png' id='{{item.cate_id}}' catchtap='remove'></image>
+  </view>
+</view>
+
+<view class='b' wx:if='{{cate_id&&list.length===0}}'>
+请添加新分类后，才能合并！
+</view>
+
+<view class='f themebgreen flex-aic' >
+  <view class='f2' bindtap='edit'>编辑分类</view>
+  <view class='f1' bindtap='add'>添加分类</view>
+</view>

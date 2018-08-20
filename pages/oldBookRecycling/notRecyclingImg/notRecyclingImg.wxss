@@ -1,0 +1,5 @@
+.img{
+    width: 700rpx;
+    /*height: auto;*/
+    margin: 0 25rpx;
+}

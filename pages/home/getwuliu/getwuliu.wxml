@@ -1,0 +1,8 @@
+<view wx:for='{{info}}' class='box'>
+  <view class='time'>{{item.time}}</view>
+  <view class='text'>{{item.context}}</view>
+</view>
+
+<view class='box'>
+  <view class='text'>{{startTitle}}</view>
+</view>

@@ -1,0 +1,84 @@
+<view class='a'>
+  <image wx:if='{{detail.give_type=="card"}}' class='a1' 
+  src='https://m.zujiekeji.cn/xcximg/xcxzhuli/3.png'></image>
+  <image wx:if='{{detail.give_type=="coupon"}}' class='a1' 
+  src='https://m.zujiekeji.cn/xcximg/xcxzhuli/4.png'></image>
+</view>
+
+<view class='co10 f30 c'>
+  {{detail.title}}
+</view>
+
+<!-- <view class='tuijian flex-jac' wx:if='{{launch_list.length>0}}'>
+  <view class='tujiant'>我发起正在进行中的拼团</view>
+  <image src='https://m.zujiekeji.cn/xcximg/xcxpintuan/tile.png'></image>
+</view>
+
+<view>
+  <view class='e themebfff' wx:for='{{launch_list}}' wx:key='{{index}}' hidden='{{item.join_number===0&&item.surplus_pay_time===0}}'>
+    <view id='{{item.group_id}}' bindtap='groupinfo'>
+      <view class='flex-aic p30 pt15'>
+        <image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/icon/vip.png' class='eimg'></image>
+        <view class='e2 co10 f28'>拼团剩余时间：{{item.surplus_time}}</view>
+      </view>
+      <view class='flex-aic p30 mb20'>
+        <view class='jindu ml60'>
+          <view class='green' style='width: {{item.join_number/item.success_number*100}}%'></view>
+        </view>
+        <view class='flex-jcs f26'><view class='or'>{{item.join_number}}</view>
+        <text class='co5'>/{{item.success_number}}</text></view>
+      </view>
+    </view>
+
+    <view class='flex-aic e4 p30' wx:if='{{item.join_number!=0}}'>
+        <view class='flex-jac e33 e3' id='{{index}}' catchtap='jilu'>
+          <image src='https://m.zujiekeji.cn/xcximg/xcxkanjia/icon/jl.png' class='e3i'></image>
+          <text class='f26 co5 h60'>拼团记录</text>
+        </view>
+        <view class='flex-jac e3' id='{{item.group_id}}' catchtap='share'>
+          <image src='https://m.zujiekeji.cn/xcximg/xcxpintuan/share_small.png' class='e3i2'></image>
+          <text class='f26 co5 h60' >分享</text>
+        </view>
+    </view>
+    <view wx:if='{{item.join_number===0}}' class='e10'>
+      <view class='e5 '>
+        <view class='e7 co3 f26'>支付倒计时：{{item.surplus_pay_time}}</view> 
+        <view class='e7 co3 f26'>立即支付<text class='co4'>{{item.captain_price}}</text>元，分享好友！</view>  
+      </view>
+    </view>
+    <view class='e6' id='{{index}}' bindtap='buy2' wx:if='{{item.join_number===0}}'></view>
+  </view>
+</view> -->
+
+<view class='d themebgray'>
+  <view class='d1 f28 co5'>助力规则说明：</view>
+  <!-- <view class='d2 f24 co5'>1、会员卡开卡时间可设置3个月内使用</view>
+  <view class='d2 f24 co5'>2、使用会员卡租书均来回包邮</view> -->
+  <view class='d2 f24 co5' wx:if='{{detail.give_type=="coupon"}}'>1、使用海报邀请好友扫码关注‘博鸟绘本’公众号，完成对应助力任务即可免费获得优惠劵</view>
+  <view  class='d2 f24 co5'  wx:if='{{detail.give_type=="card"}}'>1、使用海报邀请好友扫码关注‘博鸟绘本’公众号，完成对应助力任务即可免费获得会员卡(小博士3次卡)，助力免费获得的会员立即生效</view>
+  <view class='d2 f24 co5'>2、本次活动最终解释权归博鸟绘本所有，若有任何疑问添加客服微信号BN20171215或拨打电话 0571-86113050</view>
+</view>
+
+
+
+<view class='forfooter'></view>
+<view class='footer flex-aic'>
+  <view class='btn f32 flex-grow1 themebgreen' bindtap='jindu' >
+    <view>助力进度</view>
+  </view>
+  <view class='btn f32 flex-grow1 bc1' bindtap='zhuli' >
+    <view>我要助力</view>
+  </view>
+</view>
+
+<view  class='s' bindtap='closeshare' wx:if='{{share}}'>
+  <image class='s1' src='https://m.zujiekeji.cn/xcximg/pic-hb.png'></image>
+  <view class='s3 themebfff flex-jac'>
+    <image class='s2' src='https://m.zujiekeji.cn/xcximg/download.png'></image>
+    <view class='co10 f30'>保存图片分享给好友</view>
+  </view>
+</view>
+
+<!-- <view class='goshouye zhuanfa' bindtap='share' >
+  <image src='/img/group/zf.png' class='gohome'></image>
+</view>   -->

@@ -1,0 +1,41 @@
+<import src="/temp/book/book.wxml" />
+<import src="/temp/bottomload/index.wxml" />
+<view class='bacimg'>
+  <image src='{{info.banner}}' class='bacimg'></image>
+</view>
+<view class='flex-jcs title'>
+  <!-- <view class='listname'>{{info.title}}</view> -->
+  <!-- <view class='add' bindtap='allin' id='{{allin}}' wx:if='{{allin===0}}'>全部加入书架{{all}}本</view>
+  <view class='add add2' bindtap='allin' id='{{allin}}' wx:if='{{allin===1}}'>已加入书架</view> -->
+</view>
+<view class='intro'>
+  <view class='intro1'>简介</view>
+  <view class='main'>{{info.detail}}</view>
+  <view class="btn_toPay" catchtap="goPay" wx:if="{{info.product_id}}">购买点读笔</view>
+</view>
+
+<wxs module='par'>
+  module.exports={
+    par:function(e){
+      if(e===0){
+        return "0"
+      }else{
+        return e
+      }
+    }
+  }
+</wxs>
+
+<view class='a'>
+  <view class='age flex-jcs'>
+    <view class='age1 flex-aic'>
+      <view class='xian'></view>
+      <view class='a1'>{{info.title}}书单</view>
+    </view>
+  </view>
+  <view class='listbox2'>
+    <template wx:for='{{list}}' is='seriesbook' data='{{item:item,index:index}}'></template>
+  </view>
+</view>
+
+<template is='zan-loadmore' data='{{bottomload:bottomload}}'></template>

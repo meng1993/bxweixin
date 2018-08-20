@@ -1,0 +1,44 @@
+<view class='wrap'>
+  <view class='list'>
+    <view class='flex-aic'>
+      <image src='/img/home/phone.png' class='phoneimg'></image>
+      <view class='phonet'>手机</view>
+    </view>
+    <view class='inputw {{inputphone==true?"":"bordererror"}}'>
+      <input type='number' placeholder='请输入手机号码' class='{{inputphone==true?"input":"inputerror"}}' 
+      bindblur='phonelength' bindinput='inputphone' value='{{phone}}' disabled='{{inputphonec}}'></input>
+    </view>
+  </view>
+
+  <view class='list'>
+    <view class='flex-aic'>
+      <image src='/img/home/group-14.png' class='codeimg'></image>
+      <view class='phonet'>验证码</view>
+    </view>
+    <view class='inputw flex-aic'>
+      <input type='number' placeholder='请输入手机验证码' class='input' bindinput='inputcode'></input>
+      <view class='ybtn' bindtap='getcode'>{{codestatus}}</view>
+    </view>
+  </view>
+
+  <view class='list'>
+    <view class='flex-aic'>
+      <image src='/img/home/group-13.png' class='pwdimg' ></image>
+      <view class='phonet'>密码</view>
+    </view>
+    <view class='inputw {{inputpwd==true?"":"bordererror"}}'>
+      <input placeholder='请输入密码' class='{{inputpwd==true?"input":"inputerror"}}' 
+      password='true' bindinput='inputpwd' bindblur='pwdlength' value='{{pwd}}'></input>
+    </view>
+  </view>
+
+  <form report-submit='true' bindsubmit='formid'>
+    <button class='rbtn' bindtap='register' form-type='submit'>{{zhuce}}</button>
+  </form>
+  <view class='agree flex-jac' >
+    <checkbox-group  bindchange="radioChange">
+      <checkbox value="" checked="{{ischecked}}"/>
+    </checkbox-group> 
+    <text bindtap='xieyi'>注册既同意<text class='blue'>《博鸟用户协议》</text></text>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+.g2{width: 710rpx;padding: 20rpx;}
+page{background-color: #f2f2f2;}
+.co3{color: #666666}
+.f26{font-size: 26rpx;}
+.pl20{padding-left: 20rpx}
+.f30{font-size: 30rpx;}
+.f28{font-size: 28rpx}
+.g1{width: 750rpx;display: block;background-color: #fff;}
+.mt10{margin-top: 20rpx}

@@ -1,0 +1,38 @@
+view{font-family: PingFangSC;}
+page{background-color: #EFEFF4}
+.head{position:fixed;top: 0;z-index: 10000;}
+.fortop{height: 88rpx;}
+.classification{
+  background-color: #fff;
+  width: 750rpx;
+  height: 88rpx;
+}
+.zhanwei{
+  height: 88rpx;
+}
+.condition1{
+  width: 250rpx;
+  color: #878787;
+  font-family: PingFangSC;
+  font-size: 32rpx;
+  line-height: 80rpx; height: 80rpx;
+  text-align: center;
+}
+.condition2{
+  color: #5ccd35;
+}
+.Highlight{
+  width: 40rpx; height: 8rpx; background-color: #6ed14e; margin: 0 auto; border-radius: 10px;
+}
+.a{position: relative;margin: 20rpx auto;width:712rpx }
+.bgimg{width: 712rpx;height: 156rpx;display: block}
+.a1{position: absolute;width: 712rpx;height: 156rpx;top: 0;left: 0; }
+.qian{width: 180rpx;color: #fff;font-size: 50rpx;}
+.ar{padding-left:30rpx; }
+.lei{width: 320rpx; height: 90rpx;line-height: 30rpx;color: #333333;font-size: 28rpx;font-family: PingFangSCBold}
+.riqi{height: 66rpx;line-height: 66rpx;font-size: 20rpx;color:#ff7e00}
+.yuan{font-size: 34rpx;}
+.liji{font-size: 24rpx;color:#ff7e00; border: 2rpx solid #ff7e00;padding:0rpx 14rpx;border-radius: 20px; 
+height: 40rpx;line-height: 40rpx;}
+.pr{padding-right: 30rpx;}
+.riqi2{color: #cccccd}

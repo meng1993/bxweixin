@@ -1,0 +1,155 @@
+<import src="/temp/book/book.wxml" />
+<import src="/temp/bottomload/index.wxml" />
+
+<!--客服图标-->
+<view class="customer_box">
+  <button open-type='contact' class='contact' session-from="sobot|{{userdata.nickname}}|{{userdata.face}}">联系我们</button>
+  <image src="/img/shouye/customer_service3.png" class="icon_customer"></image>
+</view>
+
+<view class="header flex-jcs flex-only">
+    <picker mode="date"  start="{{jystartdate}}" end="{{jyenddate}}" bindchange="bindDateChange"> 
+      <view class="picker">
+        {{jydate}}>
+      </view>
+    </picker>
+  <view class='searchinputbox  flex-only flex-grow1' bindtap='gosearch'>
+    <image class='searchimg' src='/img/shouye/Magnifier.png'></image>
+    <input confirm-type='search flex-grow1' placeholder='  绘本搜索' class='searchinput'   disabled="true"></input>
+  </view> 
+</view>
+
+<view class='forheader'></view>
+
+<swiper indicator-dots="{{swiper.indicatorDots}}" indicator-active-color='{{swiper.indicatorColor}}' autoplay='swiper.autoplay' circular='swiper.cirular' class='slide-image'>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item.img}}" class="slide-image" 
+      id='{{index}}' bindtap='getxinren'/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='flex-only categorybox flex-wrap'>
+  <view class='category  {{index==3||index==7?"category2":""}}' wx:for='{{icons}}' 
+  id='{{item.path}}' bindtap='go'>
+     <view class='category2'>
+      <image src='{{item.src}}' class='icon1'></image>
+       <!--<image wx:if="{{index==6}}" class='new' src='/img/shouye/new.png'></image> -->
+      <!-- <image wx:if="{{index==6}}" class='new' src='/img/shouye/hot.png'></image> -->
+      <view class='categoryname {{index==7?"categoryname7":""}}'>{{item.name}}</view>
+     </view>
+  </view> 
+</view>
+
+<view class='flex-jcs twoviewbox flex-wrap' style="position: relative;">
+  <!-- <image class='twoview' src='/img/shouye/shuoming.png' bindtap='shiyong'>
+  </image>
+  <view class='flex-grow1' bindtap='getxinren2'>
+    <image class='twoview' src='/img/shouye/xinren.png'>
+    </image>
+  </view> -->
+  <image class='fourview' src='https://m.zujiekeji.cn/xcximg/shouyeicon/pt.png' 
+  id='/pages/pintuan/list/list' bindtap='navigate'></image>
+  <image class='fourview' src='https://m.zujiekeji.cn/xcximg/shouyeicon/kj.png' 
+  id='/pages/kanjia/kanjiaye/kanjiaye'bindtap='navigate'></image>
+  <image class='fourview' src='https://m.zujiekeji.cn/xcximg/shouyeicon/sm.png'
+  id='/pages/home/shuoming/shuoming' bindtap='navigate'></image>
+  <!--新用户专享隐藏-->
+  <!--<image class='fourview' src='https://m.zujiekeji.cn/xcximg/shouyeicon/xr.png' -->
+  <!--id='/pages/index/xinren/xinren?id=1' bindtap='navigate'></image>-->
+  <image class="fourview" id="/pages/oldBookRecycling/index/index" src="/img/oldBook/share.png" bindtap="navigate"></image>
+  <image class='new' src='/img/shouye/new.png' style="top:170rpx;right:150rpx;"></image>
+</view>
+
+<view class='hot flex-aic' wx:if='{{diandu.length>0}}'><view class='gang'></view>点读专区</view>
+
+<view class='flex-aic mr bt' >
+  <view class='dd1' wx:for='{{diandu}}' wx:key='{{index}}' id='{{item.id}}' bindtap='diandud'>
+    <view class='dd2 flex-jasc'>
+      <view class='dd3'>
+        <image class='dd3i' src='{{item.logo}}' mode='aspectFit'></image>
+      </view>
+      <view class='flex-aic dd6'>
+        <view class='dd4'>{{item.title}}</view>
+        <image src='/img/home/right.png' class='dd5'></image>
+      </view>    
+    </view>
+  </view>
+</view>
+
+<!--特色人物-->
+<view wx:for="{{seriesList}}">
+  <!--title-->
+  <view class='hot flex-aic'>
+    <view class='gang'></view>{{item.name}}
+    <view class="btn_more" data-type="{{item.book_dimension_id}}" catchtap="toSeries">
+      更多
+      <image class="icon_right" src="/img/home/right.png"></image>
+    </view>
+  </view>
+<!--content-->
+  <view class='czy_view'>
+    <view class="figure" wx:for="{{item.item_list}}" wx:for-item='mitem' wx:for-index='mindex' data-id="{{mitem.book_dimension_item_id}}" data-name="{{item.name}}" catchtap="toCelebrity">
+      <image class="figure_img" src="{{mitem.logo}}"></image>
+      <view class="figure_name">{{mitem.title}}</view>
+    </view>
+  </view>
+  <view class="bg20"></view>
+</view>
+
+
+<view class='hot flex-aic' wx:if='{{mr.length>0}}'><view class='gang'></view>名人书单</view>
+
+<view class='flex-aic mr' >
+  <view class='mr0' wx:for='{{mr}}' wx:key='{{index}}'>
+    <view class='mr1 flex-jac' id='{{item.celebrity_id}}' bindtap='mrlist'>
+      <image class='mr2' src='{{item.personal_img}}'></image>
+      <view>
+        <view class='mr3'>{{item.fullname}}</view>
+        <view class='mr4 flex-aic'>
+          <text>书单</text>
+          <image src='https://m.zujiekeji.cn/xcximg/mr/jt_right.png' class='mr5'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='hot flex-aic' wx:if='{{mr.length>0}}'><view class='gang'></view>全球儿童图书大奖清单</view>
+
+<view class='flex-jcs flex-wrap bt j'>
+  <view class='j1 {{index%2==0?"jb":""}} flex-aic' wx:for='{{jiang}}' wx:if='{{index<4}}'
+  wx:key='{{index}}' id='{{item.award_id}}' bindtap='award'>
+    <image src='{{item.logo}}' class='j2'></image>
+    <view class='j3 flex-aic'>{{item.title}} <image src='/img/home/right.png' class='j4'></image></view>
+  </view>
+</view>
+
+<view class='jingxuanshudan themebgray'>
+<view class='shudan'>
+  <view class='hot flex-aic'><view class='gang'></view>精选书单</view>
+  <view class='themebgray'>
+  <view class='bs' id='{{item.id}}' bindtap='shudan' wx:for="{{books}}" wx:key="{{item.id}}">
+  <view class='jingxuan' >
+  <view class='jx-title ml25'>{{item.title}}</view>
+   <view class='jx-comment ml25'>{{item.recommend}}</view>
+    <view class='jingxuan-img'>
+      <view class='tu' wx:for="{{item.book_info}}" wx:key='{{index}}'>
+        <image mode='aspectFit' src='{{item.img_medium}}'></image>
+      </view>
+    </view>
+    </view>
+  </view>
+  </view>
+  </view>
+</view>
+
+<view class='hot flex-aic'><view class='gang'></view>热门推荐</view>
+<view class='listbox themebgray'>
+  <template is='book' data='{{item:item,index:index}}'wx:for="{{lists}}"wx:key="{{item.book_id}}"></template>
+</view>
+
+<template is="zan-loadmore" data="{{bottomload}}"></template>
+<template is="zan-loadend" data="{{bottomend}}"></template>
+

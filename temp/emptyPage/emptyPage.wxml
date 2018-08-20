@@ -1,0 +1,7 @@
+<template name="emptyPage">
+    <view class='emptyPage'>
+        <image style="width: 128rpx;height: 142rpx;margin: 200rpx 320rpx 0;" src='https://m.zujiekeji.cn/xcximg/xcxkanjia/nolist.png'></image>
+        <view style="text-align: center;color: #999999;font-size: 30rpx;margin-top: 20rpx;">{{emptyContent}}~</view>
+        <view wx:if="{{emptyBtnText}}" bindtap='btn_add' style="width: 270rpx;height: 70rpx;margin: 20rpx auto;border:6rpx solid #6ed14e;color: #6ed14e;text-align: center;border-radius:10px;line-height: 70rpx;">{{emptyBtnText}}</view>
+    </view>
+</template>

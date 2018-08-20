@@ -1,0 +1,142 @@
+page{ background-color: #efeff4;}
+.title{
+  background-image: url(https://m.zujiekeji.cn/xcximg/xcxpintuan/pintuan_bg.png);
+  height: 260rpx;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.ap{position: absolute;right: 0;top: 20rpx;width: 150rpx;height: 54rpx;line-height: 54rpx;text-align: center;
+color: #ff773f;font-size: 26rpx;border-top-left-radius: 50px;border-bottom-left-radius: 50px;}
+.a{height: 146rpx;}
+.a1{
+  color: #fff;
+  font-size: 32rpx;
+  text-align: center;
+  padding-top: 30rpx;
+}
+.a2{
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  padding-top: 26rpx;
+}
+.a3{
+  background-color: #fff;
+  width: 710rpx;
+	height: 190rpx;
+	border-radius: 10rpx;
+  margin: 0 20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.a3-title{
+  font-size: 30rpx;
+  height: 140rpx;
+}
+.a3-main{
+  width: 466rpx;
+}
+.a3 image{
+  width: 178rpx;
+	height: 178rpx;
+}
+.a3-content{
+  width: 674rpx;
+  margin: 0 20rpx ;
+}
+.price{
+  font-size: 32rpx;
+  color: #ff001e;
+  font-weight: 600;
+  padding-left: 10rpx;
+}
+.a3-price{
+  font-size: 24rpx;
+  color: #999999;
+  vertical-align:bottom;
+}
+.ago{
+  text-decoration: line-through;
+  padding-left: 30rpx;
+}
+.a4{
+  width: 710rpx;
+	height: 350rpx;
+	background-color: #ffffff;
+  margin: 135rpx auto 0 auto;
+}
+.a4{
+  font-size: 26rpx;
+}
+.a4-time{
+  border-bottom: 1px solid #efeff4;
+  padding: 30rpx 0;
+}
+.a5{
+  width: 50rpx;
+	height: 40rpx;
+  line-height: 40rpx;
+	background-color: #ffe3e5;
+	border-radius: 4rpx;
+  text-align: center; 
+  color: #ff001e;
+  margin:0 10rpx;
+}
+.a4-people{
+  padding: 40rpx 20rpx;
+}
+.jindu{
+  color: #ff646f;
+}
+.buy{
+  width: 670rpx;
+	height: 88rpx;
+	background-color: #6fd14e;
+	border-radius: 6rpx;
+  text-align: center;
+  line-height: 88rpx;
+  color: #fff;
+  margin:  0 auto;
+  font-size: 32rpx;
+}
+.f32{font-size: 32rpx;}
+.b{width: 670rpx;background-color: #fff;margin-left: 20rpx;padding: 30rpx 20rpx;}
+.co7{color: #b5b5b5}
+.mt20{margin-top: 20rpx;}
+.mt10{margin-top: 10rpx}
+.g{width: 710rpx;background-color: #fff;margin-left: 20rpx;}
+.g2{background-color: #f2f2f2;width: 630rpx;padding: 20rpx;margin-left: 20rpx;border-radius: 10px;}
+.co3{color: #666666}
+.f26{font-size: 26rpx;}
+.pl20{padding-left: 20rpx}
+.f30{font-size: 30rpx;}
+.f28{font-size: 28rpx}
+.g1{width: 710rpx;display: block;}
+.goshouye{position: fixed;width: 100rpx;height: 100rpx;border-radius: 50px;
+bottom: 160rpx;right: 30rpx;z-index: 1000}
+.zhuanfa{bottom: 280rpx;}
+.gohome{display: block;width: 100rpx;height: 100rpx;border-radius: 50px;}
+.tishikuang{position: absolute;  left: 80rpx;top: 400rpx; height: 327rpx;width: 600rpx;background-color: #fff;z-index: 999;border-radius: 10px;}
+.tishi-1{border-bottom: 1px solid #dcdcdc;padding: 20rpx 30rpx;font-size: 26rpx; display: flex}
+.tishi-6{width: 8rpx; height: 36rpx; background-color: #6fd14e; margin-right: 10rpx}
+.tishi-2{font-size: 26rpx;display: flex;padding: 60rpx 30rpx}
+.tishi-2 .bgs-img{width: 62rpx; height:62rpx;display:block;margin: 0 auto;padding-bottom: 20rpx}
+.tishi-2 button{background-color: #fff;color: black;font-size: 26rpx;line-height: 30rpx}
+.tishi{background-color: rgba(0,0,0,0.3); position: fixed; width: 100%; height: 100%; top: 0; left: 0;z-index: 1000;}
+button::after{border: none}
+.f1{text-align: center;line-height: 60rpx;font-size: 32rpx;color:#999 }
+.e{width: 710rpx;background-color: #fff;margin-left: 20rpx;height: 100rpx;margin-top: 20rpx;}
+.e1{height: 96rpx;line-height: 96rpx;text-align: center;}
+.e2{height: 100rpx;}
+.Highlight{
+  height: 4rpx; background-color: #6ed14e;  border-radius: 10px;
+}
+.or{
+  color: #ff8e00;
+}
+.p20{padding: 20rpx 0;}
+.co11{color: #6fd14e}
+.fhead{width: 66rpx;height: 66rpx;display: block;border-radius: 100px;}
+.co10{color: #333333}
+.co12{color: #ffc000}

@@ -1,0 +1,49 @@
+<!--pages/oldBookRecycling/orderConfirm/orderConfirm.wxml-->
+<view class="order_confirm">
+    <view class="bg20 line-20"></view>
+    <!--书本图片展示列表-->
+    <view class="img_book" bindtap="toOrderConfirmList">
+        <image class="image" wx:for="{{lists}}" wx:if="{{index<4}}" src="{{item.img_medium}}" mode="aspectFit"></image>
+        <view class="book_num">
+            共{{lists.length}}本
+            <image class="youjiantou czy_right" src="/img/shelf/yousanjiao.png"></image>
+        </view>
+    </view>
+    <view class="bg20"></view>
+
+    <view class="line88">
+        <view class="line88_left text_left_cf">赔偿价格</view>
+        <view class="line88_right text_right_cf"><text>￥{{compenPrice}}</text></view>
+    </view>
+
+    <!--czy新增鸟蛋开始-->
+
+    <view class='flex-jasc feiyongb themebfff'>
+        <view class='xuanzejihua'>我的鸟蛋:<text style="color: #ff001e">{{myEggNum}}</text>个</view>
+        <view class='flex-aic'>
+            <image src='/img/close.png' class='btn_switch' data-id="0" wx:if="{{!switchType}}" catchtap="changeSwitch"></image>
+            <image src='/img/open.png' class='btn_switch' data-id="1" wx:if="{{switchType}}" catchtap="changeSwitch"></image>
+        </view>
+    </view>
+
+    <view class='flex-jasc feiyongb themebfff' hidden='{{havecard}}' wx:if="{{switchType}}">
+        <view class='xuanzejihua' style="margin-left: -10rpx;">
+            当前可用鸟蛋<text style="color: #ff001e">{{eggNum}}</text>个，抵扣<text style="color: #ff001e">￥{{eggNum/100}}</text>元
+        </view>
+        <view class='flex-aic'>
+            <view class='flex-aic'>
+
+            </view>
+        </view>
+    </view>
+    <!--czy新增鸟蛋结束-->
+
+    <view class="buyoneConfirm_bottom">
+        <view class="bottom_left">
+            <view class="pay_money">支付金额：<text class="num">{{endMoney}}元</text></view>
+            <view class="reduce_money">抵扣金额：{{reduceMoney}}元</view>
+        </view>
+        <view class="bottom_right" catchtap="toOrder">支付</view>
+    </view>
+
+</view>

@@ -1,0 +1,168 @@
+/**app.wxss**/
+input image{
+  margin: 0;
+  padding: 0;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.flex-only{
+  display: flex;
+}
+.flex-jcc{ 
+  display: flex;justify-content: center;
+}
+.flex-jce{
+  display: flex;justify-content: flex-end;
+}
+.flex-jcs{
+  display: flex;justify-content: space-between;
+}
+.flex-aic{
+  display: flex;align-items: center;
+}
+.flex-aie{
+  display: flex;align-items: flex-end;
+}
+.flex-jac{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-jasc{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-grow1{
+  flex-grow: 1;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.themegreen{
+  color: #6ED14E;
+}
+.themebgreen{
+  background-color: #6ED14E;
+}
+.themegray{
+  color: #EFEFF4;
+}
+.themebgray{
+  background-color: #EFEFF4;
+}
+.themebfff{
+  background-color: #fff;
+}
+.themefff{
+  color: #fff;
+}
+.family1{
+  font-family: PingFangSC;
+}
+.app-label{background-color: #eee;color: #878787;font-family: PingFangSC;
+font-size: 22rpx;padding:0 10rpx;line-height: 44rpx;border-radius: 10rpx;}
+.f28{font-size: 28rpx;}
+.f26{font-size: 26rpx;}
+.f24{font-size: 24rpx;}
+.f30{font-size: 30rpx;}
+.f32{font-size: 32rpx;}
+.f36{font-size: 36rpx;}
+.c333{color: #333333;}
+.c999{color: #999999;}
+
+/*11111111----------------------------------->czy新增*/
+.bgColor{
+  background: #f0f2f5;
+}
+.bg20{
+  width: 750rpx;
+  height: 20rpx;
+  background: #f0f2f5;
+}
+.youjiantou{
+  position: absolute;
+  width: 17px;
+  height: 31px;
+  right: 21rpx;
+}
+/*长750、宽88的左右内容部分样式开始*/
+.line88{
+  width: 750rpx;
+  height: 88rpx;
+  border-bottom: 1rpx solid lightgray;
+  background:#fff;
+}
+.line88_left{
+  float: left;
+  line-height: 88rpx;
+  margin-left: 31rpx;
+}
+.line88_right{
+  float: right;
+  line-height: 88rpx;
+  margin-right: 31rpx;
+}
+/*长750、宽88的左右内容部分样式结束*/
+/*留言复制开始*/
+.liuyan{
+  width: 750rpx;
+  height: 100rpx;
+  padding-top: 20rpx;
+  background-color: #ffffff;
+}
+.liuyan .liuyan_text{
+  float: left;
+  width: 98rpx;
+  height: 100rpx;
+  line-height: 65rpx;
+  color: #262626;
+  font-size: 28rpx;
+  padding-left: 32rpx;
+}
+.liuyan .liuyan_textarea{
+  float: left;
+  width: 620rpx;
+  height: 100rpx;
+  font-size: 28rpx;
+}
+/*留言复制结束*/
+.btn-166-56{
+  width: 166rpx;
+  height: 56rpx;
+  text-align: center;
+  line-height: 56rpx;
+  border: 1rpx solid #999999;
+  border-radius: 28px;
+  font-size: 28rpx;
+  color: #999999;
+  margin-top: 16rpx;
+}
+.btn-166-56-c{
+  width: 166rpx;
+  height: 56rpx;
+  text-align: center;
+  line-height: 56rpx;
+  border: solid 1px #6fd14e;
+  border-radius: 28px;
+  font-size: 28rpx;
+  color: #6fd14e;
+  margin-top: 16rpx;
+}
+.btn-671-88-c{
+  width: 671rpx;
+  height: 88rpx;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  color: #fff;
+  background-color: #6fd14e;
+  margin: 67rpx auto;
+}

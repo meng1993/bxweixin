@@ -1,0 +1,46 @@
+<view class="series">
+    <!--<image src="{{book_dimension_info.logo}}" mode="aspectFit" class="top_img"></image>-->
+    <view class="item" wx:for="{{book_dimension_list}}">
+        <!--头部-->
+        <!--<block wx:if="{{type == 0}}">-->
+            <view class="item_top" data-id="{{item.book_dimension_item_id}}" data-name="{{book_dimension_info.name}}" catchtap="toCelebrity">
+                <image src="{{item.logo}}" class="header_img"></image>
+                <view class="item_top_describe">
+                    <view class="name">{{item.title}}</view>
+                    <view class="describe">{{item.summary}}</view>
+                </view>
+                <!--<view class="btn_addAll" data-ids="{{item.book_ids}}" catchtap="addBoxAll">+全部加入书架{{item.book_ids.length}}本</view>-->
+                <view class="btn_addAll" data-ids="{{item.book_ids}}" data-index="{{index}}" catchtap="addBoxAll" wx:if="{{item.allin !== 1}}">一键加入书架</view>
+                <view class="btn_addAll btn_addAll2" data-ids="{{item.book_ids}}" data-index="{{index}}" catchtap="removeAll" wx:if="{{item.allin == 1}}">已加入书架</view>
+                <!--<view class="btn_addAll btn_addAll2" data-ids="{{item.book_ids}}" wx:if='{{allin===1}}'>已加入书架</view>-->
+            </view>
+        <!--</block>-->
+        <!--<block>-->
+        <!--<block wx:if="{{type == 1 || type == 2}}">-->
+            <!--<view class="item_top item_top2">-->
+                <!--<view class="item_top_name">小猪佩奇系列<text class="book_num">(共20本)</text></view>-->
+                <!--<view class="btn_addAll">+全部加入书架</view>-->
+            <!--</view>-->
+        <!--</block>-->
+
+        <!--内容部分-->
+        <view class="item_content">
+            <view class="content_common" wx:for="{{item.book_list}}" wx:if="{{index < 3}}" data-id="{{item.book_id}}" catchtap="toDetail">
+                <view class="book_img">
+                    <image src="{{item.img_medium}}"></image>
+                </view>
+                <view class="boo_describe">{{item.title}}</view>
+            </view>
+        </view>
+
+        <!--底部-->
+        <view class="item_bottom" data-id="{{item.book_dimension_item_id}}" data-name="{{book_dimension_info.name}}" catchtap="toCelebrity">
+            查看更多
+            <image src="/img/icon_right.png" class="icon_more"></image>
+        </view>
+
+        <view class="bg20"></view>
+    </view>
+
+
+</view>

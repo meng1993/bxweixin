@@ -1,0 +1,6 @@
+<web-view src='https://m.zujiekeji.cn/#/agreement' class='web'></web-view>
+
+
+
+<!--测试环境-->
+<!--<web-view src="https://testm.zujiekeji.cn/?_={{num}}#/agreement"></web-view>-->

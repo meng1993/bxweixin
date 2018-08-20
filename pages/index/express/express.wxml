@@ -1,0 +1,3 @@
+<view class='mt40'>
+    <view class='select-tab pl40' wx:for="{{lists}}" bindtap="choice" id="{{index}}">{{item.name}}快递</view>
+</view>

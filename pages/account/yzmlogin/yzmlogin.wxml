@@ -1,0 +1,45 @@
+<image src='/img/shouye/logo.png' class='logo'></image>
+<view class='text'>博鸟绘本</view>
+<view class='text text2'>让孩子的世界更美好</view>
+<view class='wrap'>
+  <view class='list'>
+    <view class='flex-aic'>
+      <image src='/img/home/phone.png' class='phoneimg'></image>
+      <view class='phonet'>手机</view>
+    </view>
+    <view class='inputw {{inputphone==true?"":"bordererror"}}'>
+      <input type='number' placeholder='请输入手机号码' class='{{inputphone==true?"input":"inputerror"}}' 
+      bindinput='inputphone' bindblur='phonelength'></input>
+    </view>
+  </view>
+
+  <view class='list' hidden='{{logintype==1}}'>
+    <view class='flex-aic'>
+      <image src='/img/home/group-13.png' class='pwdimg' ></image>
+      <view class='phonet'>密码</view>
+    </view>
+    <view class='inputw {{inputpwd==true?"":"bordererror"}}'>
+      <input placeholder='请输入密码' class='{{inputpwd==true?"input":"inputerror"}}' 
+      password='true' bindinput='inputpwd' bindblur='pwdlength' value='{{pwd}}'></input>
+    </view>
+  </view>
+
+  <view class='list' hidden='{{logintype==0}}'>
+    <view class='flex-aic'>
+      <image src='/img/home/group-14.png' class='codeimg'></image>
+      <view class='phonet'>验证码</view>
+    </view>
+    <view class='inputw flex-aic'>
+      <input type='number' placeholder='请输入手机验证码' class='input' bindinput='inputcode'></input>
+      <view class='ybtn' bindtap='getcode'>{{codestatus}}</view>
+    </view>
+  </view>
+
+  <view class='flex-jcs'>
+    <view class='otherway' bindtap='forget'>忘记密码</view>
+     <view class='otherway' bindtap='yanzhengma'>{{logintype==0?"验证码登录":"手机登录"}}</view> 
+  </view>
+  <view class='rbtn' bindtap='login' hidden='{{logintype==1}}'>登录</view>
+  <view class='rbtn' bindtap='login2' hidden='{{logintype==0}}'>登录</view>
+  <view class='rbtn2' bindtap='register'>注册</view>
+</view>

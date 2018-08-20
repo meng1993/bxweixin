@@ -1,0 +1,4 @@
+view{font-family: PingFangSC}
+.box{padding: 20rpx;}
+.time{font-size: 26rpx;color: gray}
+.text{font-size: 30rpx;}

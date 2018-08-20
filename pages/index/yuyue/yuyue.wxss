@@ -1,0 +1,110 @@
+@import '/pages/shelf/orderinfo/orderinfo.wxss';
+page{background-color: #f0f2f5}
+view{font-family: PingFangSC}
+.picker{font-size: 32rpx;color: #262626;padding: 10rpx 30rpx;height:60rpx;
+    line-height:60rpx;
+}
+.choicetime{color: #3b7ada;font-size: 28rpx;margin-right:30rpx;}
+.pickerw{margin-bottom: 20rpx;border-bottom:1rpx solid lightgray;background-color: #fff;}
+.czy_active{
+    border-bottom:none;
+    margin-bottom:0;
+}
+.out{width: 400rpx;height: 100rpx;line-height: 100rpx;text-align: center;border-radius: 10px;
+color: #fff;margin: 100rpx auto 40rpx;}
+.cSubmit{
+    /*line-height:100rpx;*/
+    /*background-color:#6ed14e;*/
+    /*color:#fff;*/
+    /*font-size:36rpx;*/
+    /*margin-left:175rpx;*/
+}
+.wenxin{display: block;width: 36rpx;height: 34rpx;margin-left: 30rpx;margin-right: 10rpx;}
+.title{font-size: 32rpx;}
+.text{font-size: 28rpx;line-height: 40rpx;color: red;padding:20rpx 30rpx;}
+.dizhixiugai{font-size: 28rpx;color: #3b7ada;margin-right: 10rpx;}
+.select-tab{height:90rpx; margin: 20rpx auto;border: 1rpx solid #cccccc;border-width:1rpx 0;width: 100%;font-size: 30rpx;line-height: 90rpx;color:#333333;}
+.select-opt{font-size: 30rpx;margin-left: 40rpx;}
+.select-tab .flex-aic{margin-right: 40rpx;}
+.red{color: red;}
+.marked-words{font-size: 26rpx;color: #ff9b01;width: 100%;height: 80rpx;line-height: 80rpx;text-indent: 
+67rpx;background-color: #fff7e9;position: relative;}
+.marked-words view{font-weight: bold;display: inline;}
+.marked-words image{width: 33rpx;height: 33rpx;position: absolute;top: 0;bottom: 0;left: 20rpx;margin: auto;}
+.right-tag-img{width: 74rpx;height: 74rpx;position: absolute;right: 0;top: 0;}
+.mineimgw{position: relative;}
+
+
+.czy_xiugai{
+    height:60rpx;
+    float:left;
+    line-height:60rpx;
+    margin-right:30rpx;
+}
+.choicetime .jj{
+    margin-top:18rpx;
+}
+.order_eggs {
+    position: relative;
+    font-size: 26rpx;
+    color: #262626;
+}
+.order_eggs .icon_point{
+    position: absolute;
+    width: 16rpx;
+    height: 16rpx;
+    border-radius: 50%;
+    background: #fb9c09;
+    left: 30rpx;
+    top: 38rpx;
+}
+/*tab切换样式*/
+.tab_btns{
+    display: flex;
+    width: 100%;
+    height: 88rpx;
+    background: #fff;
+}
+.tab_btns .btn_common{
+    flex: 1;
+    text-align: center;
+    line-height: 88rpx;
+    font-size: 32rpx;
+    color: #878787;
+}
+.tab_btns .active{
+    border-bottom: 3rpx solid #6fd14e;
+    border-radius: 2rpx;
+    color: #5dce35;
+}
+.toCheckCourier{
+    width: 100%;
+    height: 90rpx;
+    background-color: #ffffff;
+}
+.toCheckCourier .courier{
+    float: left;
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 32rpx;
+    color: #333333;
+    margin-left: 20rpx;
+}
+.icon_right{
+    float: right;
+    width:17rpx;
+    height: 31rpx;
+    margin: 36rpx 20rpx;
+}
+.order_number{
+    float:left;
+    width:550rpx;
+    height:90rpx;
+    margin:0;
+}
+.oneself_btn{
+    font-size: 26rpx;
+    color: #6fd14e;
+    margin-left: 35%;
+    margin-bottom: 100rpx;
+}

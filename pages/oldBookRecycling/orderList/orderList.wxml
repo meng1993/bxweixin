@@ -1,0 +1,9 @@
+<import src='/temp/oldBook/oldBook.wxml' />
+<import src='/temp/emptyPage/emptyPage.wxml' />
+
+<view class="orderList">
+
+    <template is="orderList" data="{{list,checkType,orderListType}}" wx:if="{{list.length != 0}}"></template>
+    <template is="emptyPage" data="{{emptyContent,emptyBtnText}}" wx:if="{{list.length == 0}}"></template>
+
+</view>

@@ -1,0 +1,3 @@
+<view class="checkCourier">
+    <view class="courier_name" data-name="{{item}}" data-code="{{courierCodeList[index]}}" wx:for="{{courierList}}" catchtap="checkCourier">{{item}}</view>
+</view>

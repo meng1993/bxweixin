@@ -1,0 +1,27 @@
+@import '/pages/shelf/orderinfo/orderinfo.wxss';
+@import '/pages/order/order.wxss';
+view{font-family: PingFangSC}
+.a{width: 750rpx;height: 154rpx;position: relative}
+img{display: block}
+.abg{width: 750rpx;height: 154rpx;}
+.a1{height: 54rpx;position: absolute;top: 50rpx;}
+.a1a{width: 42rpx;height: 36rpx;margin: 0 30rpx;}
+.a1b{font-size: 40rpx;color: #fff;font-weight: bold}
+.a2{height: 54rpx;position: absolute;top: 50rpx;right: 30rpx;}
+.a2a{font-size: 26rpx;color: #fff;}
+.mb20{margin-bottom: 20rpx;}
+.orderb{padding: 20rpx 30rpx;}
+.ordert{color: #878787;font-size: 28rpx;margin-bottom: 10rpx;}
+.phone{width: 30rpx;height: 34rpx;margin: 0 20rpx;}
+.blue{color: #3b7ada;font-size: 32rpx;}
+.phonew{padding: 20rpx;margin: 20rpx 0;}
+.fbtn{width: 160rpx;height: 60rpx;border: 2rpx solid #999999;background: #ffffff;border-radius: 5px;
+margin-right: 20rpx;font-size: 32rpx;line-height: 60rpx;text-align: center;color: #878787;}
+.fbtn2{color: #fb0025;border: 2rpx solid #fb0025;}
+.footer2{background-color: #f9f8f8;padding-right: 20rpx;width: 730rpx;}
+.goumai{width: 120rpx;height: 40rpx;border-radius: 5px;line-height: 40rpx;
+text-align: center;color: #3b7ada;border: 2rpx solid #3b7ada;font-size: 20rpx;}
+.goumaiw{padding-left: 20rpx;padding-bottom: 20rpx;}
+.message{color: #262626;font-size: 28rpx;padding: 0 30rpx 20rpx;}
+.right-tag-img{width: 74rpx;height: 74rpx;position: absolute;right: 0;top: 0;}
+.mineimgw{position: relative;}

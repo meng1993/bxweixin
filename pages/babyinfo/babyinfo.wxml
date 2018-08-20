@@ -1,0 +1,56 @@
+<view class='k1 {{index>0?"bt":""}} bfff' wx:for='{{babylist}}' wx:key='{{index}}'>
+      <view class='flex-aic k1a'>
+        <view class='f28 w50'>宝贝昵称：</view>
+        <input class='f28 bb flex-grow1 h60 c9' bindinput='input' value='{{item.baby_nick}}' id='{{index}}'></input>
+      </view> 
+      <view class='flex-aic k1a'>
+        <view class='f28 w50'>宝贝生日：</view>
+        <picker mode="date" bindchange="bindDateChange" class='flex-grow1 h60' id='{{index}}'>
+          <view class='f28 bb h60 c9'>{{item.baby_birthday}}</view>
+        </picker>
+      </view>
+      <view class='flex-aic k1a'>
+        <view class='f28'>宝贝性别：</view>
+        <view class='flex-grow1 h60'>
+          <radio-group class="flex-aic" bindchange="radioChange" id='{{index}}'>
+            <label class="radio f28">
+              <radio value="1" checked="{{item.baby_sex==='1'||item.baby_sex===1}}"/>男
+            </label>
+            <label class="radio f28">
+              <radio value="2" checked="{{item.baby_sex==='2'||item.baby_sex===2}}"/>女
+            </label>
+          </radio-group>
+        </view>
+      </view>
+      <image class='add2' src='/img/home/add.png' bindtap='add' wx:if='{{index==0}}'></image>
+      <image class='add2' src='/img/home/cut.png' bindtap='remove' id='{{item.id}}' data-index='{{index}}' wx:if='{{index!=0}}'></image>
+</view>
+<view class='k1 bt bfff' wx:for='{{babylist2}}' wx:key='{{index}}'>
+      <view class='flex-aic k1a'>
+        <view class='f28 w50'>宝贝昵称：</view>
+        <input class='f28 bb flex-grow1 h60 c9' bindinput='input2' value='{{item.baby_nick}}' id='{{index}}'></input>
+      </view> 
+      <view class='flex-aic k1a'>
+        <view class='f28 w50'>宝贝生日：</view>
+        <picker mode="date" bindchange="bindDateChange2" class='flex-grow1 h60' id='{{index}}'>
+          <view class='f28 bb h60 c9'>{{item.baby_birthday}}</view>
+        </picker>
+      </view>
+      <view class='flex-aic k1a'>
+        <view class='f28'>宝贝性别：</view>
+        <view class='flex-grow1 h60'>
+          <radio-group class="flex-aic" bindchange="radioChange2" id='{{index}}'>
+            <label class="radio f28">
+              <radio value="1" checked="{{item.baby_sex==='1'}}"/>男
+            </label>
+            <label class="radio f28">
+              <radio value="2" checked="{{item.baby_sex==='2'}}"/>女
+            </label>
+          </radio-group>
+        </view>
+      </view>
+      <image class='add2' src='/img/home/add.png' bindtap='add' wx:if='{{index==0&&babylist.length==0}}'></image>
+      <image class='add2' src='/img/home/cut.png' bindtap='remove2' id='{{item.id}}' data-index='{{index}}' wx:if='{{index!=0||babylist.length>0}}'></image>
+</view>
+<view class='save f28 save2' bindtap='save'>保存</view>
+<!-- <view class='save f28 save2' bindtap='add'>添加</view> -->

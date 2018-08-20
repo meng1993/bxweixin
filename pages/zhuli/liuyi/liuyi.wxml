@@ -1,0 +1,10 @@
+
+<view  class='a'>
+  <image src='https://m.zujiekeji.cn/xcximg/liuyi.png' class='b' mode='widthFix'></image>
+  <view class='c'>
+    <view class='c1' bindtap='lingquan'></view>
+    <view class='c2' id='1' bindtap='go'></view>
+    <view class='c3' id='2' bindtap='go'></view>
+    <view class='c2' id='3' bindtap='go'></view>
+  </view>
+</view>

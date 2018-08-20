@@ -1,0 +1,4 @@
+@import '/pages/babyhouse/babyhouse';
+.add2{width: 192rpx;height: 192rpx;border-radius: 5px;margin-right: 16rpx;margin-bottom: 16rpx;
+border: 4rpx dotted #999999;line-height: 192rpx;text-align: center;font-size: 50rpx;color: #999999}
+.dt2{height: auto;min-height: 100rpx;}

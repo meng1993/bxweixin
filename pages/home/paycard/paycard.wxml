@@ -1,0 +1,136 @@
+<wxs module="filters" src="../../../pages/diandu/pay/pay.wxs"></wxs>
+<view class='header flex-jac'>
+    <image src='/img/shouye/wenxin.png' class='headimg'></image>
+    <view class='headert'>暂不支持黑龙江,吉林,内蒙古,新疆,云南,青海,海南,西藏等地区</view>
+</view>
+
+<!--选择地址-->
+<view class='themebfff' style="margin-top: 80rpx;">
+    <view class='flex-jasc pr40' wx:if='{{addressid==0}}' bindtap='checkaddress'>
+        <view class='qingxuandizhi'>请选择收货地址</view>
+        <image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>
+    </view>
+    <view class='flex-jasc adresswrap pr40' wx:if='{{addressid!=0}}' bindtap='checkaddress'id='{{addressid}}'>
+        <view>
+            <view class='flex-aic'>
+                <view class='name'>{{address.address_name}}</view>
+                <view class='phone'>{{address.mobile}}</view>
+                <view class='moren' wx:if='{{address.is_set_default==1}}'>默认</view>
+            </view>
+            <view class='flex-aic mt'>
+                <view><image class='adressimg' src='/img/shelf/adress.png'></image></view>
+                <view class='adress'>{{address.province}}{{address.city}}{{address.district}}
+                    {{address.address}}</view>
+            </view>
+        </view>
+        <image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>
+    </view>
+</view>
+<image class='fgx' src='/img/shelf/fgx.png'></image>
+
+
+
+
+
+<view>
+
+<view class='flex-aic box1 themebfff'>
+  <view><image src='{{card.img}}' class='img1'></image></view>
+  <view class='flex-grow1 boxr'>
+    <view class='pname themegreen'><b>{{group?'【拼团】':''}}</b>{{card.name}}</view>
+    <view class='p1'>每次可借阅{{card.one_rent_num}}本，{{card.total_use_times==0?"次数不限,最多同时拥有两单":"总借阅次数："+card.total_use_times}}</view>
+    <view class='flex-jasc'>
+      <view class='price'>￥{{card.price}}</view>
+        <!--去掉数量-->
+      <!--<view class='flex-jasc' hidden='{{from=="kanjia"||from=="pintuan"||user_bargain_id||group}}'>-->
+        <!--<view class='b3'>数量：</view><view class='b1' bindtap='jian'>-</view>-->
+        <!--<view class='b1 b2'>{{num}}</view><view class='b1' bindtap='jia'>+</view>-->
+      <!--</view>-->
+    </view>
+  </view>
+</view>
+<view class='jydate flex-jcs themebfff'>
+    <view class='datezhi'>借阅时间：{{card.type==2?"3":"12"}}个月</view>
+    <view class='sanshitian'>共计{{card.type==2?"90":365}}天</view>
+</view>
+<view class='flex-jasc feiyongb themebfff mt'>
+    <view class='xuanzejihua'>价格</view>
+    <view class='feiyongr'>￥{{card.price*num}}</view>
+</view>
+<view  class='themebfff'>
+  <view class='flex-jasc feiyongb'>
+    <view>
+      <view class='xuanzejihua lineh60'>押金</view>
+       <view class='zhima' wx:if='{{jianyajin=="1"}}'>平台已为您减免押金~</view> 
+       <view bindtap='gozm'>
+       <view class='zhima' wx:if='{{jianyajin=="0"}}' >芝麻信用可减免押金，去授权~</view> 
+       </view>
+    </view>
+    <!--<view class='feiyongr'>￥{{card.deposit}}</view>-->
+      <view class='feiyongr' wx:if="{{jianyajin=='1'}}">￥0.00</view>
+      <view class='feiyongr' wx:else>￥{{card.deposit}}.00</view>
+  </view>
+</view>
+<view class='flex-jasc feiyongb themebfff'>
+    <view class='xuanzejihua'>优惠券</view>
+    <view class='flex-aic'>
+      <view class='flex-aic' bindtap='checkyouhui'>
+        <view class='jihua' wx:if='{{!hadyouhui}}'>{{youhuitext}}</view>
+        <view class='feiyongr' wx:if='{{hadyouhui}}'>-￥{{youhuiprice}}</view>
+      </view>
+      <image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>
+    </view>
+</view>
+<!--czy新增鸟蛋开始-->
+
+<view class='flex-jasc feiyongb themebfff'>
+    <view class='xuanzejihua'>我的鸟蛋:<text style="color: #ff001e">{{myEggNum}}</text>个</view>
+    <view class='flex-aic'>
+        <image src='/img/close.png' class='btn_switch' data-id="0" wx:if="{{!switchType}}" catchtap="changeSwitch"></image>
+        <image src='/img/open.png' class='btn_switch' data-id="1" wx:if="{{switchType}}" catchtap="changeSwitch"></image>
+    </view>
+</view>
+
+<view class='flex-jasc feiyongb themebfff' wx:if="{{switchType}}">
+    <view class='xuanzejihua' style="margin-left: -10rpx;">
+        当前可用鸟蛋<text style="color: #ff001e">{{eggNum}}</text>个，抵扣<text style="color: #ff001e">￥{{eggNum/100}}</text>元
+    </view>
+    <view class='flex-aic'>
+
+    </view>
+</view>
+<!--czy新增鸟蛋结束-->
+
+<view class='flex-jasc themebfff choosetime feiyongb'>
+  <view>
+    <view class='xuanze'>会员卡生效时间</view>
+    <view class='f26'>(只能设置一次，请谨慎操作)</view>
+  </view>
+  <view class='xztime flex-aic'>
+    <picker mode="date" start="{{ctstartdate}}" end="{{ctenddate}}" bindchange="bindDateChoose"> 
+      <view class="picker">
+      {{ctdate}}
+      </view>
+    </picker>
+    <image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>
+  </view>
+</view>
+
+</view>
+<!-- <textarea class='themebfff' placeholder='买家留言：期待您的宝贵意见~~' value='{{message}}' bindinput='message'></textarea> -->
+
+<view class='footer themebfff'>
+  <view class='gongji'>
+      <view class='ying' wx:if="{{card.price*num - youhuiprice - eggNum/100 > 0 && switchType}}">共计：<text>{{filters.toFix(zongjia - eggNum/100)}}</text>元</view>
+      <view class='ying' wx:elif="{{card.price*num - youhuiprice - eggNum/100 > 0}}">共计：<text>{{filters.toFix(zongjia)}}</text>元</view>
+      <view class='ying' wx:elif="{{card.price*num - youhuiprice - eggNum/100 <= 0 && jianyajin!='1'}}">共计：<text>100</text>元</view>
+      <view class='ying' wx:elif="{{card.price*num - youhuiprice - eggNum/100 <= 0 && jianyajin=='1'}}">共计：<text>0</text>元</view>
+    <view class='ya' hidden='{{jianyajin=="1"}}'>押金可退：<text>{{card.deposit}}</text>元</view>
+    <view class='ya' hidden='{{jianyajin!="1"}}'>已减免<text>{{card.olddeposit}}</text>元押金</view>   
+  </view>
+  <form report-submit='true' bindsubmit='formid'>
+  <button class='btn themebgreen' bindtap='buy' form-type='submit'>购买</button>
+  </form>
+</view>
+
+<view class='forfooter'></view>

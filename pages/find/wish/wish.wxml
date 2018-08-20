@@ -1,0 +1,34 @@
+<view class='header'>
+  当前心愿单,已加入
+  <text class='orange'>{{list.length}}</text>本
+</view>
+<view class='main flex-jcs' wx:for='{{list}}' wx:key='{{index}}' id='{{index}}' bindtap='detail'>
+  <view class='content flex-only'>
+    <image  class='main-img' src='{{item.img}}'></image>
+  <view class='a1'>
+    <view class='title'>{{item.title}}</view>
+    <view class='autor' wx:if='{{item.publisher!=""}}'>作者:{{item.author}}</view>
+    <view class='press' wx:if='{{item.publisher!=""}}'>出版社：{{item.publisher}}</view>
+  </view>
+  </view>
+  <view class='status' wx:if='{{item.status=="wait"}}'>待实现</view>
+  <view class='status c999' wx:if='{{item.status=="abandon"}}'>已取消</view>
+  <view class='status themegreen' wx:if='{{item.status=="rent"}}'>可租</view>
+  <image src='/img/news/remove2.png' class='remove' catchtap='remove' id='{{index}}'></image>
+</view> 
+<view class='null' wx:if='{{list.length===0}}'>
+  <image src='https://m.zujiekeji.cn/xcximg/shequ/nonebook.png'></image>
+  <view class='nullt'>你的心愿单，未添加书籍哦~</view>
+</view>
+<view class='kong'></view>
+<view class='footer flex-jcs'>
+  <view class='add1 flex-aic' bindtap='pic'>
+    <image src='https://m.zujiekeji.cn/xcximg/shequ/paizhao.png'></image>
+    <view class='photo'>拍照添加</view>
+  </view>
+  <view class='xian'></view>
+  <view class='add1 flex-aic' bindtap='cam'>
+    <image src='https://m.zujiekeji.cn/xcximg/shequ/sacn2.png'></image>
+    <view class='scan'>扫码添加</view>
+  </view>
+</view>

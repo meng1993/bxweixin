@@ -1,0 +1,44 @@
+@import '/temp/search/index.wxss';
+.historybox{
+  
+}
+.historuposition{
+  position: absolute;
+  width: 750rpx;
+}
+.history{
+  height: 48rpx;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  line-height: 48rpx;
+  font-size: 30rpx;
+  padding: 4rpx 16rpx;
+  margin: 20rpx;
+}
+.historyt{
+  font-size: 30rpx;
+  line-height: 60rpx;
+  margin-top: 10rpx;
+  margin-left: 60rpx;
+}
+.clearhistory{
+  margin-top: 10rpx;
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 60rpx;
+}
+.nobookbox{
+  padding-top: 350rpx;
+}
+.nobook{
+  width: 200rpx;
+  height: 200rpx;
+  display: block;
+  margin: 0 auto;
+}
+.nobooktext{
+    font-size: 32rpx;
+    margin-top: 40rpx;
+    color: #666;
+    text-align: center;
+}

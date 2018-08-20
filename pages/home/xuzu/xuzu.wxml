@@ -1,0 +1,142 @@
+<view class='marked-words'><image src='/img/remind.png'></image>您已购买的绘本不会进入续租，当前需续租 <view>{{total_num}}</view> 本</view>
+<view class='themebfff'>
+  <view class='flex-jasc adresswrap pr40'>
+    <view>
+      <view class='flex-aic'>
+        <view class='name'>{{items.address_name}}</view>
+        <view class='phone'>{{items.mobile}}</view>
+        <view class='moren' wx:if='{{address.is_set_default==1}}'>默认</view>
+      </view>
+      <view class='flex-aic mt'>
+        <view><image class='adressimg' src='/img/shelf/adress.png'></image></view>    
+        <view class='adress'>{{items.province}}{{items.city}}{{items.district}}
+        {{items.address}}</view>
+      </view> 
+    </view>
+  </view> 
+</view> 
+<image class='fgx' src='/img/shelf/fgx.png'></image>
+<view class='themebfff'>
+  <view class='flex-jasc imgwrap' bindtap='gozhanshi'>
+    <view class='flex-only'>
+      <view class='mineimgw' wx:for="{{lists}}" wx:if="{{index<4}}" id='{{item.book_id}}'>
+        <image class='mineimg' src='{{item.img_medium}}'></image>
+        <image class='right-tag-img' src='/img/purchased-min.png' wx:if="{{item.is_purchased}}"></image>
+      </view>
+    </view>
+    <view class='flex-jasc'>
+      <view class='jiben'>共{{lists.length}}本</view>
+      <image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>
+    </view>
+  </view>
+  <view class='jydate flex-jcs' hidden='{{cardid==6||cardid==7||cardid==8||cardid==9}}'>
+    <view class='datezhi' >借阅时间为：{{stime}}至{{etime}}</view>
+    <view class='sanshitian'>共计三十天</view>
+  </view>
+</view>
+
+<!--jjjjjjjjjjjjjjjjj新增会员计划开关开始-->
+<view class='themebfff flex-jasc jihuab '>
+  <view class='flex-aic'>
+    <image src='/img/shelf/bluespot.png' class='orangespot'></image>
+    <view class='xuanzejihua'>选择会员计划(共<text style="color: #ff001d;">{{effectiveCard}}</text>张可用)</view>
+  </view>
+  <view class='flex-aic'>
+    <image src='/img/close.png' class='btn_switch' data-id="0" wx:if="{{!switchType2}}" catchtap="changeSwitch2"></image>
+    <image src='/img/open.png' class='btn_switch' data-id="1" wx:if="{{switchType2}}" catchtap="changeSwitch2"></image>
+  </view>
+</view>
+
+<view class='themebfff flex-jasc jihuab' style="margin-top: -14rpx;" wx:if="{{switchType2}}">
+  <view class='flex-aic'>
+    <view class='xuanzejihua' style="padding-left: 30rpx;" wx:if="{{havecard}}">
+      <!--您共<text style="color: #ff001d;">{{effectiveCard}}</text>张会员卡，当前使用<text style="color: #ff001d;">{{cardname}}</text>-->
+      <text style="color: #ff001d;">{{cardname}}</text>
+    </view>
+    <!--<view class='xuanzejihua' style="padding-left: 30rpx;" wx:if="{{!havecard}}">-->
+    <!--&lt;!&ndash;<text style="color: #ff001d;">{{cardname}}</text>&ndash;&gt;-->
+    <!--</view>-->
+  </view>
+  <view class='flex-aic'>
+    <view class='jihua' style="margin-right: 5rpx;" bindtap='chosecard'>请选择</view>
+    <image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>
+  </view>
+</view>
+<!--jjjjjjjjjjjjjjj新增会员计划开关结束-->
+
+
+<view class='flex-jasc feiyongb themebfff'>
+    <view class='xuanzejihua'>运费</view>
+    <view class='feiyongr'>￥{{yunfei}}.00</view>
+</view>
+<view class='flex-jasc feiyongb themebfff'>
+    <view class='xuanzejihua'>商品租金</view>
+    <view class='feiyongr'>￥{{zujin}}<text>{{zujin==0?".00":""}}</text></view>
+</view>
+
+<!--jjjjjjjjjjjjjjjjjjj新增鸟蛋和优惠券开始-->
+<view class='flex-jasc feiyongb themebfff' hidden='{{havecard}}' bindtap='checkyouhui'>
+  <view class='xuanzejihua'>优惠券</view>
+  <view class='flex-aic'>
+    <view class='flex-aic'>
+      <view class='jihua' wx:if="{{!hadyouhui}}">{{youhuitext}}</view>
+      <view class='feiyongr' wx:if='{{hadyouhui}}'>-￥{{youhuiprice}}</view>
+    </view>
+    <image src='/img/shelf/yousanjiao.png' class='yousanjiao'></image>
+  </view>
+</view>
+
+<!--czy新增鸟蛋开始-->
+
+<view class='flex-jasc feiyongb themebfff'>
+  <view class='xuanzejihua'>我的鸟蛋:<text style="color: #ff001e">{{myEggNum}}</text>个</view>
+  <view class='flex-aic'>
+    <image src='/img/close.png' class='btn_switch' data-id="0" wx:if="{{!switchType}}" catchtap="changeSwitch"></image>
+    <image src='/img/open.png' class='btn_switch' data-id="1" wx:if="{{switchType}}" catchtap="changeSwitch"></image>
+  </view>
+</view>
+
+<view class='flex-jasc feiyongb themebfff' hidden='{{havecard}}' wx:if="{{switchType}}">
+  <view class='xuanzejihua' style="margin-left: -10rpx;">
+    当前可用鸟蛋<text style="color: #ff001e">{{eggNum}}</text>个，抵扣<text style="color: #ff001e">￥{{eggNum/100}}</text>元
+  </view>
+  <view class='flex-aic'>
+    <view class='flex-aic'>
+
+    </view>
+  </view>
+</view>
+<!--czy新增鸟蛋结束-->
+<!--jjjjjjjjjjjjjjjjjjj新增鸟蛋和优惠券结束-->
+
+<input class='themebfff' placeholder='买家留言：期待您的宝贵意见~~' value='{{message}}' bindinput='message'></input>
+
+<!--11111111111111111111111111111111111111修改展示逻辑开始-->
+<view class='footer themebfff flex-aic'>
+  <!--租金没抵扣完、且平台没减押金-->
+  <view class='gongji' hidden='{{havecard}}' wx:if="{{zujin-youhuiprice-eggNum/100>0 && jianyajin=='0'}}">
+    共计：{{filters.toFix(zujin-youhuiprice-eggNum/100 + yajin)}}元
+  </view>
+  <!--租金没抵扣完、但平台减了押金-->
+  <view class='gongji' hidden='{{havecard}}' wx:if="{{zujin-youhuiprice-eggNum/100>0 && jianyajin=='1'}}">
+    共计：{{filters.toFix(zujin-youhuiprice-eggNum/100)}}元
+  </view>
+  <!--租金抵扣完了、但平台没减押金-->
+  <view class='gongji' hidden='{{havecard}}' wx:if="{{zujin-youhuiprice-eggNum/100 <=0 && jianyajin=='0'}}">
+    共计：{{yajin}}元
+  </view>
+  <!--租金抵扣完了、平台也减押金了-->
+  <view class='gongji' hidden='{{havecard}}' wx:if="{{zujin-youhuiprice-eggNum/100 <=0 && jianyajin=='1'}}">
+    共计：0.00元
+  </view>
+
+
+
+  <view class='gongji' hidden='{{!havecard}}'>
+    共计：0.00元
+  </view>
+  <form report-submit='true' bindsubmit='formid'>
+    <button class='tijiao' bindtap='submit' form-type='submit'>提交订单</button>
+  </form>
+</view>
+<!--11111111111111111111111111111111111111修改展示逻辑结束-->

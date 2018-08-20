@@ -1,0 +1,4 @@
+@import '/pages/index/yuyue/yuyue.wxss';
+.mt40{margin-top: 40rpx;border-top: 1rpx solid #cccccc;}
+.pl40{padding-left: 40rpx;}
+.select-tab{margin: 0;border-width: 0 0 1rpx 0;}

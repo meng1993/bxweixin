@@ -1,0 +1,23 @@
+@import '/temp/book/book.wxss';
+@import '/temp/bottomload/index.wxss';
+.listbox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 2rpx;
+}
+.listbox2{
+  display: flex;padding: 0 18rpx;background-color:#fff;flex-wrap: wrap;
+}
+.bookw{position: relative}
+.gouxuan{position: absolute;display: block;width: 40rpx;height: 40rpx;right: 30rpx;top: 30rpx;
+background-color: rgba(255,255,255,0.7);border-radius: 4px;z-index: 10000}
+.footer{position: fixed;bottom: 0;width: 750rpx;height: 100rpx;z-index: 10000;background-color: #fff;}
+.footerlimg{display: block; width: 40rpx;height: 38rpx;margin: 0 auto}
+.footerr{background: #6ed14e;color: #fffefe;font-size: 32rpx;line-height: 100rpx;text-align: center;
+width: 250rpx;}
+.forfooter{height: 100rpx;}
+.shujia{color: #878787;font-size: 22rpx;text-align: center;margin-top: 10rpx;}
+.imgb{width: 250rpx;padding-top: 10rpx;position: relative;}
+.num{position: absolute;top: 6rpx;right: 70rpx;min-width: 40rpx;height: 40rpx;border-radius: 100px;
+background-color: rgb(244, 53, 48);color: #fff;font-size: 24rpx;text-align: center;line-height: 40rpx;}

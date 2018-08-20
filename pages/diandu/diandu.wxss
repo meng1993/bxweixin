@@ -1,0 +1,15 @@
+@import "/pages/celebritylist/celebritylist.wxss";
+.listbox2{
+  display: flex;padding: 0 18rpx;background-color:#fff;flex-wrap: wrap;
+}
+.btn_toPay{
+  width: 710rpx;
+  height: 76rpx;
+  text-align: center;
+  line-height: 76rpx;
+  background-color: #6fd14e;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+  color: #fefefe;
+  margin: 27rpx 20rpx;
+}

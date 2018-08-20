@@ -1,0 +1,118 @@
+<view class='title'>
+  <view class='a'>
+    <view class='a1'>团长：{{show.captain_phone}}</view>  
+    <view class='a2'>发起拼团时间：{{show.start_time}}</view>
+  </view>
+  <view class='a3'>
+    <view class='a3-content  flex-jcs'>
+      <image src='https://m.zujiekeji.cn/xcximg/xcxpintuan/pintuan_pic178x178.png'></image>
+      <view class='a3-main '>
+          <view class='a3-title'>{{group.name}}</view>
+          <view class='flex-aie  a3-price'>
+              <view>拼团价:</view>
+              <view class='price'>{{user_id==show.captain_id?group.captain_price:group.price}}元</view>
+              <view class='ago'>{{card.price}}元</view>
+          </view>
+      </view>
+    </view>
+  </view>
+  <view class='ap themebfff' bindtap='wanfa'>玩法详情></view>
+</view>
+
+<view class='a4'>
+  <view class='a4-time flex-jcc'>
+        <view>拼团发起倒计时：</view>
+        <view class='a5'>{{hours}}</view>
+        <view>时</view>
+        <view class='a5'>{{minute}}</view>
+        <view>分</view>
+        <view class='a5'>{{time}}</view>
+        <view>秒</view>
+  </view>
+  <view class='a4-people flex-jcs'>
+        <view class='jindu'>拼团进度</view>
+        <view>已拼人数：{{show.join_number}}人</view>
+        <view>目标人数：{{show.success_number}}人</view>
+  </view>
+  <view wx:if='{{show_group_status==0||show_group_status==-1}}'>
+    <view class='buy'>已结束</view>
+  </view>
+  <view wx:if='{{show_group_status==2}}'>
+    <view class='buy'>拼团成功</view>
+  </view>
+  <view wx:if='{{show_group_status==1}}'>
+    <view class='buy' wx:if='{{user_id===""}}' bindtap='nologin'>
+          立即参团￥{{group.price}}
+    </view>
+    <view class='buy' wx:if='{{user_id!=""&&pay_status==1}}' bindtap='buy'>
+          立即参团￥{{group.price}}
+    </view>
+    <view class='buy' wx:if='{{user_id!=""&&pay_status==0}}'>
+          您已参与拼团
+    </view>
+  </view> 
+</view>    
+
+<view class='e flex-aic'>
+  <view id='1' class='flex-grow1 e2' wx:for='{{list1}}' wx:key='{{item.v}}' id='{{item.v}}' bindtap='list1'>
+    <view class='e1 f30 {{item.v==list1c?"co11":""}}'>{{item.t}}</view>
+    <view class='Highlight' wx:if='{{item.v==list1c}}'></view>
+  </view>
+</view>
+
+<view class='b' wx:if='{{list1c=="1"}}'>
+   <view class='f1' wx:if='{{ptlist.length===0}}'>暂无拼团好友~</view> 
+  <view class='flex-jasc f' wx:for='{{ptlist}}' wx:key='{{index}}'>
+      <view class='flex-aic'>
+        <image class='fhead' src='{{item.face!=""?item.face:"/img/shouye/logo.png"}}'></image>
+        <text class='co10 f26 pl20'>{{item.user_phone}}</text>
+      </view>
+      <view class='co10 f26'>
+        {{item.create_time}}
+      </view>
+    </view> 
+</view>
+
+<view class='b' wx:if='{{list1c=="2"}}'>
+  <view class='f28 co7 mt20'>1、用户支付拼团价时，可设置会员卡开卡时间，时间范围为3个月，仅有一次机会，谨慎操作</view>
+  <view class='f28 co7 mt20'>2、拼团成功获得会员卡，请在“我的”-->“我的会员”查看</view>
+  <view class='f28 co7 mt20'>3、会员卡数量有限，先到先得，使用会员卡免费租书，往返包邮</view>
+  <view class='f28 co7 mt20'>4、本次砍价活动最终解释权归博鸟绘本所有，如有任何疑问请添加客服微信号BN20171215或拨打电话0571-86113050</view>
+</view>
+
+<view class='b' wx:if='{{list1c=="3"}}'>
+  <view class='f1' wx:if='{{launch_list.length===0}}'>暂无其它团~</view> 
+  <view class='flex-jcs p20' wx:for='{{launch_list}}' wx:key='{{index}}'
+  id='{{item.group_id}}' data-type='{{item.group_type}}' bindtap='groupinfo'>
+    <view class='f26 co10'>【团长】</view>
+    <view class='f26 co10'>{{item.captain_phone}}</view>
+    <view class='f26 co10'>截止:{{item.end_time}}</view>
+    <view class='f26 co10'>还需<text class='or'>{{item.success_number-item.join_number}}</text>人</view>
+  </view>
+</view>
+
+<view class='goshouye' bindtap='goshouye' wx:if='{{xcxpages1}}'>
+  <image src='/img/group/home.png' class='gohome'></image>
+</view> 
+<view class='goshouye zhuanfa' bindtap='share'  wx:if='{{from!="list"}}'>
+  <image src='/img/group/zf.png' class='gohome'></image>
+</view>
+
+<view wx:if="{{share}}" class='tishi' bindtap='closeshare'>
+<view class='tishikuang' >
+  <view class='tishi-1'>
+    <view class='tishi-6'></view>
+   分享
+  </view>
+  <view class='tishi-2'>
+      <button open-type="share" class='tishi-zi'>
+        <image class='bgs-img' src='/img/group/wx.png'></image>
+        直接转发我的好友
+    </button>
+      <button  class='tishi-zi' bindtap="savephoto" >
+        <image class='bgs-img' src='/img/group/phone.png'></image>
+        保存图片发朋友圈
+    </button>
+  </view>
+</view>
+</view>

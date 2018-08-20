@@ -1,0 +1,6 @@
+page{background-color: #EFEFF4;padding: 20rpx;}
+.a{font-size: 28rpx;color: #999999;}
+.b{height: 140rpx;width: 710rpx;border-radius: 10px;margin-top: 20rpx;position: relative;}
+.b1{font-size: 32rpx;color: #333333;text-align: center;line-height: 80rpx;}
+.b2{font-size: 28rpx;color: #999999;text-align: center;}
+.b3{position: absolute;display: block; right: 20rpx;top: 20rpx;width: 40rpx;height: 40rpx;}

@@ -1,0 +1,8 @@
+.ceng{position: absolute;top: 0;width: 750rpx;height: 100%;}
+.logo{display: block;width: 220rpx;height: 280rpx;margin: 200rpx auto 0;}
+.login{width: 200rpx;background-color: #6ed14e;border-radius: 10px;text-align: center;
+line-height: 60rpx;color: #fff;margin: 100rpx auto 0;font-size: 36rpx;}
+.wrap{position: relatives;width: 750rpx;}
+.img-xinren{width: 750rpx;}
+.ling{position: absolute;top: 70%;left:100rpx;width: 550rpx;height: 550rpx;}
+page{background-color: #EFEFF4}

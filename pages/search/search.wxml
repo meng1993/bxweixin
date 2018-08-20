@@ -1,0 +1,17 @@
+<import src='/temp/search/index.wxml'></import>
+<template is='search' data="{{typearr:typearr,typearrindex:typearrindex,novalue:novalue}}"></template>
+<view>
+  <view class='historuposition' hidden='{{nohistory}}'>
+    <view class='flex-only flex-jcs'>
+      <view class='family1 historyt'>历史搜索</view>
+      <image src='/img/shouye/clearhistory.png' class='clearhistory' bindtap='clearhistory'></image>
+    </view>
+    <view class='flex-only flex-wrap'>
+      <view class='history family1' wx:for='{{historyarr}}' id='{{index}}' data-text='{{item}}' bindtap='historysearch' bindlongpress='removeonehistory'>{{item}}</view>
+    </view>
+  </view>
+  <view class='nobookbox' hidden='{{havebook}}'>
+     <image src='/img/shelf/nobook.png' class='nobook'></image>
+     <view class='nobooktext'>抱歉，没有搜索到相关图书</view>
+  </view>
+</view>

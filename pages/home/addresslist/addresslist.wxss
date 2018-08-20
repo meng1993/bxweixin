@@ -1,0 +1,18 @@
+view{font-family: PingFangSC;}
+page{background-color: #EFEFF4}
+.box{margin-bottom: 20rpx;}
+.moren{width: 65rpx;height: 32rpx;border: 2rpx solid #498fe1; color: #3b7ada;font-size: 22rpx;
+text-align: center;line-height: 32rpx;border-radius: 5px;}
+.xuan{width: 40rpx;height: 40rpx;display: block;margin-right: 10rpx;}
+.box1{border: 2rpx dotted #EFEFF4;padding: 30rpx;}
+.c26{color: #262626;}
+.f24{font-size: 24rpx;}
+.f32{font-size: 32rpx;}
+.name{line-height: 46rpx;}
+.phone{line-height: 46rpx;margin-left: 40rpx;margin-right: 20rpx;}
+.address{margin: 20rpx 0;}
+.bj{padding: 16rpx 0;}
+.btn{margin-left: 30rpx;width: 96rpx;height: 46rpx;border: 2rpx solid rgba(102,102,102,0.5);
+line-height: 46rpx;text-align: center;font-size: 28rpx;}
+.add{ width: 310rpx;height: 88rpx;background: #6ed14e;margin: 100rpx auto;text-align: center;
+line-height: 88rpx;color: white;font-size: 32rpx;}

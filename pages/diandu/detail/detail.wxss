@@ -1,0 +1,24 @@
+.a1{width: 750rpx;height: 420rpx;display: block;}
+.a2{padding-top: 20rpx;padding-bottom: 30rpx; border-bottom: 1rpx solid #eaeaea;width: 710rpx; margin: 0 auto}
+.a3{line-height: 48rpx;}
+.cred{color: #ff001e;}
+.a4{margin-top: 15rpx;}
+.a5{text-decoration:line-through;margin-left: 30rpx;}
+.b{padding-top: 30rpx;padding-left: 20rpx;padding-bottom: 38rpx;}
+.b1{width: 160rpx;}
+.b2{min-width: 130rpx;height: 50rpx;padding: 0 15rpx;margin-right: 20rpx;border-radius: 25px;font-size: 26rpx;
+line-height: 50rpx;text-align: center}
+.b4{background-color: #f0f0f0;color: #999999;}
+.b3{background-color: #6fd14e;color: #ffffff;}
+.b5{margin-bottom: 30rpx;}
+.b6{width: 64rpx;height: 52rpx;}
+.b7{width: 72rpx;height: 52rpx;text-align: center;line-height: 52rpx;}
+.b8{width: 200rpx;height: 56rpx;background-image: url(https://m.zujiekeji.cn/xcximg/dd/del_add.png);
+background-size: 100% 100%;}
+.forfooter{height: 98rpx;}
+.footer{width: 750rpx;height: 98rpx;z-index: 1000;position: fixed;bottom: 0;}
+
+.product_detail_image{
+    width: 750rpx;
+    /*height: auto;*/
+}

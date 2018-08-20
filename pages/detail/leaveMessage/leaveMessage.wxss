@@ -1,0 +1,3 @@
+@import '/temp/bookDetail/bookDetail.wxss';
+.userwrap{margin-bottom: 20rpx;}
+.userevaluation{padding-left: 30rpx;line-height: 100rpx;color: #262626;font-size: 34rpx;margin-bottom: 2rpx;background-color: #fff;}

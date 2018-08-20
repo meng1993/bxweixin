@@ -1,0 +1,62 @@
+@import '/pages/group/explain/explain.wxss';
+.tab{height: 80rpx; font-size: 35rpx;width: 100%; color: #878787; line-height: 80rpx;}
+.select-tab{width: 50%; text-align: center; display: inline-block; height: 100%;}
+.select-tab.active{color: #6fd14e; border-bottom: 8rpx #5dce35 solid;}
+.bg-img{width: 750rpx; height: 380rpx; margin-top: 8rpx;display:block;}
+.content{padding: 0 20rpx;position: relative}
+.cront{height: 60rpx; padding: 0 20rpx; line-height: 60rpx; font-size: 26rpx; color: #fe6969;background-color: #ffdba0;}
+.cront view,.already view,.btnnav view{display: inline-block;}
+.date{color: #333333; width: 70%; text-align:center;}
+.date-num{background-color: #fe6969; color: white; padding: 5rpx 9rpx; line-height: 30rpx;margin: 0 2rpx; border-radius: 8rpx;}
+.jt-img{width: 18rpx; height: 18rpx;}
+.explain{color: #cf920f;float:right;}
+.title{font-size: 33rpx; padding-top: 30rpx;}
+.money{color: #ff001e; font-size: 30rpx; padding: 20rpx 0rpx;}
+.money view,.card .title view,.card .attr view{display:inline-block;}
+.unit{font-size:23rpx;}
+.num{margin-left: 10rpx;}
+.already{font-size: 28rpx; color: #999999;margin-bottom:30rpx;}
+.already .attend{margin-left: 40rpx;}
+.btnnav{height: 95rpx; position: fixed; bottom: 0; left: 0; width: 100%; line-height: 95rpx; color: white;text-align:center;}
+.btnnav .w50{width: 50%;}
+.btnnav .sbuy{background-color: #6fd14e;}
+.btnnav .buy,.share{background-color: #49b126;}
+.disabled .sbuy{background-color: #cfcfcf;}
+.disabled .buy{background-color: #c0c0c0;}
+.alert{height:50rpx;background-color: #ffeed3; color:#333333; line-height:50rpx; font-size: 30rpx;position:fixed; bottom: 95rpx;left:0;width:100%;text-align:center;}
+.alert .num{color: #ff001e;}
+.text-bg{margin-bottom: 90rpx;}
+.card{position:relative;}
+.card .title{position:absolute;height:35rpx;line-height:35rpx;text-align:center;left:15%;top:25%;color:white;width: 60%;font-size:33rpx;}
+.card .attr{position:absolute;height:30rpx;line-height:30rpx;text-align:center;left:14%;top:55%;color:#836106;font-size: 27rpx;width: 60%;}
+.card .attr view{width:33%;text-align:center;}
+.mask{position: fixed;width:100%; height:100%; top:0;left:0; background-color: #000; opacity: 0.6;}
+.box{position: fixed;width: 550rpx; height: 250rpx;top:0;left:0;bottom:0;right:0;margin:auto;background-color:white; border-radius: 20rpx; padding: 30rpx 20rpx;text-align:center;font-size:27rpx;}
+.box .alert{background-color: white;}
+.box .list{margin-top: 30rpx;}
+.box .item{width: 50%; display: inline-block; font-size: 27rpx;}
+.box .bg-img{width: 62rpx; height:62rpx;display:block;margin:0 auto;margin-bottom: 20rpx;}
+button:after{border: none;}
+button{color: white;padding:0;border-radius:0;line-height: 95rpx;}
+.ok-img{width: 38rpx; height: 38rpx; margin-right: 10rpx;position: relative; top:7%;}
+.success{color: #6fd14e; font-size:32rpx;}
+.ok{ border-top: 5rpx solid #cccccc;background-color:white;}
+.guizeimg{display: block;width: 750rpx;height: 357rpx;margin: 0 auto;}
+.jieshuimg{display: block;width: 210rpx;height: 178rpx;position: absolute;right: 20rpx;top: 20rpx;}
+.goshouye{position: fixed;width: 100rpx;height: 100rpx;border-radius: 50px;
+bottom: 160rpx;right: 30rpx;}
+.zhuanfa{bottom: 280rpx;}
+.zhuanfabtn{width: 100rpx;height: 100rpx;border-radius: 50px;
+position: absolute;top: 0;left: 0;opacity: 0;}
+.gohome{display: block;width: 100rpx;height: 100rpx;border-radius: 50px;}
+.yichengtuan{position: absolute;top: -60rpx;width: 750rpx;height: 60rpx;text-align: center;
+left: 0;background-color: rgb(255, 238, 211);line-height: 60rpx;font-size: 28rpx;color:black}
+.forbottom{height: 95rpx;}
+.forbottom2{height: 60rpx;}
+.tishikuang{position: absolute;  left: 80rpx;top: 400rpx; height: 327rpx;width: 600rpx;background-color: #fff;z-index: 999;border-radius: 10px;}
+.tishi-1{border-bottom: 1px solid #dcdcdc;padding: 20rpx 30rpx;font-size: 26rpx; display: flex}
+.tishi-6{width: 8rpx; height: 36rpx; background-color: #6fd14e; margin-right: 10rpx}
+.tishi-2{font-size: 26rpx;display: flex;padding: 60rpx 30rpx}
+.tishi-2 .bgs-img{width: 62rpx; height:62rpx;display:block;margin: 0 auto;padding-bottom: 20rpx}
+.tishi-2 button{background-color: #fff;color: black;font-size: 26rpx;line-height: 30rpx}
+.tishi{background-color: rgba(0,0,0,0.3); position: fixed; width: 100%; height: 100%; top: 0; left: 0}

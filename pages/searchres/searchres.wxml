@@ -1,0 +1,38 @@
+<import src='/temp/search/index.wxml'></import>
+<import src="/temp/book/book.wxml" />
+<import src="/temp/bottomload/index.wxml" />
+<view class='topposition'>
+  <template is='search' data="{{typearr:typearr,typearrindex:typearrindex,novalue:novalue,pla:pla}}"></template>
+  <view class='classification flex-only' hidden='{{nobook}}'>
+    <view bindtap='changecondition' id='0'>
+      <view class='condition1 {{condition=="0"?"condition2":""}}'>综合</view>
+      <view class='Highlight' hidden='{{condition=="0"?false:true}}'></view>
+    </view>
+    <view bindtap='changecondition' id='1'>
+      <view class='condition1 {{condition=="1"?"condition2":""}}'>销量</view>
+      <view class='Highlight' hidden='{{condition=="1"?false:true}}'></view>
+    </view>
+    <view bindtap='changecondition' id='2'>
+      <view class='condition1 {{condition=="2"?"condition2":""}}'>最新</view>
+      <view class='Highlight' hidden='{{condition=="2"?false:true}}'></view>
+    </view>
+  </view>
+</view>
+
+<view class='zhanwei'></view>
+<view class='zhanwei' hidden='{{nobook}}'></view>
+
+<view class='{{book=="book"?"listbox":"listbox2"}}' bindtouchend='touchmove'>
+  <template is='{{book}}' data='{{item:item,index:index}}' wx:for="{{lists}}"
+  wx:key="{{item.book_id}}"></template>
+</view>
+
+<template is="zan-loadmore" data="{{bottomload}}"></template>
+<view hidden='{{nobook}}'>
+<template is="zan-loadend" data="{{bottomend}}"></template>
+</view>
+
+<view class='nobookbox' hidden='{{!nobook}}'>
+     <image src='/img/shelf/nobook.png' class='nobook'></image>
+     <view class='nobooktext'>抱歉，没有搜索到相关图书</view>
+</view>

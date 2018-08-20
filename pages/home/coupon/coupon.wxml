@@ -1,0 +1,65 @@
+<import src="/temp/emptyPage/emptyPage.wxml" />
+
+<view class='head'>
+  <view class='classification flex-only' hidden='{{nobook}}'>
+    <view bindtap='changecondition' id='0'>
+      <view class='condition1 {{condition=="0"?"condition2":""}}'>未使用</view>
+      <view class='Highlight' hidden='{{condition=="0"?false:true}}'></view>
+    </view>
+    <view bindtap='changecondition' id='1'>
+      <view class='condition1 {{condition=="1"?"condition2":""}}'>已使用</view>
+      <view class='Highlight' hidden='{{condition=="1"?false:true}}'></view>
+    </view>
+    <view bindtap='changecondition' id='2'>
+      <view class='condition1 {{condition=="2"?"condition2":""}}'>已过期</view>
+      <view class='Highlight' hidden='{{condition=="2"?false:true}}'></view>
+    </view>
+  </view>
+</view>
+<view class='fortop'></view>
+<view hidden='{{condition!="0"}}'>
+  <view class='a' wx:for='{{lists0}}' bindtap='gobuycard'>
+    <image class='bgimg' src='/img/home/yhq.png'></image>
+    <view class='a1 flex-aic'>
+      <view class='qian flex-jac'><text class='yuan'>￥</text>{{item.amount}}</view>
+      <view class='ar flex-grow1'>
+        <view class='flex-jasc pr'>
+          <view class='lei flex-aic'>{{item.coupon_name}}</view>
+          <view class='liji'>立即使用</view>
+        </view>
+        <view class='riqi'>有效期{{item.use_start_time}}至{{item.use_end_time}}</view>
+      </view>
+    </view>
+  </view>
+  <template wx:if="{{lists0.length == 0}}" is="emptyPage" data="{{emptyContent}}"></template>
+</view>
+<view  hidden='{{condition!="1"}}'>
+  <view class='a' wx:for='{{lists1}}'>
+    <image class='bgimg' src='/img/home/yhj-ygq.png'></image>
+    <view class='a1 flex-aic'>
+      <view class='qian flex-jac'><text class='yuan'>￥</text>{{item.amount}}</view>
+      <view class='ar'>
+        <view class='flex-aic'>
+          <view class='lei flex-aic'>{{item.coupon_name}}</view>
+        </view>
+        <view class='riqi riqi2'>有效期{{item.use_start_time}}至{{item.use_end_time}}</view>
+      </view>
+    </view>
+  </view>
+  <template wx:if="{{lists1.length == 0}}" is="emptyPage" data="{{emptyContent}}"></template>
+</view>
+<view hidden='{{condition!="2"}}'>
+  <view class='a' wx:for='{{lists2}}'>
+    <image class='bgimg' src='/img/home/yhj-ygq.png'></image>
+    <view class='a1 flex-aic'>
+      <view class='qian flex-jac'><text class='yuan'>￥</text>{{item.amount}}</view>
+      <view class='ar'>
+        <view class='flex-aic'>
+          <view class='lei flex-aic'>{{item.coupon_name}}</view>
+        </view>
+        <view class='riqi riqi2'>有效期{{item.use_start_time}}至{{item.use_end_time}}</view>
+      </view>
+    </view>
+  </view>
+  <template wx:if="{{lists2.length == 0}}" is="emptyPage" data="{{emptyContent}}"></template>
+</view>

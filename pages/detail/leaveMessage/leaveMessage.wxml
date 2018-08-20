@@ -1,0 +1,6 @@
+<import src="/temp/bookDetail/bookDetail.wxml" />
+<!--用户评价开始-->
+<view class='themebgray userwrap'>
+    <template is="leaveMessage" data="{{messageType,leaveMessageList}}"></template>
+</view>
+<!--用户评价结束-->

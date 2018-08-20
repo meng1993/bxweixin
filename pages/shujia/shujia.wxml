@@ -1,0 +1,77 @@
+<view hidden='{{!login}}'>
+<view class='fortop'></view>
+<!-- hidden='{{lists.length==0?true:false}}' -->
+<view class='positiontop themebgray' >
+  <view class='topgreen themebgreen'></view>
+  <view class='shujiahead flex-only flex-aic themebfff'>
+    <image src='/img/shelf/greenspot.png' class='greenspot'></image>
+    <view class='flex-grow1 flex-jasc'>   
+          <view class="shujiaheadtext">借阅时间：{{jydate}}至{{jymaxdate}}</view>
+          <picker mode="date"  start="{{jystartdate}}" end="{{jyenddate}}" bindchange="bindDateChange">
+            <view class='choicetime'>重新选择</view>
+          </picker> 
+    </view>
+  </view>
+  <view class='shujiahead flex-only flex-aic themebfff'>
+    <image src='/img/shelf/greenspot.png' class='greenspot'></image>
+    <view class='flex-grow1 flex-jasc'>   
+          <view class="shujiaheadtext">每次最多不超过10本</view>
+          <view class='edit themegreen' bindtap='edit'>{{editstate=="1"?"编辑":"取消"}}</view>
+    </view>
+  </view>
+</view>
+
+<view class='listwrap' hidden='{{lists.length==0?true:false}}'>
+  <view class='list flex-aic themebfff' wx:for='{{lists}}' wx:key='{{item.book_id}}'>
+    <view data-checked='{{item.checked}}' data-bookid='{{item.book_id}}'bindtap='checked'
+    id='{{index}}' wx:if='{{item.has_stock==1||editstate=="2"}}' class='checkboxw flex-aic'>
+    <image class='checkbox ' 
+    src='{{item.checked==true?"../../img/shelf/xuanzhong2.png":"../../img/shelf/moren2.png"}}'
+    ></image>
+    </view>
+    <view class='checkboxw flex-aic'  wx:if='{{item.has_stock==0}}' hidden='{{editstate=="2"}}'>
+     <image class='checkbox' id='{{index}}' src='../../img/shelf/wufaxuan.png'            
+     data-checked='{{item.checked}}' data-bookid='{{item.book_id}}'></image> 
+    </view>
+    <image class='listimg' src='{{item.img_medium}}'></image>
+    <view class='listtextbox' id='{{item.book_id}}' bindtap='godetail'>
+      <view class='listtext'>{{item.title}}</view>
+      <view class='yijie'>
+        <view class='yijiewan' wx:if='{{item.has_stock==0}}'>已借完</view>
+        <view class='yijieguo' wx:if='{{item.is_borrow==1}}'>已借过</view>
+      </view>
+    </view>
+    <!-- <view class='shanchu' id='{{index}}'>删除</view> -->
+  </view>   
+</view>
+
+<view class='nobook' hidden='{{lists.length>0||listload==false}}'>
+  <image class='nokookimg' src='/img/shelf/bookshelfno.png'></image>
+  <view class='nobooktext'>您的书架是空的哦</view>
+  <view class='stroll' bindtap='goshouye'>去首页逛逛</view>
+</view>
+<!-- hidden='{{lists.length==0?true:false}}' -->
+<view class='footer flex-jcs' >
+  <view class='flex-aic'  bindtap='checkall'>
+    <image class='checkbox m30' id='{{checkall}}'
+    src='{{checkall==true?"/img/shelf/xuanzhong2.png":"/img/shelf/moren2.png"}}' ></image>
+    <view class='quanxuan'>全选</view>
+  </view>
+  <view class='flex-aic' hidden='{{editstate=="1"?false:true}}'>
+    <view class='quanxuan'>已选：{{selected}}本</view>
+    <view class='jieyue themebgreen' bindtap='borrow'>借阅</view>
+  </view>
+  <!-- <view class='jieyue shanchub' hidden='{{editstate=="1"?true:false}}' bindtap='shanchu'>删除</view> -->
+  <view class='flex-aic' hidden='{{editstate=="1"?true:false}}'>
+    <view class='quanxuan'>已选：{{selected}}本</view>
+    <view class='jieyue shanchub'  bindtap='shanchu'>删除</view>
+  </view>
+</view>
+
+<view class='forfooter'></view>
+</view>
+
+<view class='ceng' hidden='{{login}}'>
+  <image src='../../img/shouye/logot.png' class='logo'></image>
+  <view class='login' bindtap='login'>登录</view>
+</view>

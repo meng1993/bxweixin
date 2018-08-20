@@ -1,0 +1,150 @@
+ @import '/temp/oldBook/oldBook.wxss';
+.checkList{
+    overflow: hidden;
+}
+.cActive{
+    color: #ff001e;
+}
+.checkList .header{
+    position: fixed;
+    width: 100vw;
+    height: 106rpx;
+    border-bottom: 1rpx solid lightgray;
+    overflow: hidden;
+    background: #fff;
+    z-index: 999;
+}
+.checkList .header .input_box{
+    position: relative;
+    float: left;
+    width: 620rpx;
+    height: 66rpx;
+    background-color: #eeeeee;
+    border-radius: 33px;
+    margin: 20rpx;
+}
+.checkList .header .input_box .icon_input{
+    position: absolute;
+    width: 32rpx;
+    height: 33rpx;
+    left: 24rpx;
+    top: 18rpx;
+}
+.checkList .header .input_box .input_search{
+    position: absolute;
+    width: 490rpx;
+    height: 66rpx;
+    line-height: 66rpx;
+    left: 70rpx;
+    top: 0;
+    font-size: 28rpx;
+    color: #afafaf;
+}
+.checkList .header .input_box .icon_scan{
+    position: absolute;
+    width: 34rpx;
+    height: 32rpx;
+    right: 17rpx;
+    top: 17rpx;
+}
+.checkList .header .btn_search{
+    /*width: 61px;*/
+    float: left;
+    height: 106rpx;
+    line-height: 106rpx;
+    font-size: 32rpx;
+    color: #6fd14e;
+}
+/*111111111111111111111content*/
+.checkList .content{
+    margin-top: 106rpx;
+    margin-bottom: 98rpx;
+}
+/*----------------------->bottom*/
+.checkList .bottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 98rpx;
+    border-top: 1px solid lightgray;
+    background: #fff;
+    z-index: 999;
+}
+.checkList .bottom .select_num{
+    position: relative;
+    float: left;
+    width: 220rpx;
+    height: 98rpx;
+}
+.checkList .bottom .select_num .select_img{
+    width: 36rpx;
+    height: 34rpx;
+    margin-left: 92rpx;
+    margin-top: 14rpx;
+}
+.checkList .bottom .select_num .select_text{
+    text-align: center;
+    font-size: 28rpx;
+    color: #878787;
+}
+.checkList .bottom .select_num .icon_top{
+    position: absolute;
+    width: 40rpx;
+    height: 40rpx;
+    background: red;
+    text-align: center;
+    line-height: 40rpx;
+    font-size: 24rpx;
+    color: #fff;
+    left: 60%;
+    top: 0;
+    border-radius: 50%;
+}
+.checkList .bottom .egg_num{
+    float: left;
+    width: 300rpx;
+    height: 98rpx;
+    text-align: center;
+    line-height: 98rpx;
+    font-size: 32rpx;
+    color: #333333;
+}
+.checkList .bottom .btn_add_box{
+    float: left;
+    width: 280rpx;
+    height: 98rpx;
+    text-align: center;
+    line-height: 98rpx;
+    background-color: #6fd14e;
+    font-size: 36rpx;
+    color: #ffffff;
+}
+
+
+/*复制开始*/
+.num_cal{
+     float: left;
+     width: 250rpx;
+     height: 98rpx;
+     display: flex;
+     flex-direction: column;
+ }
+.num_cal .select_num{
+     flex: 1;
+     line-height: 49rpx;
+     font-size: 30rpx;
+     color: #262626;
+ }
+.num_cal .select_num >text{
+     color: #ff8e00;
+ }
+.num_cal .new_egg_num{
+     flex: 1;
+     line-height: 49rpx;
+     font-size: 26rpx;
+     color: #999999;
+ }
+.num_cal .new_egg_num >text{
+     color: #ff304f;
+ }

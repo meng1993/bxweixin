@@ -1,0 +1,42 @@
+page{
+  background-color: #EFEFF4;
+  font-family: PingFangSC;
+}
+.positiontop{width: 750rpx;position: fixed;top: 0}
+.topgreen{height: 20rpx;width: 750rpx;}
+.edit{font-size: 30rpx;padding: 10rpx 20rpx;}
+.fortop{height: 200rpx;}
+.shujiahead{height: 88rpx;padding: 0 30rpx;margin-bottom: 2rpx;}
+.greenspot{width: 16rpx;height: 16rpx;display: block;margin-right: 20rpx;}
+.shujiaheadtext{color: #262626;font-size: 28rpx;line-height: 40rpx;}
+.choicetime{color: #3b7ada;font-size: 28rpx;margin: 10rpx 0;}
+.listwrap{margin: 20rpx 0;}
+.list{margin-bottom: 2rpx;}
+.checkbox{display: block;width: 40rpx;height: 40rpx;margin: 0 auto;}
+.checkboxw{width: 100rpx;height: 80rpx;}
+.m30{margin: 0 30rpx;}
+.listimg{display: block; width: 130rpx;height: 134rpx;margin: 20rpx 0;}
+.listtextbox{width: 470rpx;padding-left: 20rpx;}
+.listtext{color: #535353;font-size: 26rpx;max-height: 80rpx;line-height: 40rpx;overflow:hidden;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;}
+.yijie{display: flex}
+.yijiewan{padding-right: 30rpx;color: #4a90e2;font-weight: 600;font-size: 24rpx;}
+.yijieguo{color: #ffaa43;font-weight: 600;font-size: 24rpx;}
+.shanchu{color: #9b9b9b;font-size: 28rpx;width: 70rpx;text-align: center;margin:0 20rpx;}
+.footer{width: 750rpx;height: 88rpx;position: fixed;background-color: #fff;bottom: 0;
+border-top:4rpx solid #EFEFF4}
+.quanxuan{color: #262626;font-size: 32rpx;margin-right: 20rpx;}
+.forfooter{height: 90rpx;}
+.jieyue{height: 88rpx;width: 180rpx;color: #fffefe;font-size: 32rpx;text-align: center;line-height: 88rpx;}
+.shanchub{background-color: #fb0025;}
+.nokookimg{display: block;width: 256rpx;height: 160rpx;margin: 0 auto}
+.nobooktext{font-size: 30rpx;text-align: center;line-height: 100rpx;color: #262626;}
+.nobook{margin-top: 200rpx;}
+.stroll{width: 270rpx;height: 70rpx;border: 6rpx solid #6ed14e;color:#6ed14e;text-align: center;
+border-radius: 10px; margin: 0 auto;line-height: 70rpx;}
+.ceng{position: absolute;top: 0;width: 750rpx;height: 100%;}
+.logo{display: block;width: 220rpx;height: 280rpx;margin: 200rpx auto 0;}
+.login{width: 200rpx;background-color: #6ed14e;border-radius: 10px;text-align: center;
+line-height: 60rpx;color: #fff;margin: 100rpx auto 0;font-size: 36rpx;}

@@ -1,0 +1,18 @@
+.dimg{width: 256rpx;height: 256rpx;display: block}
+.add2{width: 248rpx;height: 248rpx;border-radius: 5px;
+border: 4rpx dotted #999999;line-height: 248rpx;text-align: center;font-size: 60rpx;color: #999999}
+.a{padding: 20rpx;}
+page{background-color: #EFEFF4}
+.b{height: 90rpx;padding:0 20rpx;}
+.b1{font-size: 28rpx;color: #333333;width: 150rpx;}
+.b2{width: 500rpx;font-size: 28rpx;color: #333333;height: 60rpx;line-height: 60rpx;}
+.c{font-size: 28rpx;color: #999999;padding-left: 20rpx;line-height: 100rpx;}
+.mb20{margin-bottom: 20rpx;}
+.r{width: 18rpx;height: 32rpx;display: block;}
+.tijiao{width: 550rpx;height: 88rpx;line-height: 88rpx;text-align: center;color: white;font-size: 36rpx;
+margin-top: 30rpx;border-radius: 22px;margin: 50rpx auto 0}
+.remove{width: 550rpx;height: 88rpx;line-height: 88rpx;text-align: center;color: #ff4c44;font-size: 36rpx;
+border-radius: 22px;margin: 30rpx auto 0}
+.header{width: 750rpx;height: 80rpx;background-color: #fdf3df;}
+.headimg{width: 32rpx;height: 34rpx;display: block;}
+.headert{color: #f09f00;font-size: 28rpx;}

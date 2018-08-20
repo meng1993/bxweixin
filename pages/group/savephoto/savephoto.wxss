@@ -1,0 +1,5 @@
+/* pages/group/savephoto/savephoto.wxss */
+page{height: 100%}
+.savephoto{width: 100%; display: block}
+button{position: fixed;bottom: 0;left: 0;background-color: #6fd14e; color: #fff;width: 100%;border-radius: 0}
+.zhuli{display: block;width: 710rpx;background-size: 100%;margin: 0 auto;}

@@ -1,0 +1,24 @@
+.userwrap{margin-bottom: 20rpx;}
+.userevaluation{
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    height: 100rpx;
+    color: #262626;
+    font-size: 34rpx;
+    margin-bottom: 2rpx;
+    background-color: #fff;
+    clear: both;
+}
+.userevaluation .message_left{
+    float: left;
+}
+.userevaluation .btn_lookAll{
+    float: right;
+    color: #6fd14e;
+}
+
+.userbox{padding: 20rpx;margin-bottom: 2rpx;background-color: #fff;border-bottom: 1rpx solid lightgray;}
+.userimg{display: block;width: 70rpx;height: 70rpx;margin-right: 10rpx;border-radius: 50%;}
+.username{color: #535353;font-size: 24rpx;}
+.commenttime{color: #b3b3b3;font-size: 24rpx;margin-right: 10rpx;}
+.content{color: #262626;font-size: 24rpx;margin-top: 20rpx;line-height: 40rpx;position: relative;}

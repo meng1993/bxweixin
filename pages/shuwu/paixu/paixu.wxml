@@ -1,0 +1,9 @@
+
+<view class='a'>设置图书在书房里的展示规则</view>
+
+<view class='b themebfff' wx:for='{{list}}' wx:key='{{index}}' id="{{index}}" bindtap='check'>
+  <view class='b1'>{{item.a}}</view>
+  <view class='b2'>{{item.b}}</view>
+  <image class='b3' wx:if='{{!item.checked}}' src='https://m.zujiekeji.cn/xcximg/shequ/icon_default.png'></image>
+  <image class='b3' wx:if='{{item.checked}}' src='https://m.zujiekeji.cn/xcximg/shequ/icon_selected.png'></image>
+</view>

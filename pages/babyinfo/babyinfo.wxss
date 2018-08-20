@@ -1,0 +1,7 @@
+@import '/pages/babyhouse/babyhouse.wxss';
+page{background-color: #EFEFF4}
+.bfff{background-color: #fff;margin-top: 20rpx;border-radius: 5px;}
+.save2{margin: 30rpx auto; width: 300rpx;}
+.add2{width: 60rpx;height: 60rpx;text-align: center;line-height: 50rpx;
+position: absolute;bottom: 30rpx;right: 30rpx;z-index: 200;}
+.w50{width: 170rpx}

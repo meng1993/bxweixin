@@ -1,0 +1,32 @@
+<view class='themebgray'>
+  <view class='record-bac'  wx:for='{{list}}' wx:key='{{index}}'>
+    <view class='record-main' id='{{item.assistance_id}}'  bindtap='detail'>
+      <view class='record-title'>     
+        <image class='cardi' wx:if='{{item.give_type=="card"}}'
+         src='https://m.zujiekeji.cn/xcximg/xcxkanjia/icon_vip.png'></image>
+        <image class='cardi' wx:if='{{item.give_type=="coupon"}}'
+        src='https://m.zujiekeji.cn/xcximg/xcxkanjia/discount.png'></image> 
+         {{item.title}}
+      </view>
+      <view class='record-content flex-aic' catchtap='zudang'>
+        <view class='jindu of' >
+          <view class='green' style='width: {{item.finish/item.total*100}}%'></view>
+        </view>
+      <view class='flex-jcs'><view class='or'>{{item.finish}}</view>/{{item.total}}</view>
+      </view>
+    </view>
+
+    <view class='p' >
+      <image wx:if='{{item.tag==="已参加"}}' src='https://m.zujiekeji.cn/xcximg/ycj.png' class='p1'></image>
+      <image wx:if='{{item.tag==="已完成"}}' src='https://m.zujiekeji.cn/xcximg/ywc.png' class='p1'></image>
+    </view>
+  </view>
+</view>
+
+<view class='nobookw themebgray' wx:if='{{list.length==0}}'>
+<view class='nobook'>
+  <image class='nokookimg2' src='https://m.zujiekeji.cn/xcximg/xcxkanjia/nolist.png'></image>
+  <view class='nobooktext'>助力记录为空~</view>
+  <view class='stroll' bindtap='gozhuli'>我要发起助力</view>
+</view>
+</view>

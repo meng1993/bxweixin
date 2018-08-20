@@ -1,0 +1,65 @@
+<view class="header flex-only flex-aic">
+   <view class='avatar flex-jac' bindtap='myinfo'>
+     <image src='{{avatarurl}}' class='avatarurl'></image>
+   </view>
+   <view class='signin family1 ' bindtap='login' wx:if='{{!login}}'>登录/注册</view>
+   <view class='signin family1 ' wx:if='{{login}}' >
+    <view class='family1 f34 mb4' bindtap='myinfo'>{{nickname}}</view>
+    <view class='family1 f26' wx:if='{{login}}' bindtap='babyinfo'>宝贝资料></view>
+   </view>
+   <view class='h100 flex-grow1'>
+     <image src='/img/home/msg.png' class='xiaoxi'  wx:if='{{login}}' bindtap='news'></image>
+   </view>
+</view>
+
+<view class="btn_coupons_eggs">
+    <view class="btn_common" bindtap="toDiscount">
+        <image class="icon_img" src="/img/shelf/user_discount.png"></image>
+        <view class="text_message">优惠券：{{mycouponNum}}</view>
+    </view>
+    <view class="btn_common" bindtap="toEggs">
+        <image class="icon_img" src="/img/shelf/user_bird-egg.png"></image>
+        <view class="text_message">鸟蛋：{{eggNum}}</view>
+    </view>
+    <!--<view class="btn_common"></view>-->
+</view>
+
+<view class='themebfff' wx:if='{{login}}' >
+  <view class='iconsbox flex-only flex-wrap'>
+    <view class='icons' wx:for="{{myicons}}" wx:key="name" id='{{index}}' bindtap='order'>
+      <image class='icons-img' src='{{item.src}}'></image>
+      <view class='icons-name'>{{item.name}}</view>
+      <view class='hongdian' wx:if='{{item.num>0}}'>{{item.num}}</view>
+    </view>
+  </view>
+</view>
+
+<view class='myactive flex-jcs ' wx:if='{{login}}'>
+<view class='myactive-icon' wx:for="{{myactive}}" wx:key="name" id='{{item.name}}' bindtap='myactive'>
+<image src='{{item.src}}'></image>
+<view>{{item.name}}</view>
+</view>
+</view>
+
+<!--<view class='myactive flex-jcs ' wx:if='{{login}}'>-->
+    <!--<view class='myactive-icon' wx:for="{{myactive2}}" wx:key="name" id='{{item.name}}' bindtap='myactive'>-->
+        <!--<image src='{{item.src}}'></image>-->
+        <!--<view>{{item.name}}</view>-->
+    <!--</view>-->
+<!--</view>-->
+
+<view class='mylistbox' wx:if='{{login}}'>
+  <view class='mylist flex-only flex-jcs {{index==5?"myset-martop":""}}' wx:for='{{mylists}}'
+  id='{{item.name}}' bindtap='list2'>
+    <view class='mylistm flex-only flex-aic'>
+      <image src='{{item.src}}' class='mylist-img'></image>
+      <view class='mylist-name'>{{item.name}}</view>
+    </view>
+    <view class='mylistm flex-only flex-aic'>
+      <view class='mylist-text'>{{item.text}}</view>
+      <image src='/img/shelf/yousanjiao.png' class='mylist-sanjiao'></image>
+    </view>
+  </view>
+</view>
+
+<!-- <view class='ceng' wx:if='{{!login}}' bindtap='login'></view>s -->

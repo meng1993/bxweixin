@@ -1,0 +1,4 @@
+.a{width: 730rpx;height: 98rpx;line-height: 98rpx;font-size: 28rpx;padding-left: 20rpx;}
+page{background-color: #efeff4;padding-top: 20rpx;}
+.f{width: 670rpx;height: 88rpx;line-height: 88rpx;text-align: center;margin: 0 auto; margin-top: 158rpx;
+color: #ffffff;font-size: 32rpx;border-radius: 4px;}

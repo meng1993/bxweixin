@@ -1,0 +1,14 @@
+view{font-family: PingFangSC}
+.w{position: relative;width: 750rpx;height: 540rpx;}
+.zm1{display: block;width: 750rpx;height: 540rpx;}
+.s1{position: absolute;width: 412rpx;height: 288rpx;background-size: 100% 100%;
+background-image: url('https://m.zujiekeji.cn/static/img/zmxy_yuanhu.ce9e3cd.png');
+top: 100rpx;left: 170rpx;}
+.text1{color: #fff;font-size: 34rpx;margin-top: 80rpx;}
+.text2{color: #fff;font-size:50rpx;margin: 10rpx}
+.text3{color: rgb(171, 223, 248);font-size: 34rpx;}
+.center{text-align: center}
+.img1{display: block; width: 750rpx;height: 750rpx;}
+.text4{font-size: 26rpx;text-align: center;margin-top: 30rpx;color: #666}
+.text5{color: #2196f3}
+.text6{font-size: 32rpx;margin: 30rpx 0 10rpx;color: #666}

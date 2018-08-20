@@ -1,0 +1,22 @@
+<view class='a themebfff'>
+  <view class='a1 flex-aic bb'>
+    <view class='a2'>+86</view>
+    <view class='flex-jasc flex-grow1'>
+      <input type='number' bindinput='phone' class='a3 flex-grow1' placeholder='请填写新手机号'
+      value='{{phone}}'></input>
+      <image class='a4' src='/img/home/cancle_black.png' bindtap='clearphone'></image>
+    </view> 
+  </view>
+  <view class='a1 flex-aic'>
+    <view class='flex-grow1'>
+      <input type='text' bindinput='code' class='a3 flex-grow1' placeholder='请输入验证码'></input>
+    </view>
+    <view class='a5 {{codestatus!="获取验证码"?"a52":""}}' bindtap='getcode'>{{codestatus}}</view>
+  </view>
+</view>
+   <!--  -->
+ 
+ <view class='save2 f28' wx:if='{{phone.length!=11||code==""}}'>完成</view> 
+ <view bindtap='wancheng'>
+  <view class='save f28' wx:if='{{phone.length==11&&code!=""}}' >完成</view> 
+ </view>

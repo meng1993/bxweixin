@@ -1,0 +1,32 @@
+page{font-family: PingFangSC;}
+view{font-family: PingFangSC;}
+.searchinputwrap{padding: 14rpx 20rpx;position: fixed;top: 0;width: 710rpx;}
+.searchinputbox{
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden; align-items: center;  
+}
+.fortop{height: 88rpx;}
+.searchimg{
+  width: 34rpx;
+  height: 34rpx;
+  margin-left: 20rpx;
+}
+.searchinput{
+  background-color: #fff;
+  height: 60rpx;
+  color: #9c9c9c;
+  font-family: PingFangSC;
+  font-size: 30rpx;
+  font-style: normal;
+}
+.conditionwrap{padding: 20rpx 0 0 20rpx;}
+.conditiont1{color: #5fcb3d;font-size: 36rpx;}
+.conditiont2{color: #878787;font-size: 26rpx;margin-left: 20rpx;}
+.condition{width: 162rpx;margin-right: 20rpx;background: #e9e9e9;border-radius: 20px;line-height: 62rpx;
+text-align: center; color: #878787; font-size: 28rpx;margin-top: 20rpx;}
+.condition2{background-color: #6ed14e;color: #fff;}
+.iscondition{background-color: #6ed14e;color: #fff;}
+.footer{width: 750rpx;height: 88rpx;position: fixed;bottom: 0;line-height: 88rpx;text-align: center;
+color: #fffefe;font-size: 32rpx;}
+.forfooter{height: 88rpx;}

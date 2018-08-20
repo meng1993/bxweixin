@@ -1,0 +1,29 @@
+<view class='list1 flex-aic themebfff bb'>
+  <view class='list1a'>收货人：</view>
+  <input value='{{name}}' bindinput='name'></input>
+</view>
+<view class='list1 flex-aic themebfff bb'>
+  <view class='list1a'>手机号码：</view>
+  <input value='{{phone}}' type='number' bindinput='phone'></input>
+</view>
+<view class='list1 flex-aic themebfff bb'>
+  <view class='list1a'>所在省市区：</view>
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="list1a" style="width: 500rpx;height: 95rpx;line-height: 95rpx;" wx:if="{{editType}}">
+     {{region[0]}}，{{region[1]}}，{{region[2]}}
+    </view>
+    <view class="list1a" style="width: 500rpx;height: 95rpx;line-height: 95rpx;" wx:else>
+      <!--{{region[0]}}，{{region[1]}}，{{region[2]}}-->
+    </view>
+  </picker>
+</view>
+<view class='flex-only themebfff bb dizhi'>
+  <view class='list2a list1a'>详细地址：</view>
+  <textarea value='{{address}}' auto-height='true' bindinput='address' show-confirm-bar='false'></textarea>
+</view>
+<view class='list1 flex-jasc themebfff bb'>
+  <view class='list1a'>设为默认地址：</view>
+  <image src='{{checked==false?"/img/home/moren3.png":"/img/home/xuanzhong3.png"}}' class='xuan' 
+  bindtap='checked'></image>
+</view>
+<view class='save' bindtap='save'>保存</view>

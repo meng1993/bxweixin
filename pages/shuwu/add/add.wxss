@@ -1,0 +1,5 @@
+page{background-color:#EFEFF4;padding-top: 20rpx;}
+.a{padding-left: 20rpx;padding-right: 30rpx;width: 700rpx;height: 110rpx;margin-bottom: 20rpx;}
+.a2{display: block;width: 20rpx;height: 32rpx;}
+.a1{display: block;width: 70rpx;height: 70rpx;}
+.a3{font-size: 28rpx;color: #333333;margin-left: 20rpx;}

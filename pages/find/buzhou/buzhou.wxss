@@ -1,0 +1,11 @@
+.img{
+  width: 750rpx;
+}
+page{background-color: #EFEFF4;}
+.b{padding: 30rpx 20rpx;}
+.f24{font-size: 24rpx;}
+.f28{font-size: 28rpx;}
+.co5{color: #999}
+.co6{color: #ffde00}
+.co7{color: #b5b5b5}
+.mt10{margin-top: 10rpx;}

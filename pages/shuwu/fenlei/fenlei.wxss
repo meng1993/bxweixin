@@ -1,0 +1,13 @@
+page{background-color: #EFEFF4}
+.a{width: 730rpx;padding-left: 20rpx;padding-top: 20rpx;}
+.a1{width: 344rpx;height: 150rpx;margin-right: 20rpx;position: relative;margin-bottom: 20rpx;}
+.a2{font-size: 28rpx;color: #333333;text-align: center;padding-top: 32rpx;padding-bottom: 20rpx;}
+.a3{font-size: 28rpx;color: #999999;text-align: center;}
+.a4{display: block;width: 42rpx;height: 42rpx;position: absolute;top: 0;right: 0;z-index: 1000}
+.f{width: 750rpx;height: 98rpx;position: fixed;bottom: 0;line-height: 98rpx;text-align: center;
+color: #ffffff;font-size: 32rpx;}
+.f view{width: 50%;height: 98rpx;}
+.f1{background-color: #49b126;}
+.a5{height: 66rpx;width: 306rpx;background-color: #f3f3f3;font-size: 28rpx;color: #333333;margin: 10rpx auto;
+z-index: 100;padding-left: 10rpx;}
+.b{text-align: center;padding-top: 30rpx;font-size: 30rpx;color: #999999;}

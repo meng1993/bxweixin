@@ -1,0 +1,57 @@
+<import src="/temp/book/book.wxml" />
+<import src="/temp/bottomload/index.wxml" />
+<view class='bacimg'>
+    <image src='{{celebrity_info.banner}}' class='bacimg'></image>
+</view>
+<view class='flex-jcs title'>
+    <view class='listname'>{{celebrity_info.title}}</view>
+    <view class='add' bindtap='addBoxAll' data-ids="{{ids}}" id='{{allin}}' wx:if="{{allin !== 1}}">全部加入书架{{ids.length}}本</view>
+    <view class='add add2' id='{{allin}}' wx:if='{{allin===1}}'>已加入书架</view>
+</view>
+<view class='intro'>
+    <view class='intro1'>简介</view>
+    <view class='main'>{{celebrity_info.detail}}</view>
+</view>
+
+<wxs module='par'>
+    module.exports={
+    par:function(e){
+    if(e===0){
+    return "0"
+    }else{
+    return e
+    }
+    }
+    }
+</wxs>
+
+<!--<view class='a' wx:for='{{list}}' wx:key='{{index}}'>-->
+    <!--<view class='age flex-jcs'>-->
+        <!--<view class='age1 flex-aic'>-->
+            <!--<view class='xian'></view>-->
+            <!--<view class='a1'>{{item.title}},{{item.summary}}</view>-->
+        <!--</view>-->
+        <!--<view class='age2' id='{{index}}' bindtap='inshujia'>-->
+            <!--一键加入书架{{item.book_num}}本-->
+        <!--</view>-->
+    <!--</view>-->
+    <!--<view class='flex-jcs flex-wrap themebfff'>-->
+        <!--<view wx:for='{{list}}' wx:for-item='mitem' wx:for-index='mindex' wx:key='{{index}}'-->
+              <!--class='bb {{mindex%2===0?"br":""}}'>-->
+            <!--<template is='book' data='{{item:mitem,index:mindex,parent:par.par(index)}}'></template>-->
+        <!--</view>-->
+    <!--</view>-->
+<!--</view>-->
+
+<view class='a'>
+    <view class='flex-jcs flex-wrap themebfff'>
+        <view wx:for='{{list}}' wx:for-item='mitem' wx:for-index='mindex' wx:key='{{index}}'
+              class='bb {{mindex%2===0?"br":""}}'>
+            <template is='book' data='{{item:mitem,index:mindex,parent:par.par(mindex)}}'></template>
+        </view>
+    </view>
+</view>
+
+<!--<template is='zan-loadmore' data='{{bottomload:bottomload}}'></template>-->
+
+

@@ -1,0 +1,5 @@
+<image class='savephoto' src='{{src}}' mode='widthFix'></image>
+<!-- <image src='{{src}}' class='zhuli' mode='widthFix'  wx:if='{{from=="zhuli"}}'></image> -->
+
+
+<button bindtap='save'>保存图片到相册</button>

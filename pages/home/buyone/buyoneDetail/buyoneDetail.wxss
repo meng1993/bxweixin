@@ -1,0 +1,35 @@
+@import '/pages/orderd/orderd.wxss';
+.order_num{
+    width: 750rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: #ffffff;
+    text-indent: 20rpx;
+    font-size: 28rpx;
+    color: #262626;
+    border-bottom: 1rpx solid lightgray;
+}
+.bottom_btns{
+    position: fixed;
+    width: 750rpx;
+    height: 109rpx;
+    background-color: #fff;
+    bottom: 0;
+}
+.bottom_btns .btn_common{
+    float: right;
+    width: 161rpx;
+    height: 61rpx;
+    text-align: center;
+    line-height: 61rpx;
+    border: 1rpx solid #999999;
+    border-radius: 10rpx;
+    font-size: 32rpx;
+    color: #878787;
+    margin-top: 24rpx;
+    margin-right: 20rpx;
+}
+.bottom_btns .btn_active{
+    border: solid 1px #ff1330;
+    color: #fb0025;
+}
